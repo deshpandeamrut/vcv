@@ -1,0 +1,518 @@
+<div class="dash-wrap" id="dashboard-home-investor" >
+
+<form name="oneStepRegistrationForm" ng-show="investorDashboardDetails.dashboard_flag == 'incomplete_profile'">
+		<p class="info-para" style="margin-left: 20%">
+			<span class="info-logo-icon sprite"></span>
+			<span class="text">Welcome to Mortgage Chance,  you are required to enter your personal details in order in help us verify and rate your profile.  Mortgage Chance will <strong>never</strong> disclose any of your personal details to investors.  If you see a * next to a field, that item is and always will be confidential.</span>
+		</p>
+		<span class="main-form-headings">Detailed Registration</span>
+		<span class="main-form-headings">Personal Details</span>
+		<div class="main-form"> 
+
+			<!--Title-->
+			<label>Title*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<select class="input-field" ng-model="oneStepRegistration.title" >
+						<option checked value="Mr">Mr</option>
+						<option value="Mrs">Mrs</option>
+						<option value="Miss">Miss</option>
+					</select>
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<!--First Name-->
+			<label>First Name*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="first_name" validate-type="name" ng-model="oneStepRegistration.first_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<!--Middle Name-->
+			<label>Middle Name</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="middle_name" validate-type="name" ng-model="oneStepRegistration.middle_name" validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<!--Surname-->
+			<label>Surname*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="last_name" validate-type="name" ng-model="oneStepRegistration.last_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<!--Date of Birth-->
+			<label>Date of Birth*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" placeholder="mm/dd/yyyy" class="input-field"  name="dob" validate-type="date" ng-model="oneStepRegistration.dob"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+					<span class="sprite date-icon"></span> </div>
+			</span> <br clear="all">
+
+			<div class="form-element clearfix upload-spl">
+				<label class="col-sm-4 pad-zero" for="inputEmail3">Profile image</label>
+				<div class="col-sm-8 pad-zero">
+					<span class="form-hold2 clearfix">
+						<div class="file-upload-wrap clearfix">
+							<input  disabled="disabled" class="col-sm-6 uploadfile" />
+							<div class="fileUpload col-sm-4 mc-btn file-upload-btn">
+								<span>Upload</span>
+								<input type="file" class="upload uploadbtn" name="inv1" ng-file-select="onFileSelect($files,$event)" />
+							</div>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+		<span class="main-form-headings">Address</span>
+
+		<div class="main-form">
+			<label>Unit Number*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="street_no" validate-type="novalid" ng-model="oneStepRegistration.address.street_no"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<label>Street Name*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="street_name" validate-type="novalid" ng-model="oneStepRegistration.address.street_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<label>Suburb*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" class="input-field"  name="suburb" validate-type="novalid" ng-model="oneStepRegistration.address.suburb"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<label>Postcode*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="postcode" validate-type="number" ng-model="oneStepRegistration.address.postcode"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<label>City* </label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" class="input-field"  name="city_name" validate-type="name" ng-model="oneStepRegistration.address.city_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<label>State* </label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" class="input-field"  name="state_name" validate-type="name" ng-model="oneStepRegistration.address.state_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+			<label>Phone Number*</label>
+			<br clear="all">
+			<span class="form-hold clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="phone_type" placeholder="code" validate-type="number" ng-model="oneStepRegistration.phone.phone_city_code"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span>
+			<span class="form-hold number clearfix">
+				<div class="validate-line">
+					<input type="text"  class="input-field" name="phone_type" validate-type="number" ng-model="oneStepRegistration.phone.phone_number"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span>             
+
+
+
+
+		</div>
+
+		<span class="main-form-headings">Bank details</span>
+		<div class="main-form"> 
+
+			<!--Branch Name-->
+			<label>Branch Name*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" class="input-field" name="bank_name" validate-type="novalid" ng-model="oneStepRegistration.bankdetail.bank_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+			<!--Account Holder name-->
+			<label>Account Holder name*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" class="input-field" name="account_holder_name" validate-type="name" ng-model="oneStepRegistration.bankdetail.account_holder_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+			<!--Account number-->
+			<label>Account number*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" class="input-field" name="account_number" validate-type="number" ng-model="oneStepRegistration.bankdetail.account_number"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+			<!--Bank Name-->
+			<label>Bank Name*</label>
+			<br clear="all">
+			<span class="form-hold2 clearfix">
+				<div class="validate-line">
+					<input type="text" class="input-field" name="branch_name" validate-type="novalid" ng-model="oneStepRegistration.bankdetail.branch_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+					<div class="input-wrapper"></div>
+					<div class="message"></div>
+				</div>
+			</span> <br clear="all">
+
+
+
+		</div>
+
+		<div class="errormessage" ng-show="isError">{{displayError}}</div>
+
+
+
+
+
+
+		<div class="main-form"> 
+			<!--Button-->
+			<button type="submit" class="mc-btn" ng-click="submitRegistration()">SUBMIT</button>
+		</div>
+</form>
+<div class="clearfix"></div>
+<!-- after registration -->
+   <div class="dashboard-container" ng-show="investorDashboardDetails.dashboard_flag == 'verified_user'">
+      <div class="row trend-pro-auc">
+         <h2><span class="sprite trend-pro-auc-icon"></span>Trending Property Auctions
+            <!-- <span class="country-dropdown">
+               <select class="input-field selectpicker">
+                  <option value="owner">Owner</option>
+                  <option value="investor">Investor</option>
+               </select>
+            </span> -->
+         </h2>
+
+         <!--------------------- slider--------------------->
+         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+          <!--   <ol class="carousel-indicators">
+               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol> -->
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+               <div class="item active">
+                  <div class="row">
+                     <div class="col-lg-4" ng-repeat="trending_auction in investorDashboardDetails.trending_auction_details">
+                        <div class="trend-thumbnail clearfix">
+                           <div class="days-left-hold">
+                              <span class="days-left">{{trending_auction.no_days_left}} <br> days <br> left</span>
+                              <img src="img/your-properties-image-big.jpg" class="img-responsive">
+                              <div class="price-on-img">${{trending_auction.pricing}}</div>
+                           </div>
+                           <div class="bids-media clearfix">
+
+                              <span class="pull-left bid-circle">{{trending_auction.no_bids}}<br>bids </span>
+
+                              <div class="bid-media-text">{{trending_auction.suburb}}, {{trending_auction.state_name}}</div>
+
+                           </div>
+
+
+                           <div class="list-rates clearfix">
+                              <ul class="clearfix">
+                                 <li><h5>Floating Rate</h5><h6>{{trending_auction.floating_rate}}%</h6></li>
+                                 <li><h5>Markup</h5><h6>{{trending_auction.mark_up_premium}}%</h6></li>
+                              </ul>
+                           </div>
+
+                        </div>
+
+                     </div>
+                    <!--  <div class="col-lg-4">
+                        <div class="trend-thumbnail clearfix">
+                           <div class="days-left-hold">
+                              <span class="days-left">10 <br> days <br> left</span>
+                              <img src="img/your-properties-image-big.jpg" class="img-responsive">
+                              <div class="price-on-img">$ 750,000</div>
+                           </div>
+                           <div class="bids-media clearfix">
+
+                              <span class="pull-left bid-circle">7<br>bids </span>
+
+                              <div class="bid-media-text">3 BHK Apartment, Ashfield, Sydney</div>
+
+                           </div>
+
+
+                           <div class="list-rates clearfix">
+                              <ul class="clearfix">
+                                 <li><h5>Floating Rate</h5><h6>6.4 %</h6></li>
+                                 <li><h5>Markup</h5><h6>4 %</h6></li>
+                              </ul>
+                           </div>
+
+                        </div>
+
+                     </div>
+                     <div class="col-lg-4">
+                        <div class="trend-thumbnail clearfix">
+                           <div class="days-left-hold">
+                              <span class="days-left">10 <br> days <br> left</span>
+                              <img src="img/your-properties-image-big.jpg" class="img-responsive">
+                              <div class="price-on-img">$ 750,000</div>
+                           </div>
+                           <div class="bids-media clearfix">
+
+                              <span class="pull-left bid-circle">7<br>bids </span>
+
+                              <div class="bid-media-text">3 BHK Apartment, Ashfield, Sydney</div>
+
+                           </div>
+
+
+                           <div class="list-rates clearfix">
+                              <ul class="clearfix">
+                                 <li><h5>Floating Rate</h5><h6>6.4 %</h6></li>
+                                 <li><h5>Markup</h5><h6>4 %</h6></li>
+                              </ul>
+                           </div>
+
+                        </div>
+
+                     </div> -->
+                  </div>
+               </div>
+            </div>
+
+            <div align="center">
+               <a href="currentAuctionsSignedIn.html">
+               <button class="mc-btn veiw-more-auctions-btn" type="submit">VIEW MORE AUCTIONS</button></a>
+            </div>
+
+            <!-- Controls -->
+            <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+               <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+               <span class="glyphicon glyphicon-chevron-right"></span>
+            </a> -->
+         </div>
+
+
+
+
+      </div>
+
+
+      <div class="dashboard-home-investor-other">
+         <div class="row">
+
+
+            <!-------dashboard-home-investor-pad-left-------->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dashboard-home-investor-pad-left">
+
+               <!-- <div class="investor-calendar-hold">
+                  <div class="investor-calendar">
+                     <h2><span class="sprite calendar-icon"></span>Calendar</h2>
+                     <span class="date-month overdue">
+                        <span class="day">05</span><span class="month">Jan</span>
+                     </span>
+                     <div class="payment">
+                        <span class="payment-text">Payment from Borrower</span>
+                        <button type="submit" class="mc-btn remind-btn">REMIND<br>BORROWER</button>
+
+                        <div class="payment-inner">
+                           <span class="sprite right-align-icon "></span>
+                           <div class="payment-text2">
+                              Property Downpayment,<br>$ 13,500 due
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>                         
+                  <div class="investor-calendar">
+                     <span class="date-month">
+                        <span class="day">05</span><span class="month">Jan</span>
+                     </span>
+                     <div class="payment">
+                        <span class="payment-text3">Payment from Borrower<span class="sprite alert-icon"></span></span>
+
+
+                        <div class="payment-inner">
+                           <span class="sprite right-align-icon "></span>
+                           <div class="payment-text2">
+                              Property Downpayment,<br>$ 13,500 due
+                           </div>
+                        </div>
+
+
+                        <div class="payment-inner">
+                           <span class="sprite map-icon"></span>
+                           <div class="payment-text2">
+                              Harrington Road, Sydney
+                           </div>
+                        </div>
+
+
+                     </div>
+                  </div>
+                  <a class="go-to-calendar" href="#">Go to Calendar</a>
+               </div> -->
+
+
+
+               <div class="your-account-hold">
+                  <div class="your-account">
+                     <h2><span class="sprite your-account-icon"></span>Your Account</h2>
+                     <div class="image-box clearfix">
+                       
+                        <div class="image-text">
+                           <h3>{{investorDashboardDetails.username}}<br> <span class="place">({{investorDashboardDetails.user_type}})</span></h3>
+                           <!-- <span class="grade">{{investorDashboardDetails.rating}}</span><span class="star"><span class="sprite star-icon"></span></span> -->
+                        </div>
+                     </div>
+
+                     <a href="#" class="go-to-your-account">Go to your account</a>
+
+                  </div>
+               </div>
+               <div class="investor-bid-hold">
+                  <div class="investor-bid">
+                     <h2>My Bids!</h2>
+                     <div ng-hide="investorDashboardDetails.bid_details.length"><h4 class="textAlignCenter">You have no bids</h4></div>
+                     <div ng-show="investorDashboardDetails.bid_details.length">
+                     <div class="image-box clearfix" ng-repeat="bid in investorDashboardDetails.bid_details">
+                        <span class="image-frame"><img src="img/your-properties-image.jpg"></span>
+                        <div class="image-text dashboardbids">
+                           <h3>{{bid.address.suburb}},{{bid.address.state_name}}<br><span class="place">Status: {{bid.bid_status}}</span></h3>
+                           <ul class="clearfix">
+                              <li><h5>floating rate</h5><h6>{{bid.rate_of_interest}}%</h6></li>
+                              <li><h5>markup</h5><h6>{{bid.mark_up_premium}}%</h6></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!--<p class="our-admin">Our admin will get in touch with you soon about the next steps. For now, you can <a href="#">View the schedule.</a></p>-->
+                     <a href="#myBids" class="go-to-your-account">View all bids</a>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+
+            <!-------dashboard-home-investor-pad-right-------->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dashboard-home-investor-pad-right">
+
+               <div class="seller-a-pro-hold">
+                  <div class="seller-a-pro">
+                     <h2>Add Property</h2>
+                     <h5>Do you have a property you want to sell?</h5>                                
+                  </div>
+
+                  <div align="center">
+                     <button  class="mc-btn seller-a-pro-btn" type="submit">ADD PROPERTY</button>
+                  </div>
+               </div>
+
+
+
+
+           <!--     <div class="payment-report-hold">
+                  <div class="payment-report">
+                     <h2><span class="sprite payment-report-icon"></span>Payment Report</h2>
+                     <h5>$ 83K</h5>
+                     <h6>Total Payment received in last 3 quarters</h6>
+                     <a href="#" class="go-to-report">Go to Reports</a>
+                  </div>
+               </div> -->
+               <div class="messages-hold" >
+                  <div class="messages">
+                      <h2><span class="sprite message-card-icon"></span>Messages</h2>
+                      <div ng-hide="messagesIsEmpty">
+                          <h5>{{investorDashboardDetails.inbox_message.subject}}</h5>
+                          <h6>{{investorDashboardDetails.inbox_message.message_content}}</h6>
+                          <div class="textAlignCenter">  
+                          <a href="#messageCenter" class="go-to-your-account">View All</a>
+                          </div>
+                      </div>
+                      <div ng-show="messagesIsEmpty"><h6 class="textAlignCenter">You have no messages</h6></div>
+                  </div>
+              </div> 
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script type="text/javascript">
+	$('.selectpicker').selectpicker({ });
+</script>
+<style type="text/css">
+	.errormessage{
+		text-align: center;
+		font-size: 20px;
+		color: red;
+		font-family: 'FacitWeb';
+	}
+</style>
+<script type="text/javascript">
+	jQuery('.uploadbtn').on('change',function(e){
+		var currentTarget = jQuery(e.currentTarget);
+		currentTarget.closest('.file-upload-wrap').find('.uploadfile').val(currentTarget.val());
+	});
+	jQuery('.registrationClick a').on('click',function(e) {
+		e.preventDefault();
+	});
+</script>

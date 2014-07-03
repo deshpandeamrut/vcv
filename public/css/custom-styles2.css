@@ -1,0 +1,577 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+/**
+ * styles for slider
+ * 
+ */
+.bx-wrapper .bx-pager.bx-default-pager a {
+	width: 20px;
+	height: 20px;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	background: transparent;
+	border: 1px solid #7f7f7f;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #7f7f7f;
+}
+.bx-wrapper .bx-viewport {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/**
+ * styles for Home page
+ * 
+ */
+body{
+	width: 100%;
+	/*overflow: hidden;*/
+	background-color: white;
+	color: black;
+	position: relative;
+}
+.header{
+	height: 50px;
+}
+.image-slider{
+	clear: both;
+	overflow: hidden;
+}
+.logo-content{
+	float: left;
+	margin-left: 5%;
+}
+.logo-content a{
+	color: black;
+	text-decoration: none;
+}
+.logo-content a:hover{
+	text-decoration: none;
+}
+.menu-content{
+	float: right;
+}
+.menu-list{
+	list-style: none;
+	background-color: #1c9ad6;
+	padding-right: 30px;
+}
+.menu-list .menu-item:first-child{
+	margin-left: 0px;
+}
+.menu-item{
+	position: relative;
+	display: inline-block;
+	margin-left: -4px;
+	font-family: arial;
+}
+.menu-item a{
+	text-decoration: none;
+	color: white;
+	padding: 30px;
+	display: block;
+}
+.menu-item a:hover{
+	text-decoration: none;
+	background-color: #198ac0;
+
+}
+#select-country{
+	background-color: #198ac0;
+	color: white;
+	cursor: pointer;
+	padding: 30px;
+}
+.country-name{
+
+}
+.country-flag{
+
+}
+.arrow-down{
+
+}
+.conutry-list{
+	list-style: none;
+	background-color: #1c9ad6;
+	position: absolute;
+	display: block;
+	bottom: -100%;
+	display: none;
+}
+.country-item{
+
+}
+.user-menu{
+	font-family: arial;
+	border-top: 1px solid #818283;
+	border-bottom: 1px solid #818283;
+	color: white;
+	float: none;
+	height: 120px;
+}
+.user-type{
+	display: inline-block;
+	background-color: #1c9ad6;
+	position: relative;
+	width: 48%;
+	height: 100px;
+	float: left;
+	border: 1px solid #367a9a;
+	padding-bottom: 20px;
+	position: relative;
+	top: -1px;
+	/*overflow: hidden;*/
+}
+.investor-button{
+	border-left: 1px solid #ffffff;
+}
+.button-wrapper{
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	width: 75%;
+}
+.button-wrapper h3{
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.active-button.user-type{
+	background-color: #3eb1e8;
+}
+.user-type .active-arrow{
+	display: none;
+	position: absolute;
+}
+.user-type.active-button .active-arrow{
+	display: block;
+	position: absolute;
+	/*bottom: -100%;*/
+	left: 45%;
+	margin: 0 auto;
+	/*width: 20px;*/
+	bottom: -10px;
+	/*height: 20px;*/
+	color: black;
+}
+#borrower-content{
+	display: block;
+}
+#investor-content{
+	display: none;
+}
+.button-common{
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	padding: 10px 5px;
+	color: black;
+	font-family: arial;
+	background-color: #a6df53;
+	-webkit-border-radius: 3px; 
+  	-moz-border-radius: 3px;
+  	border-radius: 3px;
+  	border-bottom: 2px solid #7bab36;
+  	text-decoration: none;
+  	font-weight: bold;
+  	position: relative;
+}
+a.button-common:hover{
+	top: 1px;
+	text-decoration: none;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #7bab36;
+}
+.user-menu-content{
+	position: relative;
+	width: 100%;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #a4a6aa;
+
+}
+.borrower-procedure{
+	list-style: none;
+	text-align: center;
+
+}
+/*.borrower-steps{
+	display: inline-block;
+	width: 20%;
+	vertical-align: top;
+}*/
+
+.borrower-steps-images{
+	width: 50px;
+	height: 50px;
+	position: relative;
+}
+.borrower-steps-numbers{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: #1c9ad6;
+	background-color:#b7e4f9;
+	width: 25px;
+	height: 25px;
+	font-size: 18px;
+	font-family: arial;
+	-webkit-border-radius: 15px; 
+  	-moz-border-radius: 15px;
+  	border-radius: 15px;
+}
+.borrower-steps-numbers span{
+	margin-top: 3px;
+	display: block;
+}
+.number-showcase{
+	border-bottom: 1px solid #a4a6aa;
+}
+.number-list{
+	padding: 10px 0px;
+	text-align: center;
+	margin: 0 auto;
+}
+.number-item{
+	display: inline-block;
+}
+.services-offered h2{
+	text-align: center;
+	padding: 20px 0px;
+}
+.services-list{
+	width: 80%;
+	text-align: left;
+	margin: 0 auto;
+
+}
+.service-item{
+	width: 48%;
+	display: inline-block;
+	/*text-align: left;*/
+}
+.service-item span{
+	text-align: left;
+}
+.service-item span:first-child{
+	display: inline-block;
+	float: left;
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 50px; 
+  	-moz-border-radius: 50px;
+  	border-radius: 50px;
+  	border: 1px solid #8fc146;
+}
+.services-offered{
+	padding-bottom: 50px;
+}
+.property-auctions{
+	position: relative;
+}
+.heading-home{
+	/*margin-left: 15%;*/
+	border-bottom: 1px solid #8fc146;
+	margin-bottom: 65px;
+}
+.heading-title{
+	margin-left: 15%;
+	display: inline-block;
+	position: relative;
+}
+.house-image{
+	position: absolute;
+	width: 30px;
+	height: 25px;
+	left: -30px;
+}
+.property-auctions{
+	padding-bottom: 30px;
+	border-bottom: 1px solid #8fc146;
+}
+.auctions-list{
+	list-style: none;
+	/*width: 80%;*/
+	margin: 0 auto;
+	/*margin-bottom: 40px;*/
+}
+.property-block{
+	display: block;
+	color: black;
+	position: relative;
+}
+.auctions-list a{
+	display: block;
+	text-decoration: none;
+}
+.auctions-list a:hover{
+	text-decoration: none;
+}
+.auctions-item{
+	display: inline-block;
+	/*width: 19%;*/
+	/*margin-left: 5%;*/
+	/*border: 1px solid #ececec;*/
+	background-color: #f8f8f8;
+	/*border-bottom: 1px solid #c5c5c5;*/
+}
+/*home page trending options styles*/
+.trending-auctions{
+	margin: 60px auto;
+}
+.container.trending-auctions .col-md-3{
+width: 24%;
+margin-right: 11px;
+padding-left: 0px;
+padding-right: 33px;
+}
+.container.trending-auctions .button-custom-1{
+	margin: 50px auto 0px;
+}
+.container.trending-auctions .row.clearfix{
+	/*padding: 60px 0px 0px 0px;*/
+}
+.property-image{
+	position: relative;
+}
+.property-image img{
+	width: 100%;
+	min-height: 200px;
+	position: relative;
+	height: 90px;
+}
+.property-info{
+	width: 100%;
+	border-bottom: 1px solid #818283;
+	padding-bottom: 10px;
+	padding: 20px 10px;
+	overflow: hidden;
+}
+.property-price{
+	position: absolute;
+	padding: 20px 0px !important;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: auto;
+	opacity: 0.7;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	background-color: #f8f8f8;
+	text-align: center;
+	padding: 7px 0px;
+}
+.bids{
+	color: #ffffff;
+	background-color: #1c9ad6;
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 30px; 
+  	-moz-border-radius: 30px;
+  	border-radius: 50px;
+  	font-size: 16px;
+  	display: inline-block;
+  	float: left;
+  	margin: 5px 10px;
+  	text-align: center;
+  	/*padding-bottom: 10px;*/
+  	padding: 10px;
+
+}
+.property-address{
+	display: inline;
+	/*margin:10px 5px 5px 5px;*/
+	position: relative;
+	top: 15px;
+}
+.property-rate{
+	padding: 15px 0px 15px 15px;
+	width: 100%;
+}
+.property-rate h4{
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+}
+.floating-rate{
+	width: 48%;
+	display: inline-block;
+	text-align: center;
+}
+.markup-rate{
+	width: 48%;
+	display: inline-block;
+	text-align: center;
+}
+.days-left{
+	background-image: url("../images/bid_polygon_sticker.png");
+padding: 20px;
+background-repeat: no-repeat;
+background-position-x: 18px;
+background-position-y: 11px;
+position: absolute;
+top: -42px;
+right: -51px;
+width: 100px;
+height: 75px;
+text-align: center;
+}
+.feedback-showcase{
+	padding-bottom: 40px;
+	position: relative;
+	overflow: hidden;
+}
+#feedback-list{
+	padding: 25px 0px;
+	list-style: none;
+	display: block;
+	position: relative;
+}
+.feedback-item{
+	display: inline-block;
+	text-align: center;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.feedback-item.active-feedback{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}
+.feedback-photo{
+	background:grey;
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 30px; 
+  	-moz-border-radius: 30px;
+  	border-radius: 30px;
+  	margin: 0 auto;
+}
+.feedback-content{
+	width: 80%;
+	margin: 0 auto;
+}
+.arrow-buttons{
+	position: absolute;
+	cursor: pointer;
+	padding: 5px;
+	font-size: 20px;
+	font-weight: bold;
+}
+/* ===== == = === Base Styles === = == ===== */
+
+
+/* ===== == = === 20em (320px) === = == ===== */
+
+@media only screen and (min-width : 20em) {
+}
+
+/* ===== == = === 30em (480px) === = == ===== */
+
+@media only screen and (min-width : 30em) {
+}
+
+/* ===== == = === 37.5em (600px) === = == ===== */
+
+@media only screen and (min-width: 37.5em) {
+}
+
+/* ===== == = === 48em (768px) === = == ===== */
+
+@media only screen and (min-width : 48em) {
+}
+
+/* ===== == = === 56.25em (900px) === = == ===== */
+
+@media only screen and (max-width : 56.25em) {
+	.header {
+		height: 120px;
+	}
+	.logo-content{
+		width: 100%;
+		float: none;
+		display: block;
+		margin-left: 0px;
+	}
+	.menu-content {
+		clear: both;
+		display: block;
+		float: none;
+	}
+	.menu-list {
+		text-align: center;
+		padding-right: 0px;
+	}
+}
+
+/* ===== == = === 68.75em (1100px) === = == ===== */
+
+@media only screen and (min-width : 68.75em) {
+}
+
+/* ===== == = === 81.25em (1300px) === = == ===== */
+
+@media only screen and (min-width : 81.25em) {
+}
+

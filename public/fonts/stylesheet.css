@@ -1,0 +1,82 @@
+
+@font-face {  
+    font-family: 'FacitWeb-Bold';  
+    src: url('FacitWeb-Bold.ttf');  
+    src: local('FacitWeb-Bold.ttf'),   
+    local('FacitWeb-Bold'),   
+    url('FacitWeb-Bold.ttf') format('truetype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {  
+    font-family: 'FacitWeb';  
+    src: url('FacitWeb.ttf');  
+    src: local('FacitWeb.ttf'),   
+    local('FacitWeb'),   
+    url('FacitWeb.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal; 
+}
+
+
+@font-face {  
+    font-family: 'P22UndergroundPro-Demi';  
+    src: url('P22UndergroundPro-Demi.otf');  
+    src: local('P22UndergroundPro-Demi.otf'),   
+    local('P22UndergroundPro-Demi'),   
+    url('P22UndergroundPro-Demi.otf') format('opentype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {  
+    font-family: 'P22UndergroundPro';  
+    src: url('P22UndergroundPro-Heavy.otf');  
+    src: local('P22UndergroundPro.otf'),   
+    local('P22UndergroundPro-Heavy'),   
+    url('P22UndergroundPro-Heavy.otf') format('opentype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {  
+    font-family: 'P22UndergroundPro-Light';  
+    src: url('P22UndergroundPro-Light.otf');  
+    src: local('P22UndergroundPro-Light.otf'),   
+    local('P22UndergroundPro-Light'),   
+    url('P22UndergroundPro-Light.otf') format('opentype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {  
+    font-family: 'P22UndergroundPro-Medium';  
+    src: url('P22UndergroundPro-Medium.otf');  
+    src: local('P22UndergroundPro-Medium.otf'),   
+    local('P22UndergroundPro'),   
+    url('P22UndergroundPro-Medium.otf') format('opentype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {  
+    font-family: 'P22UndergroundPro-Thin';  
+    src: url('P22UndergroundPro-Thin.otf');  
+    src: local('P22UndergroundPro-Thin.otf'),   
+    local('P22UndergroundPro Thin'),   
+    url('P22UndergroundPro-Thin.otf') format('opentype');  
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {  
+    font-family: 'P22UndergroundPro-Book';  
+    src: url('P22UndergroundPro-Book.otf');  
+    src: local('P22UndergroundPro-Book.otf'),   
+    local('P22UndergroundPro-Book'),   
+    url('P22UndergroundPro-Book.otf') format('opentype');  
+    font-weight: normal;
+    font-style: normal;
+}

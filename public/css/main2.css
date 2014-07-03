@@ -1,0 +1,339 @@
+/*hari styles*/
+.validate-line{
+	position: relative;
+}
+.validation-message{
+	font-size: 12px !important;
+	color: #e60020 !important;
+	font-family:  'FacitWeb' !important;
+	margin-top: 10px !important;
+	visibility: visible;
+	display: block;
+	position: absolute;
+	bottom: -32px;
+	left: 0px;
+}
+.investor-proposals {
+	background-color: #ffffff;
+	z-index: 100;
+}
+.your-properties-media {
+	margin: 60px 0 0 60px
+}
+#your-properties .media {
+margin: 0 0 80px 0 ;
+}
+.your-properties-media .media .media-object {
+	width: 100px;
+	height: 100px;
+}
+#your-properties .apartment p {
+	min-height: 70px;
+}
+.errormessage{
+	color: red;
+	text-align: center;
+	font-size: 20px;
+}
+.signin-space{
+	margin-top: 25px;
+}
+#your-properties .media .approval-pending p{
+	font-size: 14px;
+	color: #e60020;
+	font-family: 'FacitWeb';
+}
+#personal .opened-form .input-field, #personal .opened-form .input-wrapper {
+	background: #ffffff;
+}
+#twitter-link{
+	display: none !important;
+}
+
+.registrationResponse{
+	text-align: center;
+	font-size: 20px;
+	color: grey;
+	font-family: 'FacitWeb';
+}
+
+/*styles added by srihari*/
+.feed-hold iframe {
+	width: 100% !important;
+}
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black url(../img/89.GIF) center center no-repeat;
+    opacity: .8;
+    z-index: 1000000;
+}
+.apartment .bids-days {
+	bottom: 27%;
+    left: 35%;
+    position: absolute;
+}
+.auctionCompletedLabel {
+	color: #A6DF53;
+    font-size: 29px; 
+    font-family: 'FacitWeb';
+}
+.lowerCase {
+	text-transform:lowercase;
+}
+.profileImage img {
+	height: 70px;
+	width: 70px;
+	border-radius: 999px;
+}
+.sign-in-dropdown{
+	-webkit-box-shadow: 0 1px 10px #525252;
+	border: 1px solid #D3D3D3;
+    box-shadow: 0 1px 10px #525252;
+}
+.noInfoText {
+	font-size: 18px;
+    font-weight: bold;
+    padding-top: 92px;
+}
+#aboutUsTextArea {
+	width: 100%;
+}
+.loandetailsContainer .form-element {
+	margin-top : 18px;
+}
+.approval-action-search-top {
+	color: white !important;
+	font-size: 18px;
+}
+.rebidBtn {
+    display: inline-block !important;
+    font-size: 14px !important;
+    width: 168px !important;
+}
+.withDrawBtn {
+	display: inline-block !important;
+    font-size: 14px !important;
+    width: 168px !important;
+}
+.calculator .calculatorResult{
+	font-size: 13px;
+    font-family: 'FacitWeb';  
+	text-align: center;
+	margin-top: 15px;
+}
+.calculator .calspclfield{
+	margin-left: 5px !important;
+}
+.textAlignCenter {
+	text-align: center !important;
+}
+.calspclfield > div {
+	 display: inline-block;
+    margin-right: 12px !important;
+}
+.searcPropertyImage {
+	width: 100px !important;
+	height: 100px !important;
+}
+#fullDetailsModal .modal-dialog {
+	width: 99% !important;
+}
+.colorWhite {
+	color: white !important;
+}
+.graphIframeContainer iframe {
+	width : 100%;
+	min-height: 250px;
+}
+#localInfoModal .modal-dialog{
+	width: 60%;
+}
+#localInfoModal iframe {
+	min-height: 400px !important;
+}
+.contentsContainer,.marginTop100 {
+	margin-top: 110px;
+}
+.contentsContainer .map-over {
+	top: -360px;
+}
+ #map_canvas {
+    width: 100%;
+    height: 350px;
+ }
+ .propertySearchTitle {
+  	color: #666 !important;
+    font-weight: bold;
+    text-align: center;
+ }
+ .searchExploreTitle {
+ 	color: #1C9AD6 !important;
+ 	font-family: 'FacitWeb';
+ }
+ .iPImageBox img {
+	width : 80px;
+	height: 80px;
+	cursor: pointer;
+ }
+ .iPImageBox {
+ 	margin-top: 5px;
+ }
+ .ipButtonsBox button{
+ 	 font-size: 13px !important;
+    height: 38px !important;
+    width: 168px !important;
+ }
+ .ipButtonsBox .btn-info {
+ 	background-color: #5BC0DE !important;
+    border-color: #46B8DA !important;
+ }
+.ipButtonsBox .btn-info:hover{
+	background-color: #5BC0DE !important;
+	border-color: #46B8DA !important;
+}
+.messageContainer {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+.readBackGorund {
+	background-color: #EDEDF0 !important;
+}
+textarea {
+	box-shadow: none !important;
+}
+.message-inbox-list {
+	cursor: pointer;
+}
+.message-inbox-list:hover{
+	background-color: #9AE2FF;
+    border-radius: 5px;
+}
+.archiveImg,.refreshImage {
+	width: 36px !important;
+	height: 36px !important;
+	float:right;
+	margin: 7px 0 0 7px;
+	cursor:pointer;
+	opacity:.35;
+}
+.greyBackground {
+	background : none repeat scroll 0 0 rgba(243, 243, 243, 0.85);
+}
+.fileNamesContainer {
+	display: inline-block;
+    width: 62%;
+    word-wrap: break-word;
+}
+.countryHolder {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.calculatorImage {
+	width: 35px;
+	height: 35px;
+}
+.dashboardPropertyAuction .start-auction-btn3, .dashboardPropertyAuction .start-auction-btn3:hover {
+    font-size: 12px !important;
+    margin-top: 16px !important;
+    width: 120px !important;
+}
+.disbaledHomeTab,.disbaledHomeTab:hover {
+	opacity: 0.45;
+	color: #9F9F9F !important;
+}
+.dashboardPropertyAuction  .viewpropertyDashBtn, .dashboardPropertyAuction  .viewpropertyDashBtn:hover {
+	margin-bottom: 0;
+    margin-left: 2px;
+    margin-top: 80px !important;
+    width: 150px !important;
+}
+.map-over .profilepageBids{
+	left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+}
+.dashboardbids {
+	padding-left: 12px !important;
+}
+.messages-hold a {
+	font-family: 'FacitWeb';
+}
+.approvalPendingMsg {
+	color:red;
+	margin-top:1%;
+	font-family: 'FacitWeb';
+}
+.profileAcceptedBid {
+	color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 22px;
+    margin: 10px 20px 0;
+    padding: 0;
+    text-align: left;
+}
+.userDetails {
+	font-family: 'FacitWeb';
+}
+.userDetails dt {
+	text-transform: capitalize;
+}
+.userDetails h3,.userDetails h4 {
+	color : #1C9AD6;
+}
+.calculatorFieldsBox {
+	padding-bottom: 43px;
+	border-bottom: 1px solid #e1e3e6;
+}
+.calculatorFieldsBox .form-hold2 {
+	float: right;
+}
+.doubleCalFields {
+	margin-top: -20px !important;
+}
+.calculatorResultsBox {
+	padding : 3px;
+	background-color: #f0f8f9;
+	border-left: 1px solid #e1e3e6;
+}
+.resultsHead {
+	color : black !important;
+}
+.CalFieldsBlock {
+	border-right: 1px solid #e1e3e6;
+}
+.calculatorResultsBox label,span, .calculator .input-field{
+	color: #808080 !important;
+}
+.rentingCalculator .calculatorResultsBox .form-hold2,.comparisionCal .calculatorResultsBox .form-hold2 {
+	float: right;
+}
+.calSideHead {
+	margin-top: 3px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #e1e3e6;
+}
+.propertyProfileTabs {
+	width: 100%;
+	border-bottom: none !important;
+}
+.propertyProfileTabs li {
+	width: 33.3333%;
+	border : 1px solid #e1e3e6;
+}
+.propertyProfileTabs li.active a {
+	border : none !important;
+}
+.propertyProfileTabs li a{
+	border: none !important;
+	color : black !important;
+} 
+.propertyProfileTabs li.active a,.propertyProfileTabs li.active,.propertyProfileTabs li:hover {
+	background-color: #EEE !important;
+}
+.propertyProfileTabContent > div {
+	margin : 20px 0 0 !important;
+}

@@ -1,0 +1,7148 @@
+
+/* begin of overwriting bootstrap styles */
+
+@media (min-width:1200px) {
+.container {
+	width: 1220px !important
+}
+.row {
+	margin: 0 !important
+}
+a:focus, .btn:focus {
+	outline: none !important
+}
+input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focus {
+	outline: none !important
+}
+}
+/* end of overwriting bootstrap styles */
+body {
+	line-height: normal;
+	font-weight: normal;
+}
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a:hover {
+	text-decoration: none !important;
+}
+input[placeholder], [placeholder], *[placeholder] {
+   color: #000;
+}
+.btn-group .dropdown-toggle:active, .btn-group.open .dropdown-toggle , .bootstrap-select .btn:focus {
+	outline:none !important
+}
+.transition {
+	-webkit-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+.main-wrap {
+	background-color: #1c9ad6;
+	height: 100px;
+	width: 100%;
+}
+.logo {
+	width: 280px;
+	height: 100px;
+	background: #fff;
+	padding: 25px 0 0 10px;
+	float: left;
+}
+.main-wrap-right {
+	background-color: #1c9ad6;
+	height: 100px;
+}
+.notification-drop {
+	float: left;
+	height: 100px;
+	padding: 10px;
+	width: 335px;
+    position:relative;
+}
+.notification-drop h3 {
+	font-size: 16px;
+	color: #143240;
+	padding: 0;
+	margin: 18px 0 5px 0;
+	font-family: 'FacitWeb';
+    width: 270px;
+    padding-left: 10px;
+}
+.notification-drop p {
+    color: #143240;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    position: absolute;
+    width: 270px;
+    padding-left: 10px;
+}
+.notification-dropdown {
+	min-width: 330px;
+	min-height: 230px;
+	background-color: #fff;
+	position: relative;
+	z-index: 5;
+	border: 1px solid #818283;
+	border-top: none;
+	top: 49px;
+	display: none;
+}
+.notification-drop:hover .notification-dropdown {
+	display: inherit;
+}
+.notification-dropdown .white-caret {
+	border-right: 7px solid rgba(0, 0, 0, 0);
+	border-left: 7px solid rgba(0, 0, 0, 0);
+	border-bottom: 7px solid #fff;
+	display: inline-block;
+	height: 0;
+	margin: 22px 0 0 67px;
+	position: absolute;
+	vertical-align: middle;
+	width: 0;
+	position: absolute;
+	top: -29px;
+	left: 140px;
+}
+.notification-dropdown li {
+	padding-top: 10px
+}
+.notification-dropdown li a {
+	display: block;
+}
+.notification-dropdown li a .sprite {
+	margin: 15px;
+}
+.notification-dropdown li a .head-text {
+	display: table;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+.notification-dropdown li a .para-text {
+	display: table;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+}
+.notification-dropdown li .text-block {
+	border-bottom: 1px solid #E1E3E6;
+	display: block;
+	margin-left: 65px;
+	padding-bottom: 10px
+}
+.notification-dropdown li:last-child .text-block {
+	border-bottom: 1px solid #fff;
+}
+.notification-dropdown li a.read .head-text, .notification-dropdown li a.read .para-text {
+	color: #7bab36;
+}
+.notification-dropdown li a.unread .head-text, .notification-dropdown li a.unread .para-text {
+	color: #505050;
+}
+.notification-icon {
+	float: right;
+	position: relative;
+	top: -20px;
+}
+.notifiy {
+	background-color: #E47777;
+	border-radius: 50%;
+	color: #FFFFFF;
+	height: 25px;
+	left: 25px;
+	padding-top: 2px;
+	position: absolute;
+	text-align: center;
+	top: -10px;
+	width: 25px;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+}
+.notification-borrower {
+	width: 240px;
+	height: 100px;
+	float: right;
+	background-color: #238dc0;
+	padding: 10px;
+	border-left: solid 1px #b7e4f9
+}
+.notification-borrower .media-heading {
+	font-family: 'P22UndergroundPro-Light';
+	font-size: 16px;
+	color: #fff;
+	padding: 0;
+	margin: 10px 0 5px 0;
+	width: 180px;
+    line-height:30px
+}
+.notification-borrower .media {
+	margin: 7px 0 13px 20px !important;
+}
+.notification-borrower .media-body {
+	margin: 7px 0 0 !important;
+}
+.notification-borrower .caret {
+	border-left: 7px solid rgba(0, 0, 0, 0);
+	border-right: 7px solid rgba(0, 0, 0, 0);
+	border-top: 7px solid #FFFFFF;
+	display: inline-block;
+	height: 0;
+	margin-left: 2px;
+	position: relative;    
+    right: -170px;
+    top: -33px;
+	vertical-align: middle;
+	width: 0;
+}
+.qucik-menu {
+	display: inline-block;
+	background-image: url(../img/quick-menu.png);
+	margin: 4px 9px 9px 15px;
+}
+.profile-icon, .password-icon, .member-icon {
+	background-position: 0 0;
+	height: 16px;
+	width: 16px;
+	top: 0;
+	float: left;
+}
+.password-icon {
+	background-position: 0 -16px;
+}
+.member-icon {
+	background-position: 0 -32px;
+}
+.notification-borrower:hover .quick-menu-dropdown {
+	display: inherit;
+}
+.quick-menu-dropdown {
+	min-width: 235px;
+	min-height: 140px;
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+	border: 1px solid #f4f4f4;
+	border-top: none;
+	top: -2px;
+	left: -11px;
+	display: none;
+}
+.quick-menu-dropdown li {
+	padding-top: 15px
+}
+.quick-menu-dropdown li a {
+	display: block;
+}
+.quick-menu-dropdown li a .head-text {
+	display: table;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+.quick-menu-dropdown li .text-block {
+	border-bottom: 1px solid #E1E3E6;
+	display: block;
+	margin-left: 45px;
+	padding-bottom: 5px
+}
+.quick-menu-dropdown li:last-child .text-block {
+	border-bottom: 1px solid #fff;
+}
+.dashboard {
+	float: left;
+}
+.dash-menu {
+	height: 100%;
+	padding: 20px;
+	top: 100px;
+	width: 280px;
+	background-color: #231f20;
+	float: left;
+}
+.dash-menu-nav {
+	margin-top: 20px;
+}
+
+/*---------------------------------------------------------icons-start---------------------------------------------------------*/
+.sprite {
+	display: inline-block;
+	background-image: url(../img/icons.png)
+}
+.reg-pending-icon, .dashboard-icon, .my-account-icon, .search-icon, .message-center-icon, .reports-icon, .payments-icon,
+ .my-auctions-icon, .my-calendar-icon, .membership-upgrader-icon, .chat-green-icon, .chat-grey-icon, .member-green-icon,
+  .member-grey-icon, .add-new-icon, .date-icon, .add2-new-icon, .for-auction-icon, .info-icon, .approve-icon, .fone-icon,
+   .message-icon, .phone-icon, .mail-icon, .contact-fb-icon, .contact-gp-icon, .contact-tw-icon, .contact-in-icon, .contact-map-icon, 
+   .map-arrow-icon, .property-profile-icon, .right-pro-icon, .ready-auction-icon, .ready-buy-icon, .correct-icon, .fb-footer-icon,
+    .gp-footer-icon, .tw-footer-icon, .in-footer-icon, .trend-pro-auc-icon, .calendar-icon, .right-align-icon, .map-icon, .alert-icon,
+	.your-account-icon, .payment-report-icon, .calendar-forecast-icon, .aus-icon, .nz-icon, .us-icon, .uk-icon, .irl-icon, .sa-icon,
+	.remove-icon, .left-arrow-icon, .right-arrow-icon, .fb-feed-icon, .tw-feed-icon, .blog-feed-icon, .tick-icon, .message-card-icon,
+	.pin-icon, .congratulations-band, .edit-icon, .next-msg-icon, .prev-msg-icon, .search-msg-icon, .list-msg-icon, .chat-msg-icon,
+	.return-msg-icon, .create-msg-icon, .delete-msg-icon, .file-browse-icon, .file-close-icon, .msg-important-icon, .msg-forward-icon,
+	.upcoming-payments-icon, .payment-log-icon, .successful-icon, .error-icon, .successful-done-icon, .txn-failed-icon, .info-logo-icon,
+	.date-small-icon  {
+	background-position: 0 0;
+	height: 36px;
+	width: 36px;
+	top: 0;
+	float: left;
+}
+.date-small-icon {
+    background-position: 0 -2709px;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    z-index: 2;
+	width:18px;
+	height:18px;
+}
+.info-logo-icon {
+    background-position: 0 -2674px;
+	margin-right:10px;
+}
+.txn-failed-icon {
+    background-position: 0 -2638px;
+	position:relative;
+	margin-right:10px;
+	float:right;
+	top:-10px
+}
+.successful-done-icon {
+    background-position: 0 -2601px;
+	position:relative;
+	margin-right:10px;
+	float:right;
+	top:-10px
+}
+.error-icon {
+    background-position: 18px -2589px;
+	width:18px;
+	height:8px;
+	position:relative;
+	top: 5px;
+	margin-right:10px
+}
+.successful-icon {
+    background-position: 0 -2589px;
+	width:18px;
+	height:8px;
+	position:relative;
+	top: 5px;
+	margin-right:10px
+}
+.payment-log-icon {
+    background-position: -6px -2550px;
+	position:relative;
+}
+.upcoming-payments-icon {
+    background-position: 0 -216px;
+	position:relative;
+	top:-5px;
+	margin-right:5px
+}
+.msg-forward-icon {
+    background-position: 27px -2483px;
+    cursor: pointer;
+    float: right;
+    height: 18px;
+    margin: 2px 0 0 7px;
+    opacity: 0.5;
+    width: 18px;
+}
+.msg-important-icon {
+	background-position: 18px -2383px;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	opacity:.5;
+	position:relative;
+	top:2px;
+	margin-right:10px
+}
+.file-close-icon {
+	background-position: 18px -2456px;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	float:right;
+	margin-right: 10px;
+    position: relative;
+    top: 4px;
+	opacity:.5;
+}
+.file-browse-icon {
+	background-position: 0 -2456px;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	float:left;
+	opacity:.5;
+    text-indent:-99px
+}
+.delete-msg-icon {
+	width:18px;
+	height:18px;
+	background-position: 18px -2439px;
+	float:right;
+	cursor:pointer;
+	margin: 2px 0 0 7px;
+	opacity:.5;
+}
+.create-msg-icon {
+	background-position: 0 -2511px;
+	float:right;
+	margin: 8px 0 0 7px;
+	cursor:pointer;
+	opacity:.5;
+}
+.return-msg-icon {
+	background-position: 0 -2475px; 		
+	float:right; 	
+	margin: 0 0 0 7px;
+	cursor:pointer;
+	opacity:.5;
+}
+.chat-msg-icon {
+	width:18px;
+	height:18px;
+	background-position: -17px -2421px;
+	float:right;
+	margin: 10px 0 0 7px;
+	cursor:pointer;
+	opacity:.5;
+}
+.list-msg-icon {
+	width:18px;
+	height:18px;
+	background-position: 0 -2439px;
+	float:right;
+	cursor:pointer;
+	margin: 10px 0 0 7px;
+	opacity:.5;
+}
+.search-msg-icon {
+	background-position: 0 -2422px;
+	width:18px;
+	height:18px;
+	float:none;
+	position: absolute;
+	z-index:1;
+	right:3px;
+	top:3px;
+	cursor:pointer;
+}
+.next-msg-icon {
+	background-position:18px -2402px;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	margin:4px
+}
+.prev-msg-icon {
+	background-position:0 -2402px;
+	width:18px;
+	height:18px;
+	cursor:pointer;
+	margin:4px
+}
+.edit-icon {
+	background-position:0 -2386px;
+	float:right;
+	height:14px;
+	width:16px;
+	cursor:pointer
+}
+.congratulations-band {
+	background-position:0 -2350px;
+	position:absolute;
+	left:-1px;
+}
+.pin-icon {
+	background-position:0 -2318px;
+	height:30px;
+}
+	
+.tick-icon {
+	background-position: -24px -651px;
+	width:12px;
+	height:12px;
+	float:none
+}
+.blog-feed-icon {
+	background-position: 0 -2278px;
+}
+.tw-feed-icon {
+	background-position: 0 -2242px;
+}
+.fb-feed-icon {
+	background-position: 0 -2206px;
+}
+.right-arrow-icon {
+	background-position: 0 -2146px;
+	height:56px;
+	float:right;
+	margin-top:15%
+}
+.left-arrow-icon {
+	background-position: 0 -2090px;
+	height:56px;
+	margin-top:15%
+}
+.sa-icon {  
+    background-position: 0 -2052px;
+	position:relative;
+	left:40px;
+	top:0px
+}
+.irl-icon {  
+    background-position: 0 -2016px;
+	position:relative;
+	left:40px;
+	top:0px
+}
+.uk-icon {  
+    background-position: 0 -1980px;
+	position:relative;
+	left:40px;
+	top:0px
+}
+.us-icon {  
+    background-position: 0 -1944px;
+	position:relative;
+	left:40px;
+	top:0px
+}
+.nz-icon {  
+    background-position: 0 -1908px;
+	position:relative;
+	left:40px;
+	top:0px
+}
+.aus-icon {  
+    background-position: 0 -1872px;
+	position:relative;
+	left:40px;
+	top:0px
+}
+.calendar-forecast-icon {  
+    background-position: -4px -1657px;
+    position: relative;
+	top:-5px
+}
+.message-card-icon {  
+    background-position: 0 -1624px;
+    height: 30px;
+    position: relative;
+}
+.payment-report-icon {  
+    background-position: 0 -1588px;
+    height: 30px;
+    position: relative;
+}
+.your-account-icon {
+    background-position: 0 -1320px;
+    height: 30px;
+    position: relative;
+}
+.star-icon {
+    background-position: 20px -1493px;
+    height: 20px;
+    position: relative;
+	float:none;
+	width:20px;
+}
+.alert-icon {
+    background-position: 0 -1493px;
+    height: 20px;
+    position: relative;
+	float:right;
+	width:20px;
+	margin-right:15px;
+	top:4px
+}
+.map-icon {
+    background-position: 0 -1550px;
+    height: 30px;
+    position: relative;
+	top:-5px;
+	float:left;
+}
+.right-align-icon {
+    background-position: 0 -1515px;
+    height: 30px;
+    position: relative;
+	top:5px;
+	float:left;
+}
+.calendar-icon {
+    background-position: 0 -1464px;
+    height: 20px;
+    position: relative;
+}
+.trend-pro-auc-icon {
+    background-position: 0 -258px;
+    height: 30px;
+    position: relative;
+}
+.in-footer-icon {
+    background-position: 0 -1280px;
+    cursor: pointer;
+	border-bottom: 1px solid #1c9ad6;
+	opacity:.8
+}
+.tw-footer-icon {
+    background-position: 0 -1242px;
+    cursor: pointer;
+	margin-right:5px;
+	border-bottom: 1px solid #1c9ad6;
+	opacity:.8
+}
+.gp-footer-icon {
+    background-position: 0 -1206px;
+    cursor: pointer;
+	margin-right:5px;
+	border-bottom: 1px solid #1c9ad6;
+	opacity:.8
+}
+.fb-footer-icon {
+    background-position: 0 -1170px;
+    cursor: pointer;
+	margin-right:5px;
+	border-bottom: 1px solid #1c9ad6;
+	opacity:.8
+}
+.correct-icon {
+    background-position: 0 -1420px;
+    cursor: pointer;
+}
+.ready-buy-icon {    
+	background-position: 0 -1385px;
+    cursor: pointer;
+}
+.ready-auction-icon {    
+	background-position: 0 -1350px;
+    cursor: pointer;
+}
+.property-profile-icon {
+	background-position: 0 -1310px;
+	position:relative;
+	top:-12px;
+	height: 30px;
+}
+.map-arrow-icon {
+	background-position: -10px -1142px;
+	top:0px;
+	right:10px;
+	position:relative;
+	margin-left:10px;
+	width:15px;
+	height:15px;
+	float:none
+}
+.contact-map-icon {
+	background-position: 0 -1098px;
+	top:-5px;
+	right:5px;
+	position:relative;
+	margin-left:10px;
+}
+.dashboard-icon {
+	background-position: 0 -36px;
+}
+.my-account-icon {
+	background-position: 0 -72px;
+}
+.search-icon {
+	background-position: 0 -108px;
+}
+.message-center-icon {
+	background-position: 0 -144px;
+}
+.reports-icon {
+	background-position: 0 -180px;
+}
+.payments-icon {
+	background-position: 0 -216px;
+}
+.my-auctions-icon {
+	background-position: 0 -252px;
+}
+.my-calendar-icon {
+	background-position: 0 -288px;
+}
+.membership-upgrader-icon {
+	background-position: 0 -324px;
+}
+.chat-green-icon {
+	background-position: 0 -360px;
+}
+.chat-grey-icon {
+	background-position: 0 -396px;
+}
+.member-green-icon {
+	background-position: 0 -432px;
+}
+.member-grey-icon {
+	background-position: 0 -468px;
+}
+.add-new-icon {  
+	background-position: -7px -511px;
+    cursor: pointer;
+    height: 22px;
+    margin-left: 10px;
+    position: absolute;
+    width: 22px;
+	top: 1px;
+}
+
+.remove-icon {
+	background-position: -7px -1843px;
+	position: absolute;
+	top: 1px;
+	cursor: pointer;
+	margin-left: 40px;
+    width: 22px;
+    height: 22px;
+}
+.for-auction-icon {
+	background-position: 0 -576px;
+	cursor: pointer;
+	float:left
+}
+.add2-new-icon {
+	background-position: 0 -504px;
+	float: inherit;
+	left: 10px;
+	position: relative;
+	top: 10px;
+	cursor: pointer;
+	margin-right: 10px
+}
+.date-icon {
+	background-position: 0 -540px;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: -13px;
+	z-index: 2;
+}
+.info-icon {
+	background-position: 0 -576px;
+	cursor: pointer;
+	float: none;
+	position: absolute;
+	top: 10px;
+	margin-left: 2px
+}
+.approve-icon {
+	background-position: 0 -612px;
+	cursor: pointer;
+	float: none;
+	position: absolute;
+	top: 10px;
+	margin-left: 27px
+}
+.ur-pro-icon {
+	background-position: 0 -648px;
+	height: 18px;
+	width: 10px;
+	float: none;
+	position:relative;
+	top:4px;
+	right:5px;
+}
+.right-pro-icon {
+	background-position: -14px -652px;
+	height: 9px;
+	width: 6px;
+	float: none;
+	position:relative;
+	top: -2px;
+    left: 6px;
+}
+.fone-icon {
+	background-position: -5px -664px;
+	float: left;
+	position:relative;
+	top:-5px;
+	right:5px;
+}
+.message-icon {
+	background-position: 0 -700px;
+	float: left;
+	position:relative;
+	top:-5px;
+	right:5px;
+}
+.phone-icon {
+	background-position: 0 -738px;
+	float: left;
+	position:relative;
+	top:-5px;
+	right:5px;
+}
+.mail-icon {
+	background-position: 0 -774px;
+	float: left;
+	position:relative;
+	top:-5px;
+	right:5px;
+}
+.contact-fb-icon {
+	background-position: 0 -810px;
+	top:-5px;
+	right:5px;
+	position:relative;
+}
+.contact-fb-icon:hover {
+	background-position: 0 -846px;
+}
+.contact-gp-icon {
+	background-position: 0 -882px;
+	top:-5px;
+	right:5px;
+	position:relative;
+}
+.contact-gp-icon:hover {
+	background-position: 0 -918px;
+}
+.contact-tw-icon {
+	background-position: 0 -954px;
+	top:-5px;
+	right:5px;
+	position:relative;
+}
+.contact-tw-icon:hover {
+	background-position: 0 -990px;
+}
+.contact-in-icon {
+	background-position: 0 -1026px;
+	top:-5px;
+	right:5px;
+	position:relative;
+}
+.contact-in-icon:hover {
+	background-position: 0 -1062px;
+}
+
+/*---------------------------------------------------------icons-end---------------------------------------------------------*/
+.dash-menu-nav li {
+	height: 72px;
+	padding: 0;
+	margin: 15px 0;
+}
+.dash-menu-nav li a {
+	font-size: 18px;
+	color: #C0C0C0;
+}
+.dash-menu-nav li a:hover, .dash-menu-nav li a:focus, .dash-menu-nav li .active {
+	color: #fff;
+}
+.dash-menu-nav li .text {
+	display: block;
+	float: left;
+	width: 140px;
+	margin-left: 30px;
+    font-family: 'FacitWeb';  
+}
+.dash-wrap {
+	float: left;
+	left: 0;
+	border-left:280px solid #231F20;
+	padding: 20px 0;
+	position: absolute;
+	right: 0;
+	top: 100px;
+	z-index:-1;
+}
+.dash-wrap h3.help-us {
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 24px;
+	color: #000;
+	padding: 0;
+	margin: 30px 0 50px;
+	text-align: center;
+}
+h2.get-a-2nd {
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 36px;
+	color: #000;
+	line-height: 50px;
+	padding: 0;
+	margin: 50px 0;
+	text-align: center;
+}
+.sign-up-text .media-object {
+	border: solid 1px #8fc146
+}
+.sign-up-text .media > .pull-left {
+	margin-right: 20px;
+}
+.sign-up-text .media-heading {
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	color: #000;
+	line-height: 30px;
+	padding: 0;
+	margin: 0;
+}
+.sign-in-dropdown .input-field {
+    background-color:#FAF8F8
+}
+.sign-up-text .media:first-child {
+	margin-top: 30px
+}
+.sign-up-text .media:first-child .media-body {
+	margin-top: 20px
+}
+.sign-up-text .media:last-child .media-body {
+	margin-top: 10px
+}
+.sign-up-text .media {
+	margin-top: 20px
+}
+.main-form h3 {
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 20px;
+	color: #000;
+	line-height: 30px;
+	padding: 0 0 10px 0;
+	margin: 0 ;
+	border-bottom: solid 1px #818283;
+}
+.sign-up-with {
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+.sign-up-with-text {
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	color: #000;
+	line-height: 30px;
+	margin: 20px 30px 0 0;
+	padding: 0;
+	float: left;
+}
+.social-sprite {
+	display: inline-block;
+	background-image: url(../img/social-icon.png);
+	margin: 10px;
+	opacity:.8
+}
+.social-sprite:active {
+	opacity:1
+}
+.fb-icon, .gplus-icon, .tw-icon, .lin-icon {
+	background-position: 0 0;
+	height: 48px;
+	width: 48px;
+	top: 0;
+	float: left;
+}
+.gplus-icon {
+	background-position: 0 -48px;
+}
+.tw-icon {
+	background-position: 0 -96px;
+}
+.lin-icon {
+	background-position: 0 -144px;
+}
+.social-or {
+	margin:5px 0 -10px;
+	display: block;
+}
+.or-longbar {
+	background-color: #818283;
+	height: 1px;
+	position: relative;
+	top: -15px;
+	width: 100%;
+}
+.social-or i {
+	background: #FFFFFF;
+	border: 1px solid #818283;
+	border-radius: 2px;
+	color: #000000;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 7px 2px;
+	position: relative;
+	z-index: 1;
+}
+.validate-line {
+	width: 128px;
+	height: 22px;
+	border: 1px solid #818283;
+	position: relative;
+	margin: 0 auto;
+}
+.input-wrapper {
+	width: 133px;
+	height: 15px;
+	border: none;
+	position: absolute;
+	bottom: 10px;
+	left: -2px;
+	background-color: white;
+}
+.input-field {
+	border: none;
+	position: relative;
+	z-index: 1;
+	outline: none;
+	width: 80px;
+	bottom: 2px;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	color: #000;
+	left: 5px;
+	box-shadow:none;
+	padding:0
+}
+.input-field:hover, .input-field:active, .input-field:focus {
+	outline: none;
+}
+textarea {
+	outline: none;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	color: #000;
+}
+textarea:hover, textarea:active, textarea:focus {
+	outline: none;
+}
+.main-form label {
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	color: #000;
+	line-height: 16px;
+	margin: 20px 30px 0 0;
+	padding: 0;
+	float: left;
+	font-weight: normal;
+}
+.main-form .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) {
+	width: 115px
+}
+.main-form .btn-default, .main-form .btn-default:hover, .main-form .btn-default:active, .main-form .btn-default:focus {
+	border: none;
+}
+.main-form .btn-group.open .dropdown-toggle, {
+ box-shadow:none
+}
+.main-form .btn-default:hover, .main-form .btn-default:focus, .main-form .btn-default:active, .main-form .btn-default.active, .main-form .open .dropdown-toggle.btn-default {
+	border: none;
+	background: none;
+	box-shadow: none
+}
+.main-form .dropdown-menu {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
+}
+.main-form .form-hold {
+	float: left;
+	margin: 15px 20px 0 0;
+}
+.main-form .form-hold .input-field {
+	bottom: 1px;
+}
+.main-form .form-hold2 {
+	float: left;
+	margin: 5px 0 0 0;
+	position:relative;
+}
+.main-form .form-hold2 .validate-line {
+	width: 370px;
+}
+.main-form .form-hold2 .input-wrapper {
+	width: 373px;
+}
+.main-form .form-hold2 .input-field {
+	width: 357px;
+}
+.mc-btn, .mc-btn-prev, .your-properties-btn, .select-bid-btn, .reject-bid-btn, .auction-pro-btn {
+	color: #000;
+	background-color: #a6df53;
+	border-color: #000;
+	display: inline-block;
+	margin: 20px 0 30px 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: none;
+	border-bottom: 3px solid #7bab36;
+	white-space: nowrap;
+	padding: 8px 12px 4px;
+	font-size: 18px;
+	font-family: 'P22UndergroundPro-Book';
+	width: 250px;
+	height: 48px;
+	line-height: normal;
+	border-radius: 3px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+.mc-btn:hover, .mc-btn:focus, .mc-btn-prev:hover, .mc-btn-prev:focus, .your-properties-btn:focus, .your-properties-btn:hover, .select-bid-btn:hover, .select-bid-btn:focus {
+	margin: 23px 0 27px 0;
+	color: #333;
+	text-decoration: none;
+	border-bottom: 3px solid #a6df53;
+}
+.mc-btn .next-in-btn, .mc-btn-prev .prev-in-btn {
+	border-bottom: 7px solid rgba(0, 0, 0, 0);
+	border-top: 7px solid rgba(0, 0, 0, 0);
+	border-left: 7px solid #7bab36;
+	display: inline-block;
+	height: 0;
+	margin: 3px 0 0 10px;
+	vertical-align: middle;
+	width: 0;
+	position: absolute;
+}
+.mc-btn-prev {
+	width: 109px;
+	background-color: #ebecea;
+	border-color: #818283;
+	margin-right: 13px;
+}
+.mc-btn-prev:hover, .mc-btn-prev:focus {
+	margin-right: 13px;
+	border-bottom: 3px solid #ebecea;
+}
+.mc-btn-prev .prev-in-btn {
+	border-bottom: 7px solid rgba(0, 0, 0, 0);
+	border-top: 7px solid rgba(0, 0, 0, 0);
+	border-right: 7px solid #818283;
+	border-left: none;
+	display: inline-block;
+	height: 0;
+	margin: 3px 0 0 -17px;
+	vertical-align: middle;
+	width: 0;
+	position: absolute;
+}
+.main-form .checkbox label {
+	line-height: 20px;
+}
+.main-form .checkbox {
+	display: block;
+	left: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	min-height: 20px;
+	padding-left: 20px;
+	position: relative;
+	top: -7px;
+	vertical-align: middle;
+}
+.reg-tab .nav-tabs>li.active>a, .reg-tab .nav-tabs>li.active>a:hover, .reg-tab .nav-tabs>li.active>a:focus {
+	color: #555555;
+	background: none;
+	border: none;
+	border-bottom-color: transparent;
+	cursor: pointer;
+}
+.reg-tab .img-circle {
+	border: 1px solid #8fc146;
+}
+.reg-tab p {
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	color: #000;
+	line-height: 30px;
+	margin: 10px 0;
+	padding: 0;
+	font-weight: normal;
+}
+.reg-tab .nav-tabs > li > a {
+	width: 180px;
+	opacity: 0.4
+}
+.reg-tab .nav-tabs > li.active > a {
+	opacity: 1
+}
+.reg-tab .nav-tabs > li {
+	display: inline-block;
+	float: none;
+}
+.reg-tab .nav-tabs > li .active {
+	position: relative;
+}
+.reg-tab .nav-tabs > li.active .green-caret {
+	border-left: 7px solid rgba(0, 0, 0, 0);
+	border-right: 7px solid rgba(0, 0, 0, 0);
+	border-bottom: 7px solid #8fc146;
+	display: inline-block;
+	height: 0;
+	margin: -6px 0 0 -10px;
+	position: relative;
+	vertical-align: middle;
+	width: 0;
+	position: absolute;
+}
+.reg-tab .nav-tabs {
+	border-bottom: 1px solid #8fc146;
+}
+.reg-tab .nav-tabs > li > a:hover {
+	border: none;
+}
+.reg-tab .nav > li > a:hover, .reg-tab .nav > li > a:focus {
+	background: none;
+	text-decoration: none;
+	border: none;
+}
+.main-form {
+	width: 372px;
+	margin: 0 auto
+}
+.sign-up-text .main-form {
+	width: auto
+}
+.sign-up-text .mc-btn {
+	float: left !important;
+}
+.opened-form {
+	padding: 0 0 25px;
+	margin: 10px 0
+}
+.main-form .mc-btn {
+	float: right;
+}
+.form-hold3 .validate-line {
+	width: 370px;
+	margin-top: 20px;
+}
+/* Begin of Gopi styles */
+.error {
+	border: 1px solid #e60020;
+}
+.ok {
+	border: 1px solid #8fc146;
+}
+.normal {
+	border: 1px solid #000000;
+}
+.validation-message {
+	font-size: 14px;
+	color: #e60020;
+	font-family: 'FacitWeb';
+	margin-top: 10px;
+	/*visibility: hidden;*/
+}
+.is-invalid {
+	visibility: visible;
+}
+.is-valid {
+	visibility: hidden;
+}
+.sign-up-form label {
+	margin-top: 30px;
+}
+.error .bootstrap-select .btn {
+	border: 0px solid #b94a48;
+}
+/* End of Gopi styles */
+.form-hold3 {
+	display:block;
+	position:relative;
+	margin:15px 0 0;
+}
+.form-hold3 .input-field {
+	bottom: 10px;
+	left: 0;
+}
+.form-hold3 .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) {
+	width: 100%;
+}
+.form-hold3 .input-wrapper {
+	width: 373px;
+}
+.dash-menu-nav > li .active {
+	position: relative;
+}
+.dash-menu-nav > li a.active .white-caret {
+	border-bottom: 7px solid rgba(0, 0, 0, 0);
+	border-right: 7px solid #FFFFFF;
+	border-top: 7px solid rgba(0, 0, 0, 0);
+	display: inline-block;
+	height: 0;
+	left: 47px;
+	position: relative;
+	top: 15px;
+	vertical-align: middle;
+	width: 0;
+}
+.dollar {
+	border: 1px solid #818283;
+	border-radius: 0;
+	color: #000000;
+	float: left;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	left: -1px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 8px;
+	position: absolute;
+	top: -8px;
+	z-index: 2;
+}
+.main-form .checkbox {
+	margin: 0px;
+	padding-left: 10px;
+	display: inline;
+	float: right;
+}
+.main-form .checkbox label.password-label {
+	margin-top: 20px;
+}
+/******************css-checkbox starts***********************/
+.css-checkbox-hold {
+	float: left;
+}
+input[type=checkbox].css-checkbox {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left: 30px;
+	height: 18px;
+	display: inline-block;
+	line-height: 18px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 18px;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-top: 15px;
+	font-family: 'FacitWeb';
+}
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -18px;
+}
+.css-label {
+	background-image: url(../img/checkbox-custom.png);
+}
+/******************css-checkbox end***********************/
+
+/********************* for radio *********************/
+input[type=radio].css-checkbox {
+display:none !important; 
+}
+
+input[type=radio].css-checkbox + label.css-label3 {
+padding-left:28px;
+height:18px; 
+display:inline-block;
+line-height: 18px;
+background-repeat:no-repeat;
+background-position: 0 0;
+font-size:18px;
+vertical-align:middle;
+cursor:pointer;
+background-position: 0 0;
+margin-right:40px;
+width:25px;
+}
+input[type=radio].css-checkbox:checked + label.css-label3 
+{
+background-position: 0 -18px;
+ 
+}
+.css-label3{ background-image: url(../img/checkbox-custom.png)}
+/********************* for radio *********************/
+.main-form-headings {
+	border-bottom: 1px solid #e1e3e6;
+	color: #000000;
+	font-family: 'FacitWeb';
+	font-size: 22px;
+	line-height: 30px;
+	margin: 45px 0 0 21%;
+	padding: 0 0 5px 0;
+	text-align: left;
+	display: block;
+}
+.main-form-headings-blue {
+	border-bottom: 1px solid #e1e3e6;
+	color: #1c9ad6;
+    font-family: 'P22UndergroundPro-Book'; 
+	font-size: 22px;
+	line-height: 30px;
+	margin: 45px 0 0 21%;
+	padding: 0 0 5px 0;
+	text-align: left;
+	display: block;
+}
+.main-form-para {
+	color: #231f20	;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	line-height: 30px;
+	margin: 10px 0 10px 21%;
+	padding: 0 0 5px 0;
+	text-align: left;
+	display: block;
+}
+.opened-form .input-field, .opened-form .input-wrapper {
+	background: #f0f0f0;
+}
+.add-new-text {
+	font-size: 18px;
+	color: #ccc;
+}
+#liabilities .opened-form:first-child {
+	margin-top: 50px;
+}
+.main-form .btn-default {
+	background: none;
+}
+.d-space {
+	padding-left: 25px;
+}
+/*.validation-message {
+	display: none;
+}*/
+/*-----------your-properties------------*/
+
+#your-properties .media {
+	margin: 60px 0 0 60px
+}
+#your-properties .media-heading {
+	color: #8fc146;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	line-height: 18px;
+	margin: -2px 0 0;
+	padding: 0;
+	text-align: left;
+}
+#your-properties .aminties {
+	display: table;
+}
+#your-properties .aminties li {
+	color: #b7e4f9;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 18px;
+	margin: 10px 10px 0 2px;
+	padding: 0;
+	text-align: left;
+	list-style: disc inside;
+	float: left;
+}
+#your-properties .aminties li .list-color {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style: disc;
+}
+#your-properties .media p {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 22px;
+	margin: 5px 0 0;
+	padding: 0;
+	text-align: left;
+}
+#your-properties .media-body {
+	border-bottom: 1px solid #e1e3e6;
+	min-height: 125px;
+}
+#your-properties .media > .pull-left {
+	margin-right: 25px;
+}
+#your-properties .media .apartment {
+	float: left;
+	width: 640px;
+}
+#your-properties .media .price {
+	float: left;
+	margin-left: 20px;
+	width: 150px;
+}
+#your-properties .media .price h4 {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 24px;
+	line-height: 24px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	text-align: left;
+}
+.start-auction-btn {
+	background-color: #f6f7f7;
+	border-color: #d9d9da;
+	color: #d0d0d0;
+	width: 125px;
+	font-size: 14px;
+	margin: 0 0 5px 0;
+	display: table;
+	float:left;
+}
+.start-auction-btn:hover, .start-auction-btn:focus {
+	margin: 3px 0 2px 0;
+	color: #d0d0d0;
+	border-bottom: 3px solid #f6f7f7;
+}
+
+
+.start-auction-btn2 {
+	float:left;
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 125px;
+	font-size: 14px;
+	margin: 0px 0 5px 0;
+	display: table;
+}
+.start-auction-btn2:hover, .start-auction-btn2:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 3px 0 2px 0;
+}
+#your-properties .for-auction {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 35px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	text-align: left;
+	display:inline-block;
+	float:left
+}
+.apartment .approval {
+	margin-top: 15px;
+	position: absolute;
+	color: #e60020;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 22px;
+}
+.apartment .request {
+	margin-top: 15px;
+	position: absolute;
+	color: #1c9ad6;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 22px;
+}
+.your-properties-media .bids,.bids-holder .bids {
+	width: 50px;
+	height: 50px;
+	margin:10px 0 20px;
+	position: relative;
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 17px;
+	text-align: center;
+	background-color: #1c9ad6;
+	padding-top: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	display:inline-block
+}
+.your-properties-media .days {
+	width: 50px;
+	height: 50px;
+	margin: 10px 10px 20px 10px;
+	position: relative;
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 17px;
+	text-align: center;
+	background-color: #e47777;
+	padding-top: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	display:inline-block;
+}
+.your-properties-media .small-days {
+	font-size: 10px;
+	position: relative;
+	top: -3px;
+}
+.investor-proposals {
+	margin-top: 80px;
+	position: absolute;
+	width: 700px;
+	height: auto;
+	border: 1px solid #E1E3E6;
+	display: none;
+	padding-bottom:40px;
+	margin-left:-55px;
+}
+.bids-holder:hover .investor-proposals {
+	display: inherit;
+}
+.investor-proposals h5 {
+	color: #1c9ad6;
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 22px;
+	line-height: 24px;
+	margin: 25px 0 0 20px;
+	padding: 0 0 5px;
+	text-align: left;
+	border-bottom: 1px solid #E1E3E6
+}
+.investor-proposals .hide-proposal {
+	color: #ccc;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 14px;
+	padding: 5px 0 3px 0;
+	margin-right: 10px;
+	float: right;
+	cursor: pointer;
+	border-bottom: 1px solid #ccc
+}
+.investor-proposals .hide-proposal:hover {
+	color: #999;
+	border-bottom: 1px solid #999;
+}
+.investor-proposals .head-section {
+	border: 1px solid #b7e4f9;
+	float: left;
+	width: 100%;
+}
+.investor-proposals .head-section li {
+	float: left;
+	height: 60px;
+	width: 25%;
+	color: #1c9ad6;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 16px;
+	padding-top: 15px;
+}
+.investor-proposals .head-section li:first-child {
+	width: 30%
+}
+.investor-proposals .head-section li:last-child {
+	width: 20%
+}
+.investor-proposals .inner-section {
+	float: left;
+	width: 100%;
+}
+.investor-proposals .investor-holder {
+	padding: 20px 30px 20px 20px;
+	display: block;
+}
+.investor-proposals .inner-section li {
+	float: left;
+	height: 80px;
+	width: 25%;
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 20px;
+	padding-top: 20px;
+	border-bottom: 1px solid #e1e3e6;
+}
+.investor-proposals .inner-section li:first-child {
+	width: 30%;
+	border-bottom: 1px solid #fff;
+	padding-left: 5px
+}
+.investor-proposals .inner-section li:last-child {
+	width: 20%
+}
+.investor-proposals .view-all a {
+	color: #ccc;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 14px;
+	padding: 5px 0 0;
+	cursor: pointer;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+.investor-proposals .view-all a:hover {
+	color: #999;
+	border-bottom: 1px solid #999;
+}
+.investor-proposals .arrow {
+	border-left: 10px solid rgba(0, 0, 0, 0);
+	border-right: 10px solid rgba(0, 0, 0, 0);
+	border-bottom: 10px solid #E1E3E6;
+	display: inline-block;
+	height: 0;
+	margin-left: 2px;
+	position: relative;
+	right: -10px;
+	top: -16px;
+	vertical-align: middle;
+	width: 0;
+}
+.investor-proposals .view-all {
+	height:30px
+}
+/*-----------property-profile-during-auction------------*/
+
+
+.your-properties-btn {
+	width: 200px;
+	background-color: #ebecea;
+	border-color: #818283;
+	margin: 35px 0 25px 0;
+	font-size: 14px;
+	line-height:30px;
+}
+.your-properties-btn:hover, .your-properties-btn:focus {
+	margin: 38px 0 22px 0;
+	border-bottom: 3px solid #ebecea;
+}
+.map-over-hold {
+	position: relative;
+}
+.map-over {
+	height: 360px;
+	width: 400px;
+	background: rgba(0, 0, 0, .7);
+	position: absolute;
+	right: 0;
+	top: -365px;
+	width: 400px;
+}
+.map-over-shadow {
+	border-left: 10px solid rgba(0, 0, 0, 0);
+	border-bottom: 10px solid rgba(0, 0, 0, .7);
+	display: inline-block;
+	height: 0;
+	position: absolute;
+	left: -10px;
+}
+.map-over h3 {
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 36px;
+	line-height: 14px;
+	padding: 20px 0 0;
+	cursor: pointer;
+	text-align: center;
+	font-style: italic;
+}
+.map-over h4 {
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	line-height: 14px;
+	padding: 10px 0 0;
+	cursor: pointer;
+	text-align: center;
+}
+.map-over hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #000 !important;
+	opacity: .4
+}
+.map-over ul {
+	margin: 0 auto;
+	width: 330px;
+	display: table;
+}
+.map-over li {
+	 color: #FFFFFF;
+    float: left;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 14px;
+    margin: 15px 0 0;
+    padding: 0;
+    text-align: left;
+    width: 110px;
+}
+.map-over .second li {
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+.map-over .bids-days {
+	width: 120px;
+	margin: 0 auto;
+}
+.map-over .bids {
+	width: 75px;
+	height: 75px;
+	margin-top: 0px;
+	position: absolute;
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 17px;
+	text-align: center;
+	background-color: #1c9ad6;
+	padding-top: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-left: -30px;
+}
+.map-over .days {
+	width: 75px;
+	height: 75px;
+	margin-top: 0px;
+	margin-left: 60px;
+	position: absolute;
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 17px;
+	text-align: center;
+	background-color: #e47777;
+	padding-top: 15px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.bid-property {
+	border-bottom: 1px solid #e1e3e6
+}
+.bid-property ul {
+	margin: -4px 0 0;
+	padding: 0;
+}
+.bid-property ul li {
+	display: inline-block;
+	margin: 0 1px 0 0;
+	padding: 0
+}
+.bid-property ul li:last-chlid {
+ margin:0
+}
+.investor-proposals-main {
+    margin: 0 5px;
+}
+.investor-proposals-main h5 {
+	color: #1c9ad6;
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 22px;
+	line-height: 24px;
+	margin: 25px 0 0 20px;
+	padding: 0 0 5px;
+	text-align: left;
+	border-bottom: 1px solid #E1E3E6
+}
+.investor-proposals-main .head-section {
+	border: 1px solid #b7e4f9;
+	float: left;
+	width: 100%;
+}
+.investor-proposals-main .head-section li {
+	float: left;
+	height: 60px;
+	width: 15%;
+	color: #1c9ad6;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 16px;
+	padding-top: 15px;
+}
+.investor-proposals-main .head-section li:first-child {
+	width: 25%
+}
+.investor-proposals-main .inner-section {
+	float: left;
+	width: 100%;
+}
+.investor-proposals-main .inner-section:last-child {
+	margin-bottom: 0
+}
+.investor-proposals-main .investor-holder {
+	padding: 20px 30px 20px 20px;
+}
+.investor-proposals-main .inner-section {
+	height: 85px;
+	border-bottom: 1px solid #E1E3E6;
+}
+.investor-proposals-main .inner-section:last-child {
+	border-bottom: 1px solid #fff;
+}
+.investor-proposals-main .inner-section li {
+	float: left;
+	width: 15%;
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 30px;
+	padding-top: 10px;
+	position: relative;
+}
+.investor-proposals-main .inner-section li:first-child {
+	width: 25%;
+	padding-left: 5px
+}
+.inner-section p {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 14px;
+	padding: 5px 0 0;
+	padding: 10px 0 0 5px;
+	display: table;
+	float: left;
+	position: relative;
+	top: 0
+}
+.investor-proposals-main .arrow {
+	border-left: 10px solid rgba(0, 0, 0, 0);
+	border-right: 10px solid rgba(0, 0, 0, 0);
+	border-bottom: 10px solid #E1E3E6;
+	display: inline-block;
+	height: 0;
+	margin-left: 2px;
+	position: relative;
+	right: -10px;
+	top: -16px;
+	vertical-align: middle;
+	width: 0;
+}
+.seclect-bid-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 87px;
+	height: 30px;
+	font-size: 14px;
+	margin: 0 5px 0 0;
+	display: table;
+	float: right;
+}
+.seclect-bid-btn:hover, .seclect-bid-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 1px 5px 0 0;
+	height: 30px;
+}
+.reject-bid {
+	position: absolute;
+	top: 45px;
+	left: 15px;
+}
+.reject-bid .text {
+	font-size: 14px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	cursor: pointer;
+	font-family: 'FacitWeb';
+	line-height: 14px;
+	margin-right: 10px;
+	padding: 5px 0 0;
+}
+.reject-bid .text:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+.r-bid:before {
+	border-bottom: 19px solid rgba(0, 0, 0, 0);
+	border-right: 19px solid rgba(0, 0, 0, 0.3);
+	border-top: 19px solid rgba(0, 0, 0, 0);
+	content: "";
+	display: inline-block;
+	left: -19px;
+	position: absolute;
+	top: 115px;
+}
+.r-bid:after {
+	border-bottom: 18px solid rgba(0, 0, 0, 0);
+	border-right: 18px solid #fff;
+	border-top: 18px solid rgba(0, 0, 0, 0);
+	content: "";
+	display: inline-block;
+	left: -18px;
+	position: absolute;
+	top: 116px;
+}
+.r-bid {
+	background: #fff;
+	border: 1px solid #CCCCCC;
+	padding: 40px 20px 20px 40px;
+	position: relative;
+	width: 360px;
+	height: 290px;
+	display: block;
+	left: 95px;
+	top: -145px;
+	display: none;
+	z-index:5
+}
+.reject-bid:hover .r-bid {
+	display: inherit;
+}
+.r-bid h4 {
+	color: #1C9AD6;
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 18px;
+	line-height: 18px;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+	text-align: left;
+}
+.textarea {
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #cccccc;
+	vertical-align: middle;
+	background-color: #ffffff;
+	background-image: none;
+	border: 1px solid #cccccc;
+}
+.textarea:focus {
+	border-color: #66afe9;
+	outline: 0;
+	color: #333333;
+}
+.reject-bid-btn {
+	background-color: #d82a0e;
+	border-color: #a33220;
+	border-bottom: 1px solid #a33220;
+	color: #fff;
+	width: 132px;
+	height: 40px;
+	font-size: 14px;
+	margin: 15px 5px 0 0;
+	display: table;
+}
+.reject-bid-btn:hover, .reject-bid-btn:focus {
+	color: #fff;
+	border-bottom: 1px solid #d82a0e;
+	margin: 16px 5px 0 0;
+}
+.auction-details {
+	border: 1px solid #E1E3E6;
+	margin: 40px 0 20px 0;
+}
+.auction-details h5 {
+	border-bottom: 1px solid #E1E3E6;
+	color: #1C9AD6;
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 22px;
+	line-height: 24px;
+	margin: 25px 0 20px 10px;
+	padding: 0 0 5px;
+	text-align: left;
+}
+.auction-details h6 {
+	font-size: 15px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 0 0 0 10px;
+	padding: 0;
+	text-align: left;
+}
+.auction-details h4 {
+	font-size: 15px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 5px 0 15px 10px;
+	padding: 0;
+	text-align: left;
+}
+.auction-details h3 {
+	font-size: 22px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 5px 0 15px 10px;
+	padding: 0;
+	text-align: left;
+}
+.auction-details ul {
+	margin-bottom: 0;
+}
+.auction-details li {
+	float: left;
+	margin-right: 10px;
+}
+.auction-pro {
+	margin: 0 0 20px 0;
+}
+.auction-pro-top {
+	margin:40px 0 20px 0
+}
+.auction-pro h5 {
+	border-bottom: 1px solid #E1E3E6;
+	color: #1C9AD6;
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 22px;
+	line-height: 24px;
+	margin: 25px 0 20px 10px;
+	padding: 0 0 5px;
+	text-align: left;
+}
+.auction-pro h6 {
+	font-size: 18px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 0 0 0 10px;
+	padding: 0;
+	text-align: left;
+}
+.auction-pro .new-option {
+    display: table;
+    padding: 15px 0;
+}
+.auction-pro .new-option h6  {
+	margin: 0 0 10px 10px;
+}
+.auction-pro h6 .head {
+    color: #1C9AD6;
+    display: inline-block;
+    width: 183px;
+}
+.auction-pro h4 {
+	font-size: 18px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 5px 0 10px 10px;
+	padding: 10px 0;
+	text-align: left;
+	border-bottom:1px solid #E1E3E6;
+	border-top:1px solid #E1E3E6;
+}
+.auction-pro h3 {
+	font-size: 16px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 5px 0 15px 10px;
+	padding: 0;
+	text-align: left;
+}
+.auction-pro ul {
+	margin-bottom: 0;
+}
+.auction-pro li {
+	float: left;
+	margin-right: 10px;
+}
+.auction-pro p {
+    border-top: 1px solid #E1E3E6;
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 22px;
+    margin: 5px 0 10px 10px;
+    padding: 10px 0;
+    text-align: left;
+}
+.auction-pro-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 165px;
+	font-size: 14px;
+	margin: 0 0 5px 10px;
+	display: table;
+	float:left;
+}
+.auction-pro-btn:hover, .auction-pro-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 3px 0 2px 10px;
+}
+.estate-details {
+	margin: 0 0 20px 0;
+    padding:0 0 20px 0
+}
+.estate-details h5 {
+	border-bottom: 1px solid #E1E3E6;
+	color: #1C9AD6;
+	font-family: 'P22UndergroundPro-Book';
+	font-size: 22px;
+	line-height: 24px;
+	margin: 25px 0 20px 10px;
+	padding: 0 0 5px;
+	text-align: left;
+}
+.estate-details h6 {
+	font-size: 18px;
+	color: #000;
+    font-family: 'FacitWeb';
+	margin: 0 0 0 10px;
+	padding: 0;
+    line-height:30px;
+	text-align: left;
+}
+.estate-details h4 {
+	font-size: 18px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 10px 0 15px 10px;
+	padding: 0;
+	text-align: left;
+}
+.estate-details a {
+	font-size: 18px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 5px 0 15px 10px;
+	padding: 0;
+	text-align: left;
+	display:block
+}
+.about-the-approval {
+    border: 1px solid #E1E3E6;
+	margin: 40px 0 20px 0 !important
+}
+.about-the-approval h5 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 24px;
+    margin: 25px 0 0 20px;
+    padding: 0 0 5px;
+    text-align: left;
+}
+
+.about-the-approval p {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: 20px 0 15px 5px;
+    padding: 0;
+    text-align: left;
+}
+.about-the-approval div:last-child {
+	padding-right:0;
+}
+.auction-pro-full {
+	padding-top:25px
+}
+ .approval-action-search-top {
+	padding-top:15px
+}
+ .approval-action-search {
+	padding-top:15px
+}
+
+.auction-pro-full  h6, .approval-action-search h6 {
+	font-size: 18px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 0 0 0 10px;
+	padding: 0;
+	text-align: left;
+}
+.auction-pro-full  h4, .approval-action-search h4{
+	font-size: 18px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 5px 0 10px 10px;
+	padding: 10px 0;
+	text-align: left;
+	border-top:1px solid #E1E3E6;
+}
+.approval-action-search h4{
+	border-bottom:1px solid #E1E3E6;
+}
+.auction-pro-full li ,.approval-action-search li{
+    float: left;
+    margin-right: 10px;
+}
+.auction-pro-full h3 ,.approval-action-search h3{
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 22px;
+    margin: 5px 0 15px 10px;
+    padding: 0;
+    text-align: left;
+}
+/*contact-us*/
+
+.contact-us {
+	margin-bottom:20px !important;
+}
+.contact-us h5 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 24px;
+    margin: 20px 0 10px 0;
+    padding: 0 0 2px;
+    text-align: left;
+}
+.contact-us h4 {
+	font-size: 18px;
+	color: #000;
+	font-family: 'FacitWeb';
+	margin: 10px 0;
+	padding: 0;
+	text-align: left;
+}
+.contact-us h6 {
+	font-size: 14px;
+	color: #ccc;
+	font-family: 'FacitWeb';
+	margin: 10px 0;
+	padding: 0;
+	text-align: left;
+}
+.contact-us a.faq-link {
+	font-size: 18px;
+	color: #98cb4f;
+	font-family: 'FacitWeb';
+	margin: 10px 0;
+	padding: 0;
+	text-align: left;
+}
+.contact-us a.faq-link:hover {
+	color: #73a22e;
+}
+
+.contact-us .form-hold2 {
+	float: left;
+	margin: 25px 0 0;
+}
+.contact-us .form-hold2 .validate-line {
+	width: 397px;
+}
+.contact-us .form-hold2 .input-wrapper {
+	width: 400px;
+}
+.contact-us .form-hold2 .input-field {
+	width: 386px;
+}
+.contact-us .felid {
+	padding-left:0;
+}
+
+.send-btn {
+	width: 100px;
+	margin: 20px 5px 0 0;
+}
+.send-btn:hover, .send-btn:focus {
+	margin: 23px 5px -3px 0;
+}
+.contact-us .links {
+	margin-top:20px
+}
+.contact-us .social {
+	display:block
+}
+.contact-us .links a {
+    color: #000000;
+    display: block;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: 5px 0 15px 10px;
+    padding: 0;
+    text-align: left;
+}
+.contact-us .links a .transition {
+	 transition: all 0.01s ease 0s;
+}
+.contact-us .links hr {
+	margin-left:10px
+}
+.contact-us .map-address {
+    color: #000000;
+    display: block;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    padding: 0;
+    text-align: left;
+	float:left
+}
+.contact-us a.map-arrow {    
+	color: #1C9AD6;
+    display: block;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: 5px 0 15px 0;
+    padding: 0;
+    text-align: left;
+}
+.auction-request-confirmation {
+	max-height:280px;
+	max-width:580px;
+	margin: 0 auto;
+	border: 1px solid #E1E3E6;
+}
+.auction-request-confirmation h2{
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 36px;
+    margin: 5px 0 15px 10px;
+    padding: 0;
+    text-align: center ;
+}
+.auction-request-confirmation h3 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: 5px 0 15px 10px;
+    padding: 0;
+    text-align: center;
+}
+
+.approval-action-pending-btn {
+	width: 280px;
+	height:48px;
+	background-color: #fff;
+	margin: 5px 0 5px 0;
+	font-size: 18px;
+	line-height:30px;
+	float:none;
+	border:none;
+	color:#000;
+	cursor:default;
+}
+.approval-action-pending-btn:hover, .approval-action-pending-btn:focus {
+	margin: 5px 0 5px 0;
+	border:none;
+	color:#000;
+	background-color: #fff;
+}
+
+.approval-action-pending p{
+	width: 280px;
+	margin: 5px 0 10px 0;
+	font-size: 14px;
+	line-height:normal;
+	float:none;
+	color:#ccc
+}
+
+.start-auction-btn3 {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 280px;
+	font-size: 18px;
+	margin: 0 0 30px 20px;
+	display: table;
+}
+.start-auction-btn3:hover, .start-auction-btn3:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 3px 0 27px 20px;
+}
+
+.approval-action-search-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 165px;
+	font-size: 14px;
+	margin: 0 0 5px 10px;
+	display: table;
+	float:left;
+}
+.approval-action-search-btn:hover, .approval-action-search-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 3px 0 2px 10px;
+}
+.approval-action-search-btn2 {
+	background-color: #EBECEA;
+	border-color: #818283;
+	color: #000;
+	width: 165px;
+	font-size: 14px;
+	margin: 0 0 15px 10px;
+	display: table;
+	float:left;
+}
+.approval-action-search-btn2:hover, .approval-action-search-btn2:focus {
+	color: #000;
+	border-bottom: 3px solid #EBECEA;
+	margin: 3px 0 12px 10px;
+}
+.property-profile-top {
+	padding-top:15px;
+}
+.property-profile {
+   	border : 1px solid #e1e3e6;  
+	margin: 20px 0 0;
+	padding-bottom:25px;
+}
+.property-profile h5 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 24px;
+    margin: 25px 0 0 20px;
+    padding: 0 0 5px;
+    text-align: left;
+}
+.borrowers-profile {
+	margin:20px 0 0 20px;
+}
+.borrowers-profile-image-hold {
+	float:left;
+}
+.borrowers-profile-image {
+	float:left;
+	margin-right:10px;
+    width:100px
+}
+
+.borrowers-profile-image img{
+	border-radius:3px;
+    height:100px;
+    width:100px;
+}
+
+.borrowers-profile-image p.text {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	line-height:30px;
+    width:70px
+}
+.borrowers-profile-name {
+	float:left;
+	padding: 0 10px
+}
+.borrowers-profile-name h4 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: -10px 0 0;
+    padding: 0;
+    text-align: left;
+	line-height:30px;
+}
+.borrowers-profile-name h6 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+	line-height:16px;
+}
+.borrowers-profile-name .grade {
+    background-color: #ffd75d;
+    border-radius: 50%;
+    color: #000;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    height: 50px;
+    line-height: normal;
+	margin: 15px 0 0 0;
+    padding-top: 14px;
+    text-align: center;
+    width: 50px;
+	display:inline-block;
+}
+
+.download-full-btn {
+	background-color: #EBECEA;
+	border-color: #818283;
+	color: #000;
+	width: 200px;
+	font-size: 14px;
+	margin: 30px 0 5px 0;
+	display: table;
+	float:left;
+}
+.download-full-btn:hover, .download-full-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #EBECEA;
+	margin: 33px 0 2px 0;
+}
+.borrowers-profile-btn-hold {
+    float: right;
+    width: 560px;
+}
+.add-sub {
+	border: 1px solid #818283;
+	border-radius: 0;
+	color: #000000;
+	margin: 0;
+	padding: 0 8px;
+	position: absolute;
+	top: -8px;
+	right:-1px;
+	z-index: 2;
+	width:26px;
+	height:32px;
+}
+.add-caret {
+    margin-top: -2px;
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    vertical-align: middle;    
+	border-bottom: 6px solid;
+    border-top: 0 none;    
+	border-left: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 0;
+    width: 0;
+	padding:0 0 5px;
+}
+.sub-caret {
+    margin-top: -2px;
+    position: absolute;
+    right: 6px;
+    bottom: 2px;
+    vertical-align: middle;    
+	border-top: 6px solid;
+    border-bottom: 0 none;    
+	border-left: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 0;
+    width: 0;
+	padding:0 0 5px;
+}
+.main-form .form-hold2 textarea {
+    width: 370px;
+	margin-left:-1px;
+	border:1px solid #818283;
+	box-shadow:none
+}
+.property-profile p {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 22px;
+    margin: 10px 20px 0;
+    padding: 0;
+    text-align: left;
+}
+.property-profile-investor-proposals {
+    border: 1px solid #E1E3E6;
+    border-top: none;
+    margin: 0 10px 20px;
+}
+.property-profile-investor-proposals h5 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 24px;
+    margin: 25px 0 0 20px;
+    padding: 0 0 5px;
+    text-align: left;
+}
+.property-profile-investor-proposals .investor-holder {
+    padding: 20px 30px 20px 20px;
+	display:block;
+}
+.property-profile-investor-proposals .head-section {
+    border: 1px solid #B7E4F9;
+    float: left;
+    width: 100%;
+}
+.property-profile-investor-proposals .inner-section {
+    float: left;
+    width: 100%;
+}
+.property-profile-investor-proposals .head-section li {
+    color: #1C9AD6;
+    float: left;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    height: 60px;
+    line-height: 16px;
+    padding-top: 15px;
+    width: 25%;
+}
+.property-profile-investor-proposals .head-section li:first-child {
+    width: 30%;
+}
+.property-profile-investor-proposals .head-section li:last-child {
+    width: 20%;
+}
+.property-profile-investor-proposals .inner-section li {
+    border-top: 1px solid #E1E3E6;
+    color: #000000;
+    float: left;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    height: 60px;
+    line-height: 30px;
+    padding-top: 20px;
+    width: 25%;
+}
+.property-profile-investor-proposals .inner-section.active  li, .property-profile-investor-proposals .inner-section.active  li:first-child {
+    border-top: none;
+    height: 50px;
+    line-height: 10px;
+    padding-top: 20px;
+}
+.property-profile-investor-proposals .inner-section:last-child li {
+    border-bottom: 1px solid #E1E3E6;
+	padding-bottom:50px;
+	
+}
+.property-profile-investor-proposals .inner-section:last-child li:first-child {
+    border-bottom: 1px solid #fff;
+}
+.property-profile-investor-proposals .inner-section.active {
+	background-color:#f0faff;
+}
+.property-profile-investor-proposals .inner-section li:first-child {
+    border-top: 1px solid #FFFFFF;
+    padding-left: 5px;
+    width: 30%;
+}
+.property-profile-investor-proposals .inner-section li:last-child {
+    width: 20%;
+}
+.calculator {
+    /*border: 1px solid #E1E3E6;*/
+    margin: 0 0 20px;
+}
+.calculator h5 {    
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 24px;
+    margin: 25px 0 0;
+    padding: 0 0 5px;
+    text-align: left;
+}
+
+.calculator label {
+    color: #000000;
+    float: left;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 10px 0 0;
+    padding: 0;
+}
+.calculator .form-hold2 {
+	float:left;
+	margin: 5px 0 10px 20px;
+}
+.calculator .validate-line {
+    border: 1px solid #818283;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+}
+.calculator .input-wrapper {
+    background-color: #FFFFFF;
+    border: medium none;
+    bottom: 10px;
+    height: 15px;
+    left: -2px;
+    position: absolute;
+    width: 202px;
+}
+.calculator .input-field {
+    border: medium none;
+    bottom: 5px;
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 15px;
+    left: 5px;
+    outline: medium none;
+    position: relative;
+    width: 187px;
+    z-index: 1;
+}
+.calculator hr {
+	margin: 20px 0 20px ;
+	border: 0;
+	border-top: 1px solid #E1E3E6;
+}
+.calculator h6 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: 0 0 0 20px;
+    padding: 0;
+    text-align: left;
+}
+.calculator h3 {
+    color: #98cb4f;
+    font-family: 'FacitWeb';
+    font-size: 24px;
+    margin: 10px 0 0 20px;
+    padding: 0;
+    text-align: left;
+}
+.calculator h3 i {
+    font-size: 18px;
+    color: #000000;
+	margin-left:10px;
+}
+.start-auction-btn4 {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 280px;
+	font-size: 18px;
+	margin: 0 0 30px 20px;
+	display: table;
+	float:left;
+}
+.start-auction-btn4:hover, .start-auction-btn4:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 3px 0 7px 20px;
+}
+.calculator .start-auction-btn4 {
+	margin: 0 0 10px 0;
+	width: 165px;
+}
+.calculator .start-auction-btn4:hover, .calculator  .start-auction-btn4:focus { 
+	margin: 3px 0 27px 0;
+}
+.add-property-btn {
+	float:left !important;
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 250px;
+	font-size: 18px;
+	margin: 30px 0 10px;
+	display: table;
+}
+.add-property-btn:hover, .add-property-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 33px 0 7px;
+}
+.search-property-btn {
+	float:left !important;
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 250px;
+	font-size: 18px;
+	margin: 25px 0 10px 20px;
+	display: table;
+}
+.search-property-btn:hover, .search-property-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 28px 0 7px 20px;
+}
+.add-property-or {
+    display: block;
+    margin: 30px 0 0;
+}
+.add-property-or i {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #e1e3e6;
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 15px 2px;
+    position: relative;
+    z-index: 1;
+}
+.add-property-or-longbar {
+    background-color: #e1e3e6;
+    height: 1px;
+    position: relative;
+    top: -15px;
+    width: 750px;
+	margin:0 0 0 21%;
+}
+.link-text {
+	height:50px;
+	width:280px;
+	color:#ccc;
+	display:table;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 20px;
+	position:absolute;
+	right: -330px;
+    top: -20px;
+}
+.link-text .caret {
+    border-top: 6px solid rgba(0, 0, 0, 0);
+    border-bottom: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid #818283;
+    display: inline-block;
+    height: 0;
+	position:absolute;
+    vertical-align: middle;
+    width: 0;
+	top:15px;
+	left:-20px;
+}
+.collapse-menu-fliter {
+	padding-left:0;
+	width:22%;
+}
+.collapse-menu-fliter .panel-group{
+	border: 1px solid #E1E3E6;
+    display: table;
+    margin-bottom: 9px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.collapse-menu-fliter .panel-group .panel {
+	border-radius:0;
+	box-shadow:none;
+}
+.collapse-menu-fliter .panel-heading {
+	border-radius:0;
+	padding:0;
+	background-color:#fff;
+	border:none;
+}
+.collapse-menu-fliter .panel-default {
+	border:none;
+}
+.collapse-menu-fliter .panel-body {
+	padding:10px 10px 0
+}
+.collapse-menu-fliter .show {
+	float:right;
+  border-bottom: 1px solid #CCCCCC;
+    color: #CCCCCC;
+    cursor: pointer;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 14px;
+    margin-right: 10px;
+    padding: 5px 0 0;
+}
+.collapse-menu-fliter .show:hover {
+    border-bottom: 1px solid #999999;
+    color: #999999;
+}
+.collapse-menu-fliter .panel-title {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 19px;
+    line-height: 18px;
+    margin: 0 0 0 10px;
+    padding: 15px 0 5px;
+    text-align: left;
+}
+.panel-group .panel-heading + .panel-collapse .panel-body, .panel-default > .panel-heading + .panel-collapse .panel-body {
+	 border:none
+}
+
+.collapse-menu-fliter label {
+    color: #000000;
+    float: left;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+    margin: 0;
+    padding: 0;
+}
+.collapse-menu-fliter .form-hold2 {
+	float:left;
+	margin: 0 0 10px 0;
+	width:100%
+}
+.collapse-menu-fliter .validate-line {
+    border: 1px solid #818283;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+.collapse-menu-fliter .input-wrapper {
+    background-color: #FFFFFF;
+    border: medium none;
+    bottom: 10px;
+    height: 15px;
+    left: -2px;
+    position: absolute;
+    width: 102%;
+}
+.collapse-menu-fliter .input-field {
+    border: medium none;
+    bottom: 5px;
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    left: 5px;
+    outline: medium none;
+    position: relative;
+    width: 95%;
+    z-index: 1;
+}
+
+/*-----------property_search_details------------*/
+.property_search_details-hold {
+	width:78%;
+}
+.property_search_details .media {
+	margin: 0
+}
+.property_search_details .media-heading {
+	color: #8fc146;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	line-height: 18px;
+	margin: -2px 0 0;
+	padding: 0;
+	text-align: left;
+}
+.property_search_details .aminties {
+	display: table;
+}
+.property_search_details .aminties li {
+	color: #b7e4f9;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 18px;
+	margin: 10px 10px 0 2px;
+	padding: 0;
+	text-align: left;
+	list-style: disc inside;
+	float: left;
+	width: 170px;
+}
+.property_search_details .aminties li .list-color {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style: disc;
+}
+.property_search_details .media p {
+	color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 19px;
+    margin: 17px 0 0;
+    padding: 0;
+    text-align: left;
+}
+.property_search_details .media-body {
+	border-bottom: 1px solid #e1e3e6;
+	min-height: 125px;
+	margin-bottom: 20px;
+}
+.property_search_details .media > .pull-left {
+	margin-right: 25px;
+}
+.property_search_details .media .apartment {
+	float: left;
+	width: 565px;
+}
+.property_search_details .media .price {
+	float: left;
+	margin-left: 20px;
+	width: 150px;
+}
+.property_search_details .media .price h4 {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 24px;
+	line-height: 24px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	text-align: left;
+}
+
+.view-action {
+	float:left;
+	background-color: #A6DF53;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 125px;
+	font-size: 16px;
+	margin: 0px 0 5px 0;
+	display: table;
+	height:38px;
+}
+.view-action:hover, .view-action:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 1px 0 4px 0;
+}
+
+.property_search_details .for-auction {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 12px;
+	line-height: 14px;
+	margin: 0 0 10px 0;
+	padding: 5px 0 0 0;
+	text-align: left;
+	display:inline-block;
+	width:100px;
+}
+
+.collapse-menu-fliter  .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) {
+	width: 96%
+}
+.collapse-menu-fliter  .btn-default, .collapse-menu-fliter  .btn-default:hover, .collapse-menu-fliter  .btn-default:active, .collapse-menu-fliter  .btn-default:focus {
+	border: none;
+	padding:4px 8px;
+ background-color:none;
+}
+.collapse-menu-fliter  .btn-group.open .dropdown-toggle, .btn-group.open .dropdown-toggle:focus, .btn-group.open .dropdown-toggle:hover {
+ box-shadow:none;
+ background-color:none;
+}
+.collapse-menu-fliter  .btn-default:hover, .collapse-menu-fliter  .btn-default:focus, .collapse-menu-fliter  .btn-default:active, .collapse-menu-fliter  .btn-default.active, .main-form .open .dropdown-toggle.btn-default {
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+.collapse-menu-fliter .dropdown-menu {
+	box-shadow: none
+}
+.collapse-menu-fliter  .btn-default:hover, .collapse-menu-fliter  .btn-default:focus, .collapse-menu-fliter  .btn-default:active, .collapse-menu-fliter  .btn-default.active, .collapse-menu-fliter  .open .dropdown-toggle.btn-default {
+
+	background: none;
+	box-shadow: none;
+	}
+	
+	
+/******************css-checkbox2 starts***********************/
+.css-checkbox2-hold {
+	display:table;
+	padding-left:2px;
+}
+input[type=checkbox].css-checkbox2 {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
+input[type=checkbox].css-checkbox2 + label.css-label2 {
+	padding-left: 18px;
+	height: 18px;
+	display: inline-block;
+	line-height: 18px;
+	background-repeat: no-repeat;
+	background-position: 0 -17px;
+	font-size: 18px;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-top: 15px;
+	font-family: 'FacitWeb';
+}
+input[type=checkbox].css-checkbox2:checked + label.css-label2 {
+	background-position: 0 0;
+}
+.css-label2 {
+	background-image: url(../img/checkbox-custom2.png);
+}
+/******************css-checkbox end***********************/
+h2.search-explore {
+    color: #000000;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 36px;
+    line-height: 50px;
+    margin: 100px 0 0;
+    padding: 0;
+    text-align: center;
+}
+h2.search-explore-sub {
+    color: #000000;
+	font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 0 50px;
+    padding: 0;
+    text-align: center;
+}
+.current-property-hold {
+	width:78%;
+	padding-right:0;
+}
+.main-menu {
+    border: 1px solid #B7E4F9;
+    float: left;
+}
+.main-menu .fisrt-menu {
+	height:60px;
+	width:150px;
+    float: left;
+}
+.main-menu .second-menu {
+	height:60px;
+	width:760px;
+    float: left;
+}
+.main-menu .head-section li {
+	float: left;
+	height: 60px;
+	width: 11%;
+	color: #1c9ad6;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 16px;
+	padding-top: 15px;
+}
+.main-menu .head-section li:first-child {
+	width: 14%
+}
+.main-menu .head-section li:nth-child(2) {
+	width: 15%
+}
+.main-menu .head-section li:nth-child(4) {
+	width: 15%
+}
+.sub-list {
+    float: left;
+}
+.sub-list .fisrt-menu {
+	width:150px;
+    float: left;
+}
+.sub-list img {
+	margin:20px;
+}
+.sub-list .second-menu {
+	width:550px;
+    float: right;
+    border-bottom: 2px solid #e1e3e6;
+    height: 255px;
+}
+.sub-list .head-section li {
+	float: right;
+	height: 140px;
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 16px;
+	padding-top: 45px;
+}
+.sub-list .head-section li:first-child {
+	width: 10%
+}
+.sub-list .head-section li:nth-child(2) {
+	width: 15%
+}
+.sub-list .head-section li:nth-child(3) {
+	width: 20%
+}
+.sub-list .head-section li:nth-child(4) {
+	width: 20%
+}
+.sub-list .head-section li:nth-child(5) {
+	width: 10%
+}
+.sub-list .head-section li:nth-child(6) {
+	width: 5%
+}
+.sub-list .head-section li:nth-child(7) {
+	width: 10%
+}
+.sub-list .head-section li:nth-child(8) {
+	width: 10%
+}
+.tip {
+    font-family: 'FacitWeb-Bold';  
+	color: #e60020 !important;
+}
+.tooltip-inner {
+	color: #ffffff !important;
+	text-decoration: none !important;
+	background-color: #656868 !important;
+	border-radius: 0px !important;
+}
+.tooltip.top .tooltip-arrow {
+	border-top-color: #656868 !important;
+}
+
+.view-action-btn {
+	float:right;
+	background-color: #A6DF53;
+	border-bottom: 1px solid #ececec;
+	width: 250px;
+	font-size: 16px;
+	margin: 20px 0 25px 0;
+	display: table;
+	height:38px;
+}
+.view-action-btn:hover, .view-action-btn:focus {
+	color: #9f9e9e;
+	border-bottom: 1px solid #ececec;
+	margin: 21px 0 24px 0;
+}
+.properties-bids {
+	margin: 40px 0 0 70px;
+}
+.properties-bids .media-heading {
+	color: #8fc146;
+	font-family: 'FacitWeb';
+	font-size: 18px;
+	line-height: 18px;
+	margin: -2px 0 0;
+	padding: 0;
+	text-align: left;
+}
+.properties-bids .aminties {
+	display: table;
+}
+.properties-bids .aminties li {
+	color: #b7e4f9;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 18px;
+	margin: 10px 10px 0 2px;
+	padding: 0;
+	text-align: left;
+	list-style: disc inside;
+	float: left;
+}
+.properties-bids .aminties li .list-color {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	list-style: disc;
+}
+.properties-bids .media p {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 22px;
+	margin: -10px 0 0;
+	padding: 0;
+	text-align: left;
+}
+.properties-bids .media-body {
+	border-bottom: 1px solid #e1e3e6;
+	min-height: 125px;
+}
+.properties-bids .media > .pull-left {
+	margin-right: 25px;
+}
+.properties-bids .media .apartment {
+	float: left;
+	width: 640px;
+}
+.properties-bids .media .price {
+	float: left;
+	margin-left: 20px;
+	width: 150px;
+}
+.properties-bids .media .price h4 {
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 24px;
+	line-height: 24px;
+	margin: 0 0 20px 0;
+	padding: 0;
+	text-align: left;
+}
+.properties-bids h3 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 15px 0;
+    padding: 0;
+    text-align: left;
+}
+.properties-bids h5 {    
+	color: #231F20;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    padding: 0 0 5px;
+    text-align: left;
+}
+.your-bids{
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.your-bid-tabs .nav-tabs {
+	border-bottom:none;
+	border-top: 1px solid #e1e3e6;
+	margin-bottom:40px;
+}
+.your-bid-tabs .nav-tabs>li.active>a, .your-bid-tabs .nav-tabs>li.active>a:hover, .your-bid-tabs .nav-tabs>li.active>a:focus {
+	color: #1C9AD6;
+	background-color: #ffffff;
+	border: none;
+	border-top: none ;
+}
+.your-bid-tabs .nav-tabs>li >a, .your-bid-tabs .nav-tabs>li >a:hover, .your-bid-tabs .nav-tabs>li >a:focus {
+	color: #555555;
+	background-color: #ffffff;
+}
+
+.your-bid-tabs .nav-tabs>li>a {
+    color: #505050;
+	line-height: 30px;
+	border: none;
+	border-radius:0;
+	width:280px;
+	height:55px;
+    font-family: 'FacitWeb';
+	font-size:16px;
+	background-color: #ffffff;
+	border: 1px solid #dddddd !important;
+	border-top: none !important;
+	margin:0;
+}
+.your-bid-tabs .nav-tabs>li:first-child >a {
+	border-right: none !important;
+}
+.your-bid-tabs .nav-tabs > li {
+    display: inline-block;
+    float: none;
+	margin-left:-4px
+}
+.your-bid-box {
+	width:100px;
+	height:100px;
+    border: 1px solid #E1E3E6;
+	position:relative;
+    text-align: center;
+	margin-bottom:20px
+}
+.your-bid-box h5 {
+	position:relative;
+	top:-10px;
+	left:15px;
+	width:70px;
+	height:20px;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 ;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #E1E3E6;
+	background:#fff;
+}
+.your-bid-box h6 {
+    color: #000;
+    font-family: 'FacitWeb-Bold';  
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0 0 2px 0;
+    padding: 0;
+    text-align: center;
+}
+.your-bid-box .para {
+    color: #000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 2px 0;
+    padding: 0;
+    text-align: center;
+	display:block
+}
+
+.rebid-btn {
+	float:left !important;
+	background-color: #A6DF53;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 100px;
+	height:30px;
+	font-size: 16px;
+	margin: 10px 0 20px 0;
+	display: table;
+	line-height:14px;
+}
+.rebid-btn:hover, .rebid-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 11px 0 19px 0;
+}
+.footer {
+	background-color: #1c9ad6;
+}
+.footer-container {
+	max-width:980px;
+	margin: 0 auto;
+	padding: 40px 0 20px 0;
+}
+.footer-container h4 {
+    color: #FFFFFF;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 ;
+    padding: 10px 0;
+    text-align: left;
+}
+.footer-container li a {
+    color: #F0F0F0;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 ;
+    padding: 0;
+    text-align: left;
+}
+.footer-container li a:hover {
+    color: #FFF;
+}
+.footer-container .row > div:nth-child(1) {
+	width:25%;
+}
+.footer-container .row > div:nth-child(2) {
+	width:23%;
+}
+.footer-container .row > div:nth-child(3) {
+	width:16%;
+}
+.footer-container .row > div:nth-child(4) {
+	width:35%;
+}
+.footer-container > div:nth-child(1) {
+	padding:0;
+	width:80%
+}
+.footer-container > div:nth-child(2) {
+	padding:0;
+}
+.footer-icon-hold {
+	position:relative;
+	left:-10px;
+}
+.fb-footer-icon:hover, .gp-footer-icon:hover, .tw-footer-icon:hover, .in-footer-icon:hover {
+	opacity:1
+}
+.footer-copyright  .copyright,.footer-copyright  .website {
+    color: #FFFFFF;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 ;
+    padding: 0 20px 0 0;
+    text-align: center;
+	border-right: solid 1px #fff;
+}
+.footer-copyright  .website {
+	border:none;
+    padding: 0 0 0 20px;
+}
+.footer-copyright a {
+	color: #F0F0F0;
+}
+.footer-copyright a:hover {
+	color: #FFF;
+}
+.footer-copyright {
+	max-width:980px;
+	margin: 0 auto;
+	padding: 20px 0 30px 0
+}
+.mc-header {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #EFF0F2;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top:0
+}
+.mc-logo {
+	float:left;
+	padding: 20px 0 0 50px;
+}
+.sign-in {
+	background-color:#1c9ad6;
+	float:right;
+	height:100px
+}
+.sign-in ul {
+	margin:0;
+}
+.sign-in li {
+	display:inline-block;
+    z-index:11
+}
+.sign-in li a.menu {
+	width:105px;
+	height:89px;
+    color: #FFFFFF;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 ;
+    padding: 20px 0 50px 10px ;
+	display:block;
+    text-align:center
+}
+.sign-in li a.menu.ca {
+	position:relative;
+	top:10px;
+    left:-10px
+}
+.sign-in li a.menu.hw {
+	position:relative;
+	top:10px;
+}
+.select-country {
+	width:120px;
+	background-color:#198ac0;
+	position:relative;
+}
+li.select-country a.menu {
+	padding-left:10px;
+}
+.select-country .change {
+	position:absolute;
+	top:35px;
+	left:50px;
+}
+.select-country .caret {
+	position:absolute;
+	border-left: 6px solid rgba(0, 0, 0, 0);
+    border-right: 6px solid rgba(0, 0, 0, 0);
+    border-top:  #fff 5px solid;
+	margin:0;
+	right:15px;
+}
+.sign-in-drop {
+	position:relative;
+}
+.sign-in-dropdown {
+	width:360px;
+	background-color:#faf8f8;
+	position:absolute;
+	left:-160px;
+	padding: 10px 20px 25px ;
+	z-index:12;
+	display:none;
+	margin-top:-13px
+}
+/*.sign-in-drop:hover .sign-in-dropdown {
+	display:inherit
+}*/
+.sign-in-dropdown .grey-caret {
+    border-bottom: 13px solid #faf8f8;
+    border-left: 13px solid rgba(0, 0, 0, 0);
+    border-right: 13px solid rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 0;
+    left: 140px;
+    margin: 22px 0 0 67px;
+    position: absolute;
+    top: -35px;
+    vertical-align: middle;
+    width: 0;
+}
+.sign-in-dropdown a.user-search {
+	display:table;
+}
+.sign-in-dropdown .sign-img {
+	float:left;
+    margin: 0 ;
+    padding: 0;
+}
+.sign-in-dropdown .sign-img img{
+	border-radius: 50%
+}
+.sign-in-dropdown h2 {
+	color: #ccc;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 ;
+    padding: 5px 0 0 10px;
+	float:left;
+}
+.sign-in-dropdown label {
+    color: #000000;
+    float: left;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+.form-hold4 .validate-line {
+	width:100%;
+	border:1px solid #818283
+}
+.form-hold4 .input-wrapper {
+	width:101%;
+	background-color:#faf8f8;
+}
+.form-hold4 .input-field {
+	width:97%;
+}
+.form-hold.number .validate-line {
+	width:200px;
+}
+.form-hold.number .input-wrapper {
+	width:202px;
+}
+.form-hold.number .input-field {
+	width:188px;
+}
+.sign-in-dropdown-btn2 {
+    background-color: #A6DF53;
+    border-bottom: 1px solid #7BAB36;
+    color: #000000;
+    display: table;
+    float: left;
+    font-size: 14px;
+    margin: 15px 0 5px;
+    width: 130px;
+	height:38px
+}
+.sign-in-dropdown-btn2:hover, .sign-in-dropdown-btn2:focus {
+    border-bottom: 1px solid #A6DF53;
+    color: #000000;
+    margin: 16px 0 4px;
+}
+.mc-header .notification-borrower {
+	border:none;
+}
+.single-dashboard {
+    background-color: #1C9AD6;
+    float: right;
+    width: 175px;
+}
+.single-dashboard a {
+    color: #FFFFFF;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 16px;
+    height: 89px;
+    line-height: 5px;
+    margin: 0;
+    padding: 50px 0 50px 30px;
+	width:100%;
+}
+.single-dashboard a:hover {
+    color: #FFFFFF;
+}
+.investor-sign-up .alread-investor {
+	max-width:470px
+}
+.investor-sign-up .main-form h3 {
+	color:#1c9ad6;
+}
+.sign-in-to-bib-btn {
+    background-color: #EBECEA;
+    border-color: #818283;
+    margin-right: 13px;
+}
+.sign-in-to-bib-btn:hover, .sign-in-to-bib-btn:focus {
+    border-bottom: 3px solid #EBECEA;
+    margin-right: 13px;
+}
+
+.fliter-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 87px;
+	height: 30px;
+	font-size: 14px;
+	margin: 15px 10px 0 0;
+	display: table;
+	float: right;
+}
+.fliter-btn:hover, .fliter-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 16px 10px -1px 0;
+	height: 30px;
+}
+.dashboard-container {
+	max-width:860px;
+	margin:15px 0 0 45px;
+}
+.trend-pro-auc {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px !important
+}
+.trend-pro-auc h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 20px 0 10px 10px;
+    padding: 0 0 5px;
+    text-align: left;
+}
+.country-dropdown .bootstrap-select.btn-group {
+	margin: 5px 0 0 0
+}
+.country-dropdown .bootstrap-select > .btn {
+	padding: 1px 4px;
+	width:162px;
+    font-family: 'FacitWeb';
+	font-size:16px;
+	color:#404040
+}
+.country-dropdown .btn-default ,.country-dropdown .btn-default:hover, .country-dropdown .btn-default:focus, .country-dropdown .btn-default:active,.country-dropdown .open .dropdown-toggle.btn-default {
+    background-color: #FFFFFF;
+    border-color: #b7e4f9;
+    color: #404040;
+	box-shadow:none;
+}
+.country-dropdown .bootstrap-select.btn-group .dropdown-menu {
+	min-width:160px;
+}
+.country-dropdown .caret {
+	border-top:4px solid #B7E4F9;
+}
+.trend-pro-auc .carousel-inner {
+	max-width:690px;
+	margin: 0 auto
+}
+.trend-pro-auc .carousel-control.left, .trend-pro-auc .carousel-control.right {
+	background:none;
+}
+.trend-pro-auc .carousel {
+    padding-bottom: 60px;
+}
+.trend-pro-auc .carousel-indicators li {
+	border:1px solid #000;
+}
+.trend-pro-auc .carousel-indicators .active {
+	background-color:#000;
+}
+.trend-thumbnail .days-left-hold {
+	position:relative;
+}
+.trend-thumbnail .days-left {
+	position:absolute;
+	background-image:url(../img/polygon.png);
+	background-repeat:no-repeat;
+	width:65px;
+	height:65px;
+	top:-15px;
+	right:-15px;
+	padding:9px 20px;
+    font-family: 'FacitWeb';
+	font-size:14px;
+	line-height:16px;
+	text-align:center
+}
+.trend-thumbnail {
+    margin: 50px 0 20px;
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;/*
+	box-shadow: 0 1px 1px #888888;
+	-moz-box-shadow: 0 1px 1px #888888;
+	-webkit-box-shadow: 0 1px 1px #888888;*/
+}
+.trend-thumbnail .price-on-img {
+	background-color: rgba(255,255,255,.8);
+	position:absolute;
+	bottom:0;
+	right:0;
+	left:0;
+    font-family: 'P22UndergroundPro-Book';
+	font-size:22px;
+	text-align:center;
+	height:36px;
+	padding-top:5px;
+	color:#575454
+}
+.bids-media {
+	border-bottom: 1px solid #818283;
+	overflow:hidden;
+}
+.bid-circle {
+	height:48px;
+	width:48px;
+	background-color:#1c9ad6;
+	color:#fff;
+    font-family: 'FacitWeb';
+	font-size:16px;
+	line-height:17px;
+	border-radius:50%;
+	margin:10px;
+	text-align:center;
+	padding-top:5px;
+}
+.bid-media-text {
+	overflow:hidden;
+    font-family: 'FacitWeb';
+	font-size:14px;
+	line-height:20px;
+	color:#000;
+	padding-top:10px;
+}
+.list-rates ul {
+	margin:0;
+}
+.list-rates li {
+	color:#000;
+	text-align:center;
+	width:60%;
+	display:inline-block;
+}
+.list-rates li:last-child {
+	width:36%;
+}
+.list-rates li h5{
+	color:#000;
+    font-family: 'P22UndergroundPro-Book';
+	font-size:16px;
+	line-height:17px;
+}
+.list-rates li h6{
+	color:#000;
+    font-family: 'FacitWeb';
+	font-size:16px;
+	line-height:17px;
+}
+.veiw-more-auctions-btn {
+	float:none;
+	background-color: #A6DF53;
+	border-bottom: 2px solid #7BAB36;
+	color: #000;
+	width: 250px;
+	font-size: 14px;
+	margin: 0px 0 5px 0;
+	display: table;
+}
+.veiw-more-auctions-btn:hover, .veiw-more-auctions-btn:focus {
+	color: #000;
+	border-bottom: 2px solid #A6DF53;
+	margin: 2px 0 3px 0;
+}
+.investor-calendar-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding: 0 0 20px 20px;
+}
+.investor-calendar {	
+	margin-bottom:10px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #E1E3E6;
+}
+.investor-calendar h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.investor-calendar .date-month {
+	float:left;
+	width:78px;
+	height:45px;
+	color:#1c9ad6;
+    font-family: 'FacitWeb';
+	line-height:normal;
+}
+.investor-calendar .overdue {
+    color: #e60020;
+}
+.investor-calendar .payment {
+	overflow:hidden;
+}
+.investor-calendar .date-month .day{
+	font-size:30px;
+	display:inline-block
+}
+.investor-calendar .date-month .month{
+	font-size:18px;
+	width:35px;
+	text-align:right;
+	display:inline-block
+}
+.investor-calendar .payment .payment-text {
+	color:#505050;
+    font-family: 'FacitWeb';
+	line-height:normal;
+	font-size:18px;
+	display:inline-block;
+	padding-top:12px;
+}
+.investor-calendar .payment .payment-text2 {
+	color:#505050;
+    font-family: 'FacitWeb';
+	line-height:normal;
+	font-size:16px;
+	overflow:hidden;
+	margin-left:10px;
+}
+.investor-calendar .payment .payment-text3 {
+	color:#505050;
+    font-family: 'FacitWeb';
+	line-height:normal;
+	font-size:18px;
+	display: block;
+	padding-top:12px;
+}
+
+.investor-calendar .remind-btn {
+	float:left;
+	background-color: #A6DF53;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 85px;
+	font-size: 16px;
+	margin: 0px 10px 5px 0;
+	display: table;
+	height:38px;
+	font-size:12px;
+	line-height:13px;
+	float:right;
+}
+.investor-calendar .remind-btn:hover, .remind-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 1px 10px 4px 0;
+}
+.investor-calendar .payment-inner {
+	margin: 10px 0
+}
+.investor-calendar-hold a.go-to-calendar {
+	font-size: 16px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	cursor: pointer;
+	font-family: 'FacitWeb';
+	line-height: 16px;
+	margin: 5px 0 0 0;
+	padding: 5px 0 0;
+	display:inline-block
+}
+.investor-calendar-hold a.go-to-calendar:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+.dashboard-home-investor-pad-left {
+	padding-left:0 !important;
+}
+.dashboard-home-investor-pad-right {
+	padding-right:0 !important;
+}
+.investor-bid-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding-bottom:20px;
+}
+.investor-bid {	
+	margin-left:20px;
+	margin-bottom:10px;
+}
+.investor-bid h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.image-box {
+	margin:20px 0 0 ;
+	padding-bottom:15px;
+    border-bottom: 1px solid #E1E3E6;
+}
+.image-box .image-frame img {
+	width:100px;
+	height:100px;
+	border-radius:2px;
+	float:left;
+}
+.image-box .image-text {
+	overflow:hidden;
+	margin-left:20px;
+	display: block;
+}
+.image-box .image-text h3{
+   color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    padding: 0;
+	margin:0;
+}
+.image-box .image-text h3 .place {
+	font-size:16px;
+}
+.image-box .image-text  ul {
+	margin: 18px 0 0 0;
+}
+.image-box .image-text li {
+    float: left;
+    margin-right: 10px;
+}
+.image-box .image-text h5{
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.image-box .image-text h6{
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.image-box .grade {
+    background-color: #FFD75D;
+    border-radius: 50%;
+    color: #000000;
+    display: inline-block;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    height: 50px;
+    line-height: normal;
+    margin: 15px 15px 0 0;
+    padding-top: 14px;
+    text-align: center;
+    width: 50px;
+	float:left
+}
+.image-box .star {
+    background-color: #1c9ad6;
+    border-radius: 50%;
+    color: #000000;
+    display: inline-block;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    height: 50px;
+    line-height: normal;
+    margin: 15px 15px 0 0;
+    text-align: center;
+    width: 50px;
+	padding-top:15px
+}
+.investor-bid p.our-admin {    
+    color: #CCCCCC;
+    display: block;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 18px;
+    margin: 5px 0 0 0;
+    padding: 5px 0 0;
+}
+.investor-bid p.our-admin a {
+	border-bottom: 1px solid #CCCCCC;
+    color: #CCCCCC;
+}
+.investor-bid p.our-admin a:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+.your-account-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding:0 !important;
+}
+.your-account {	
+	margin-left:20px;
+	margin-bottom:10px;
+	padding-bottom:20px;
+}
+.your-account h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.go-to-your-account {
+	font-size: 16px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	cursor: pointer;
+	font-family: 'FacitWeb';
+	line-height: 16px;
+	margin: 5px 0 0;
+	padding: 5px 0 0;
+	display:inline-block
+}
+.your-account .go-to-your-account:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+.seller-a-pro-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding:0 0 20px 0
+}
+.seller-a-pro {	
+	margin-left:20px;
+	margin-bottom:10px;
+}
+.seller-a-pro h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.seller-a-pro h5 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    line-height: 22px;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+.seller-a-pro-hold h6 {
+    color: #ccc;
+    font-family: 'FacitWeb';
+    line-height: 20px;
+    font-size: 16px;
+    margin: 10px 0 0 0;
+    padding: 0 15px 0 0;
+}
+.seller-a-pro-btn {
+    background-color: #A6DF53;
+    border-bottom: 2px solid #7BAB36;
+    color: #000000;
+	float:none;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    width: 250px;
+}
+.seller-a-pro-btn:hover, .seller-a-pro-btn:focus {
+    border-bottom: 2px solid #A6DF53;
+    color: #000000;
+    margin: 12px 0 3px;
+}
+.payment-report-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding:0 0 20px 0
+}
+.payment-report {	
+	margin-left:20px;
+	margin-bottom:10px;
+}
+.payment-report h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.payment-report h5 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 24px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+.payment-report h6 {
+    color: #404040;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #E1E3E6;
+}
+.payment-report a.go-to-report {
+	font-size: 16px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	cursor: pointer;
+	font-family: 'FacitWeb';
+	line-height: 16px;
+	margin: 5px 0  0;
+	padding: 5px 0 0;
+	display:inline-block
+}
+.payment-report a.go-to-report:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+.messages-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding:0 0 20px 0
+}
+.messages {	
+	margin-left:20px;
+	margin-bottom:10px;
+}
+.messages h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.messages h5 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 5px 0 0;
+}
+.messages h6 {
+    color: #505050;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+    padding: 5px 0 15px 0;
+    border-bottom: 1px solid #E1E3E6;
+}
+.messages a.go-to-message {
+	font-size: 16px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	cursor: pointer;
+	font-family: 'FacitWeb';
+	line-height: 16px;
+	margin: 10px 0  0;
+	padding: 5px 0 0;
+	display:inline-block
+}
+.messages a.go-to-message:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+.bid-property-modal .modal-header {
+	margin-left:20px;
+	padding: 15px 15px 10px 0;
+}
+.bid-property-modal .modal-title {
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 15px 0 0;
+    text-align: left;
+}
+.bid-property-modal .modal-body {
+	padding: 0 20px 20px
+}
+.bid-property-btn {
+    background-color: #A6DF53;
+    border-color: #7BAB36;
+    color: #000000;
+    display: table;
+    font-size: 18px;
+    margin: 25px 0 20px 0px;
+    width: 165px;
+}
+.bid-property-btn:hover, .bid-property-btn:focus {
+    border-bottom: 3px solid #A6DF53;
+    color: #000000;
+    margin: 28px 0 17px 0px;
+}
+.bid-property-modal .main-form {
+	display:table
+}
+.calendar-forecast {
+	margin: 50px 0 0 50px
+}
+.calendar-forecast h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1c9ad6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 0 5px;
+    text-align: left;
+}
+.calendar-arrow-left, .calendar-arrow-right {
+	display: inline-block;
+	background-image: url(../img/icons.png);
+	height: 36px;
+	width: 36px;
+	top: 0;
+	float: right;  
+    background-position: 0 -1694px;
+    position: relative;
+	top:-5px;
+	border:none;
+	background-color:#fff;
+	margin-right:7px;
+}
+.calendar-arrow-left:active {
+    background-position: 0 -1730px;
+}
+.calendar-arrow-right {
+    background-position: 0 -1766px;
+	margin-right:5px;
+}
+.calendar-arrow-right:active {
+    background-position: 0 -1802px;
+}
+.meeting-payment {
+	width:100%;
+	display:table;
+}
+.meeting-payment ul{
+	margin:0;
+	padding:0;
+	height:170px;
+	overflow:hidden;
+	border-bottom:1px solid #e1e3e6;
+}
+.meeting-payment li{
+	margin:0;
+	padding:20px 15px;
+	width:260px;
+	height:170px;
+	border-right:1px solid #e1e3e6;
+	float:left
+}
+
+.meeting-payment h3{
+	font-size: 18px;
+	color:#1C9AD6;
+	font-family: 'FacitWeb';
+	line-height: 20px;
+	margin: 0;
+	padding: 0;
+}
+.meeting-payment h3 .black {
+	color:#000;
+}
+.meeting-payment .alert-icon {
+	margin:0;
+	top:0
+}
+.meeting-payment  .payment-inner {
+    margin: 10px 0;
+}
+.meeting-payment .payment-text2 {
+    color: #505050;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: normal;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.meeting-payment .right-align-icon {
+	top:-3px;
+}
+.meeting-payment .map-icon {
+	top:-1px;
+}
+.pay-btn {
+    background-color: #A6DF53;
+    border-bottom: 1px solid #7BAB36;
+    color: #000000;
+    float: right;
+    font-size: 12px;
+    height: 20px;
+    line-height: 13px;
+    margin: 0 0 5px 2px;
+    width: 50px;
+	padding:2px 5px
+}
+.pay-btn:hover, .pay-btn:focus {
+    border-bottom: 1px solid #A6DF53;
+    color: #000000;
+    margin: 1px 0 4px 2px;
+}
+.mc-calendar {
+	width:450px;
+	height:360px;
+	border:1px solid #e1e3e6;
+	border-right:none;
+	padding-top:30px;
+	margin-top:30px;
+	float:left
+}
+.mc-calendar .btn {
+	height:40px;
+	width:105px;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+	margin-bottom:10px
+}
+.mc-calendar .btn-default:hover, .mc-calendar .btn-default:focus, .mc-calendar .btn-default:active, .mc-calendar .btn-default.active{
+    background-color: #fff;
+    border-color: #ADADAD;
+    color: #1C9AD6;
+	box-shadow:none;
+}
+.datepickerMonth {
+	width:150px !important
+}
+.mc-calendar-dispaly-hold {
+	position:relative;
+	float:left;
+	width:450px;
+	display:table;
+	border:1px solid #e1e3e6;
+	margin-top:30px;
+	padding-left:20px;
+}
+.mc-calendar-dispaly h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.mc-calendar-dispaly .investor-calendar:last-child {
+	border:none;
+}
+.mc-calendar-dispaly .pay-btn {
+	position:relative;
+	top:5px;
+	margin-left:10px;
+}
+.mc-calendar-dispaly .alert-icon {
+	margin-right:0;
+	top:5px
+}
+.mc-calendar-dispaly .investor-calendar {
+	padding-right:30px;
+}
+.mc-calendar-dispaly:before {
+	border-bottom: 12px solid rgba(0, 0, 0, 0);
+	border-left: 12px solid rgba(0, 0, 0, 0.2);
+	border-top: 12px solid rgba(0, 0, 0, 0);
+	content: "";
+	display: inline-block;
+	left: 1px;
+	position: absolute;
+	top: 50%;
+}
+.mc-calendar-dispaly:after {
+	border-bottom: 12px solid rgba(0, 0, 0, 0);
+	border-left: 12px solid #fff;
+	border-top: 12px solid rgba(0, 0, 0, 0);
+	content: "";
+	display: inline-block;
+	left: 0;
+	position: absolute;
+	top: 50%;
+}
+.select-country  {
+	width:120px;
+	height:100px;
+	position: relative;
+	top: 0;
+    margin-right:30px;
+}
+.select-country .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) {
+	width:120px;
+	height:100px;
+}
+.select-country.btn-group.open .dropdown-toggle {
+	box-shadow:none;
+}
+.select-country  .btn-default {
+    background: none;
+    border:none;
+    color: #333333;
+}
+.select-country .btn {
+    background: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	width:120px;
+	height:100px;
+	color:#fff;
+	text-indent:-38px;
+}
+.select-country .btn-default:hover, .select-country .btn-default:focus, .btn-default:active, .select-country .btn-default.active, .select-country  .open .dropdown-toggle.btn-default {
+	background:none;
+	border:none;
+	box-shadow:none;
+	outline:none;
+	color:#fff;
+}
+.select-country .bootstrap-select.btn-group .btn .filter-option {
+	top:35px;
+	left:14px;
+	
+}
+.select-country .dropdown-menu > li > a {
+	width:120px;
+	height:42px;
+	float:left;
+	text-indent:-38px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+	color:#fff
+}
+.select-country .dropdown-menu {
+	background-color:#1C9AD6;
+	border-radius:0;
+	padding:0;
+	margin:0;
+	box-shadow:none;
+}
+.select-country .dropdown-menu > li > a:hover {
+	background-color:#198AC0;
+	color:#fff
+}
+.select-country .dropdown-menu > li > a:focus {
+	background-color:#198AC0;
+	color:#fff
+}
+label.click-here-link {
+	margin-top:10px;
+}
+.serverMessage {    
+	color: #E47777;
+    font-family: 'FacitWeb';
+    font-size: 20px;
+    left: 0;
+    margin-top: -60px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.main-slider img {
+	width:100%;
+}
+.main-slider h3{
+	font-family: 'P22UndergroundPro-Book';
+    font-size: 36px;
+    margin: 40px auto 0;
+    width: 600px;
+}
+.main-slider .carousel-caption {
+	top:5%;
+}
+.main-slider .learn-how-it-works {
+	background-image:url(../img/learn-how-it-work.png);
+	width:327px;
+	height:60px;
+	display:inline-block;
+	margin-top:30px;
+}
+.main-slider .learn-how-it-works:hover {
+	background-position:0 -60px;
+}
+.main-slider .carousel-inner {
+	background-color: rgba(45, 45, 45, 0.7)
+}
+.main-slider .carousel-indicators {
+	bottom:20%;
+}
+.main-slider .carousel-indicators li {
+	height:24px;
+	width:24px;
+	border-radius:50%;
+	border-color:#7f7f7f;
+	float:right;
+	margin-left:5px;
+} 
+.main-slider .carousel-indicators .active {
+	height:24px;
+	width:24px;
+	border-radius:50%;
+	background-color:#7f7f7f;
+	border-color:#7f7f7f;
+}
+.scroll-down {
+	background-image:url(../img/scroll-down.png);
+	width:139px;
+	height:22px;
+	display:block;
+	margin: 60px auto 0;
+}
+.dotpattern {
+	background-image:url("../img/dot-pattern.png");
+	background-repeat:repeat;
+}
+.be-a-borrower {
+	margin-top:1px !important;
+	border: 1px solid #2378a0;
+	margin-bottom:40px !important;
+	border-left: none;
+	border-right: none;
+}
+.tab-container {
+	position: relative;
+	/*height: 190px;
+	background-color: #3eb1e8;*/
+	height: 175px;
+	background-color: #2378A0;
+	text-align: center;
+	color: #fff;
+	width:49% !important;
+	border-left: 1px solid #2378a0;
+	border-right: 1px solid #2378a0;
+	float:left;
+	cursor:pointer
+}
+.tab-container:first-child {
+	margin-right:1px;
+}
+.tab-container.active:before {
+	border-left: 19px solid rgba(0, 0, 0, 0);
+	border-right: 19px solid rgba(0, 0, 0, 0);
+	border-top: 18px solid #2378A0;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	bottom: -19px;
+	margin-left:-1px;
+}
+.tab-container.active:after {
+	border-left: 18px solid rgba(0, 0, 0, 0);
+	border-right: 18px solid rgba(0, 0, 0, 0);
+	border-top: 18px solid #3eb1e8;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	bottom: -18px;
+
+}
+.tab-container.active {
+	cursor:default;
+	background-color: #3eb1e8;
+}
+.tab-container h3 {
+	padding: 20px 10px 0;
+	font-size: 22px;
+	font-family: 'P22UndergroundPro-Book';
+	margin:0
+}
+.tab-container p {
+	font-size: 16px;
+	font-family: 'FacitWeb';
+	line-height:20px;
+	padding:10px 67px;
+	border-bottom:#fff 3px solid;
+	margin:0 0 10px;
+    min-height:85px
+}
+.cirle-notfiy  {
+    background-color: #b7e4f9;
+    border-radius: 50%;
+    color: #1c9ad6;
+    font-family: 'FacitWeb';
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    padding-top: 5px;
+    text-align: center;
+	display:inline-block;
+	position:absolute;
+	top:-10px;
+	left:90px;
+}
+.cirle-notfiy-hold {
+	position:relative;
+}
+.cirle-notfiy-hold img {
+	width:30%
+}
+.cirle-notfiy-hold p {
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    margin-top: 5px;
+    min-height: 120px;
+    padding: 0;
+    text-align: center;
+}
+.interested-btn {
+	width:250px;
+	height:44px;
+	line-height:30px;
+	margin:10px 0 20px;
+}
+.interested-btn:hover ,.interested-btn:focus {
+	margin:13px 0 17px
+}
+.numberings {
+	border-top:	1px solid #a4a6aa;
+	border-bottom:	1px solid #a4a6aa;
+	padding: 30px 0;
+	background-image:url("../img/dot-pattern.png");
+	background-repeat:repeat;
+	margin-top:20px !important
+}
+.numberings .container {
+	max-width:900px;
+}
+.numberings h2 {
+	font-size: 48px;
+	font-family: 'P22UndergroundPro-Book';
+	text-align:center;
+}
+.numberings h3 {
+	font-size: 16px;
+	font-family: 'FacitWeb';
+	text-align:center;
+	margin-top:0
+}
+.services-offered {
+	padding: 20px 0 x
+}
+.services-offered h4 {
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    padding: 20px 0 10px;
+    text-align: center;
+	border-radius:50%;
+	width:700px;
+	height:60px;
+	margin: 10px auto 30px;
+	background-image:url("../img/dot-pattern.png");
+	background-repeat:repeat;
+}
+.services-offered p {
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    margin: 10px 0 0 15px;
+    text-align: left;
+	overflow:hidden;
+}
+.services-offered img {
+	border-radius:50%;
+	border:1px solid #A6DF53;
+	width:70px;
+	margin-right:15px
+}
+.services-offered div {
+	min-height:80px;
+}
+.trending-pro {
+	border-bottom: 1px solid #8fc146
+}
+.trending-pro h1 {
+	font-size: 24px;
+	font-family: 'P22UndergroundPro-Book';
+	text-align:left;
+	padding:0;
+	margin:0;
+	line-height:36px;
+}
+.trending-pro .star-house-icon {
+	background-image:url(../img/trending-homes.png);
+	background-repeat:no-repeat;
+	width:63px;
+	height:44px;
+	display:inline-block;
+	position:relative;
+	top:13px;
+	margin-right:20px
+}
+.trending-pro-thumb .trend-thumbnail {
+	margin:50px 18px 20px
+}
+.trending-pro-thumb {
+	border-bottom: 1px solid #8fc146;
+}
+.testimonials {
+	margin: 20px 0;
+}
+.testimonials h2{
+    font-family: 'FacitWeb';
+    font-size: 30px;
+    margin: 40px 0 20px 0;
+    text-align: center;
+	line-height:45px;
+}
+.testimonials .carousel-control.left, .testimonials .carousel-control.right{
+	background-image:none;
+}
+.testimonials .carousel-inner > .item {
+	padding: 0 5%
+}
+.testimonials  .carousel-control {
+	opacity:0.7
+}
+.testimonials h3{
+	font-family: 'P22UndergroundPro-Book';
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+	line-height:40px;
+}
+.investor-btn {
+	width:250px;
+	height:44px;
+	line-height:30px;
+}
+.stripe-divider {
+	height:1px;
+	width:80%;
+	background-color:#e1e3e6;
+	margin: 50px auto;
+	position:relative;
+}
+.stripe-circle {
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background-color:#1c9ad6;
+	margin: auto;
+	left:0;
+	right:0;
+	top:-20px;
+	position:absolute;
+	border: 10px solid #FFF;
+}
+.loan-apply-hold img{
+	width:90px;
+	height:90px;
+	margin: 10px 20px 0 0;
+}
+.loan-apply-text  {
+	overflow:hidden;
+    min-height:140px
+}
+.loan-apply-text h2 {
+    font-family: 'FacitWeb';
+    font-size: 22px;
+    margin: 10px 0 10px 0;
+    text-align: left;
+	line-height:26px;
+}
+.loan-apply-text h3 {
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    text-align: left;
+}
+.apply-loan-btn {
+	width:250px;
+	height:44px;
+	line-height:30px;
+	margin:10px 0 10px
+}
+.apply-loan-btn:hover ,.apply-loan-btn:focus {
+	margin:13px 0 7px
+}
+.social-feed {
+	margin: 50px 0;
+}
+.feed-hold {
+	display:inline-block;
+	border-left: 1px solid #e2e6ef;
+	max-width:330px;
+	overflow:hidden;
+	padding: 0 0 0 20px;
+	margin-bottom:20px;
+	min-height:450px
+}
+.feed-hold p {
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    text-align: left;
+	line-height:20px;
+}
+.info-overlay {
+	min-width:300px;
+	height:122px;
+	background-color:#fff;
+	display:inline-block;
+	top: -128px;
+	left: -116px;
+	position:relative;
+	z-index:1;
+	border: 1px solid #E1E3E6;
+	cursor:default;
+	display:none
+}
+.overlay-img {
+	float:left;
+}
+.info-overlay:before {
+	border-left: 13px solid rgba(0, 0, 0, 0);
+	border-right: 13px solid rgba(0, 0, 0, 0);
+	border-top: 12px solid #E1E3E6;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	bottom: -13px;
+	margin-left:-1px;
+	left:121px;
+}
+.info-overlay:after {
+	border-left: 12px solid rgba(0, 0, 0, 0);
+	border-right: 12px solid rgba(0, 0, 0, 0);
+	border-top: 12px solid #fff;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	bottom: -12px;
+	left:121px
+}
+.overlay-text {
+	display:inline-block;
+	overflow:hidden;
+	padding:10px
+}
+.overlay-text  h3 {
+    font-family: 'FacitWeb';
+    font-size: 22px;
+    margin: 5px 0 0 0;
+    text-align: left;
+	line-height:22px;
+	padding:0
+}
+.overlay-text  p {
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    margin: 10px 0 10px 0;
+    text-align: left;
+	line-height:14px;
+	padding:0;
+	float:none
+}
+.overlay-grade {
+	width:40px;
+	height:40px;
+	background-color: #ffd75d;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+    text-align: left;
+	line-height:14px;
+	padding:0;
+	border-radius:50%;
+	padding:11px
+}
+.info-icon:hover .info-overlay {
+	display:inherit
+}
+
+.property-auction-hold{
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding:0 !important;
+}
+.property-auction {	
+	margin-left:20px;
+	margin-bottom:10px;
+	padding-bottom:20px;
+}
+.property-auction h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.property-box {
+    margin: 20px 0 0;
+    padding-bottom: 15px;
+}
+.property-box .property-frame img {
+    border-radius: 2px;
+    float: left;
+    height: 120px;
+    width: 120px;
+}
+.property-box .property-text {
+    display: inline-block;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.property-box .property-text h3 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+.property-box .property-text .h3tag {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+.property-box .property-text h3 .place {
+    font-size: 16px;
+}
+.property-box .bids-days {
+    margin: 0 auto;
+    width: 120px;
+	margin:10px 0 0 30px
+}
+.property-box .bids {
+    background-color: #1C9AD6;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    height: 48px;
+    line-height: 17px;
+    margin-left: -30px;
+    margin-top: 0;
+    padding-top: 7px;
+    position: absolute;
+    text-align: center;
+    width: 48px;
+}
+.property-box .closed {
+    background-color: #1C9AD6;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'FacitWeb';
+    font-size: 12px;
+    height: 48px;
+    line-height: 12px;
+    margin-left: 30px;
+    margin-top: 0;
+    padding-top: 9px;
+    position: absolute;
+    text-align: center;
+    width: 48px;
+}
+
+.property-auction h4 {
+    color: #1C9AD6;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+	line-height:18px;
+    margin: 5px 0 15px;
+    padding: 15px 0 0 0;
+    border-top: 1px solid #E1E3E6;
+}
+.property-auction h5 {
+    color: #404040;
+    font-family: 'FacitWeb';
+    font-size: 24px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0;
+}
+.property-auction h6 {
+    color: #505050;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 5px;
+    padding: 0 0 5px;
+}
+.property-auction ul {
+	margin:0;
+	padding:0;
+}
+.property-auction li {
+	margin:0 0 10px 15px;
+	padding:0;
+	display: inline-block
+}
+.view-payment-btn {
+    background-color: #A6DF53;
+    border-bottom: 2px solid #7BAB36;
+    color: #000000;
+	float:none;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    width: 250px;
+}
+.view-payment-btn:hover, .view-payment-btn:focus {
+    border-bottom: 2px solid #A6DF53;
+    color: #000000;
+    margin: 12px 0 3px;
+}
+.pinned-properties-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding:0 !important;
+}
+.pinned-properties {	
+	margin-left:20px;
+	margin-bottom:10px;
+	padding-bottom:20px;
+}
+.pinned-properties h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.pinned {
+	border-bottom: 1px solid #E1E3E6;
+	padding-bottom:10px;
+	margin-top:20px;
+}
+.pin-img {
+    display: inline-block;
+    float: left;
+    width: 64px;
+}
+.pinned .pin-img img {
+	width:64px;
+	height:64px;
+	float:left;
+}
+.pinned li .list-color {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 18px;
+    list-style: disc outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.pinned ul {
+	margin:0
+}
+.pinned li {
+    color: #B7E4F9;
+    float: left;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 18px;
+    list-style: disc inside none;
+    margin: 0 10px 0 2px;
+    padding: 0;
+    text-align: left;
+}
+.pin-text {
+	display:inline-block;
+	overflow:hidden;
+	padding: 0 15px
+}
+.pinned h3 {
+    color: #000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+.pinned h4 {
+    color: #000;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 20px;
+    margin: 2px 0 5px;
+    padding: 0 0 5px;
+}
+.pinned-properties a.unpin {
+	font-size: 16px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	cursor: pointer;
+	font-family: 'FacitWeb';
+	line-height: 16px;
+	margin: 10px 0  0;
+	padding: 0;
+	display:inline-block
+}
+.pinned-properties a.unpin:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+
+.pinned-view-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 77px;
+	height: 24px;
+	font-size: 14px;
+	margin: 15px 10px 0 0;
+	display: table;
+}
+.pinned-view-btn:hover, .pinned-view-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 16px 10px -1px 0;
+	height: 24px;
+}
+.congratulations-hold {
+	background-color:#fbfbfb;
+	border: 1px solid #f2f2f2;
+	border-top: none;
+	margin-bottom:20px;
+	padding:0 0 20px 0;
+	position:relative;
+}
+.congratulations {	
+	margin-left:20px;
+	margin-bottom:10px;
+}
+.congratulations h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px 0px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.congratulations h5 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    line-height: 22px;
+    font-size: 18px;
+    margin: 0;
+    padding: 0 15px 0 0;
+}
+.congratulations h4 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    line-height: 24px;
+    font-size: 18px;
+    margin: 10px 0 0 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid #E1E3E6;
+}
+.congratulations li {
+    color: #1c9ad6;
+    font-family: 'FacitWeb';
+    line-height: 24px;
+    font-size: 18px;
+    margin: 10px 0 0 15px;
+    padding: 0 15px 5px 0;
+	list-style:disc outside none
+}
+.congratulations li b {
+  color: #000;
+  font-weight:normal
+}
+.grade-circle {
+	float:left;
+	width:120px;
+	height:120px;
+	border-radius:50%;
+	border:1px solid #ffbd3d;
+	padding:45px;
+    color: #000000;
+    font-family: 'FacitWeb';
+    line-height: 30px;
+    font-size: 30px;
+}
+.congratulations-text {
+	overflow:hidden;
+	padding:20px;
+}
+.congratulations .grade-hold {
+	margin-top:20px;
+}
+.congratulations a.learn-more {
+	font-size: 16px;
+	border-bottom: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	cursor: pointer;
+	font-family: 'FacitWeb';
+	line-height: 16px;
+	margin: 20px 0  0;
+	padding: 0;
+	display:inline-block
+}
+.congratulations a.learn-more:hover {
+	border-bottom: 1px solid #999999;
+	color: #999999;
+}
+.property-box  .days {
+	width: 50px;
+	height: 50px;
+	margin: 0 10px 20px 30px;
+	position: relative;
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 17px;
+	text-align: center;
+	background-color: #e47777;
+	padding-top: 8px;
+	border-radius: 50%;
+	cursor: pointer;
+	display:inline-block;
+}
+.property-box .small-days {
+	font-size: 10px;
+	position: relative;
+	top: -5px;
+}
+.account {
+	margin: 20px 0 20px 150px
+}
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 6px 0;
+	color: #fff;
+	font-family: 'FacitWeb';
+	font-size: 12px;
+	line-height: 12px;
+	text-align: center;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.profile-image img {
+	border-radius:3px;
+	position:relative;
+	height:100px;
+	width:100px;
+}
+.profile-image {
+	position:relative;
+	display:inline-block;
+	float:left
+}
+.change-picture {
+	position:absolute;
+	background-color: rgba(0,0,0,0.6);
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+	height:26px;
+	bottom:0px;
+	width:100%
+}
+.profile-details {
+	display:inline-block;
+	margin-left:30px;
+	min-height:100px
+}
+.profile-details h2 {
+    color: #000;
+    display: block;
+	font-family: 'FacitWeb';
+    font-size: 22px;
+    line-height: 22px;
+    margin: 0;
+    padding:0;
+    text-align: left;
+}
+.profile-details h2 .borrower {
+	font-size:14px;
+	margin-left:30px
+	}
+.profile-details h4 {
+    color: #000;
+    display: block;
+	font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding:0;
+    text-align: left;
+	display:inline-block
+}
+.profile-details .grade {
+    background-color: #FFD75D;
+    border-radius: 50%;
+    color: #000000;
+    display: inline-block;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    height: 50px;
+    line-height: normal;
+    margin: 15px 90px 0 15px;
+    padding-top: 14px;
+    text-align: center;
+    width: 50px;
+}
+.profile-details .star {
+    background-color: #1C9AD6;
+    border-radius: 50%;
+    color: #000000;
+    display: inline-block;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    height: 50px;
+    line-height: normal;
+    margin: 15px 15px 0;
+    padding-top: 15px;
+    text-align: center;
+    width: 50px;
+}
+.account-profile a {
+    color: #ccc;
+    display: inline-block;
+	font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 18px;
+    margin: 10px 50px 10px 0 ;
+    padding:0;
+    text-align: left;
+}
+.account-profile a:hover {
+	color:#999
+}
+.account-profile {
+	margin-bottom:50px;
+}
+.info-cards {
+	background-color:#fafafa;
+	border:1px solid #F2F2F2;
+	border-bottom: 2px solid #e1e1e1;
+	border-top:none;
+	border-radius:4px;
+	padding:20px;
+	margin-bottom:30px
+}
+.info-cards h2 {
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.info-cards ul {
+	padding:0;
+	margin:0;
+}
+.info-cards li {
+	padding:0;
+	margin:0;
+}
+.info-cards li {
+	padding:0;
+	margin:0;
+}
+.info-cards h5 {
+    color: #666;
+    display: block;
+	font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    padding:10px 0;
+    text-align: left;
+	display:inline-block;
+	float:left
+}
+.info-cards h6 {
+    color: #231f20;
+    display: block;
+	font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    padding: 10px 0;
+    text-align: right;
+	display:inline-block;
+	float:right
+}
+.info-cards-apply-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 140px;
+	font-size: 16px;
+	margin: 0 0 5px 10px;
+	display: table;
+	float:left;
+}
+.info-cards-apply-btn:hover, .info-cards-apply-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 3px 0 2px 10px;
+}
+.info-cards-cancel-btn {
+	background-color: #eee;
+	border-color: #bebebe;
+	color: #000;
+	width: 140px;
+	font-size: 16px;
+	margin: 0 0 5px 10px;
+	display: table;
+	float:left;
+}
+.info-cards-cancel-btn:hover, .info-cards-cancel-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #eee;
+	border-bottom: 3px solid #eee;
+	margin: 3px 0 2px 10px;
+}
+.message-details {
+	margin: 0;
+	max-width:980px;
+}
+.message-head {
+	padding-bottom:20px;
+}
+.message-head h3{
+	color: #221f1f;
+	font-size: 22px;
+	margin: 0 15px 0 0;
+	padding:0;
+	line-height:26px;
+	display: inline-block;
+	font-family: 'FacitWeb';
+	float:left
+}
+.message-details .form-hold-msg-center .validate-line {
+    border: 1px solid #CCCCCC;
+    bottom: 0;
+    display: inline-block;
+    margin: 0;
+    width: 365px;
+}
+.message-details .form-hold-msg-center .input-field {
+	width:354px
+}
+.message-details .form-hold-msg-center .input-wrapper {
+	width:366px
+}
+.message-head .sprite {
+	opacity:.4
+}
+.message-details .sprite:hover, .message-details .sprite:focus, .message-details .sprite:active {
+	opacity:1
+}
+.message-body h3{
+	color: #1b99d6;
+	font-family: 'FacitWeb';
+	font-size: 22px;
+	margin: 20px 0;
+	padding:0;
+	line-height:26px;
+}
+.message-list {
+	margin: 20px 0 ;
+	border-bottom: 1px solid #e9e9e9;
+}
+.single-chat .message-list {
+	margin: 20px 0 ;
+	padding:15px;
+	border-radius:6px;
+	border-bottom: none;
+	width:80%;
+	position:relative;
+}
+.single-chat .message-list.right {
+	background-color:#f2f9fd;
+	float:right;
+	margin-right:10px
+}
+.single-chat .message-list.left {
+	background-color:#f8f8f8;
+	float:left;
+	margin-left:10px
+}
+.single-chat .message-list.right .arrow {
+	border-top: 13px solid rgba(0, 0, 0, 0);
+	border-left: 12px solid #f2f9fd;
+	content: "";
+	display: inline-block;
+	right:-12px;
+	position:absolute;
+	bottom:20px
+}
+.single-chat .message-list.left .arrow {
+	border-top: 13px solid rgba(0, 0, 0, 0);
+	border-right: 12px solid #f8f8f8;
+	left:-12px;
+	content: "";
+	display: inline-block;
+	position:absolute;
+	bottom:20px
+}
+.message-list h4 {
+	color: #555;
+	font-size: 18px;
+	font-family: 'FacitWeb';
+	margin: 0;
+	padding:0;
+	line-height:22px;
+	display: inline-block;
+	float:left
+}
+.message-list h5 {
+	color: #555;
+	font-size: 14px;
+	font-family: 'FacitWeb';
+	margin: 0;
+	padding:0;
+	line-height:22px;
+	display: inline-block;
+	float:right
+}
+.message-list p {
+	color: #444;
+	font-size: 14px;
+	font-family: 'FacitWeb';
+	margin: 20px 0 5px;
+	padding:0;
+	line-height:22px;
+}
+.message-file h5{
+	color: #444;
+	font-size: 14px;
+	font-family: 'FacitWeb';
+	margin: 20px 0 0 0;
+	padding:5px 0 5px 15px;
+	line-height:22px;
+	border: 1px solid #CCC;
+}
+.message-file .right-caret {
+    border-top: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid #8f8f8f;
+    display: inline-block;
+    height: 0;
+    width: 0;
+	margin: 0 10px 0
+}
+
+.message-file .fileUpload {
+	margin: 0 10px;
+	top:3px;
+}
+.message-file .text-area  {
+	border: 1px solid #CCC;
+	border-top:none;
+	width:100%;
+	min-height:130px;
+	padding: 10px;
+	color: #444;
+	font-size: 14px;
+	font-family: 'FacitWeb';
+	line-height:18px
+}
+.message-send-btn  {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 87px;
+	height: 30px;
+	font-size: 14px;
+	margin: 0 5px 0 0;
+	display: table;
+    float:right
+}
+.message-send-btn:hover, .message-send-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 1px 5px -1px 0;
+	height: 30px;
+}
+.message-chat {
+	position:relative;
+	margin: 20px 0;
+}
+.message-chat .fileUpload {
+    margin: 0 10px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    z-index: 1;
+}
+.message-chat .text-area  {
+	border: 1px solid #e9e9e9;
+	width:100%;
+	min-height:80px;
+	padding: 10px;
+	color: #444;
+	font-size: 14px;
+	font-family: 'FacitWeb';
+	line-height:18px;
+	position:relative;
+	width:80%;
+	float:right;
+}
+
+.message-inbox h3{
+	color: #221f1f;
+	font-size: 18px;
+	margin: 0;
+	padding: 2px 0 0;
+	line-height:18px;
+	display: inline-block;
+	font-family: 'FacitWeb';
+	float:left;
+	width:165px
+}
+.message-inbox h4{
+	color: #221f1f;
+	font-size: 16px;
+	margin: 0;
+	padding:4px 0 0;
+	line-height:16px;
+	display: inline-block;
+	font-family: 'FacitWeb';
+	float:left;
+}
+.message-inbox h5{
+	color: #221f1f;
+	font-size: 16px;
+	margin: 0;
+	padding:4px 0 0;
+	line-height:16px;
+	display: inline-block;
+	font-family: 'FacitWeb';
+	float:right;
+    border:none
+}
+.message-inbox  .css-checkbox2-hold {
+	display:inline-block;
+	float:left;
+	padding:0
+}
+.message-inbox  input.css-checkbox2[type="checkbox"] + label.css-label2 {
+	margin-top:0px
+}
+.message-inbox-list {
+	border-bottom: 1px solid #e9e9e9;
+	padding:10px 12px;
+}
+.member-upgrade h2.jumpo-text {
+    color: #000;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+	font-size: 60px;
+    line-height: 60px;
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+}
+.autions-plans ul{
+	padding:0;
+	margin: 80px 0;
+}
+.autions-plans li {
+	display:inline-block;
+	width:30%;
+	min-height:	260px;
+	float:left
+}
+.autions-plans li:nth-child(2) {
+	width:39%;
+}
+.autions-plans h3{
+	color: #231f20;
+	font-size: 22px;
+	margin: 20px 0 10px;
+	padding: 0;
+	line-height:26px;
+	font-family: 'FacitWeb';
+}
+.autions-plans h4{
+	color: #231f20;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	line-height:22px;
+	font-family: 'FacitWeb';
+}
+.autions-plans h5{
+	color: #1c9ad6;
+	font-size: 24px;
+	margin: 0;
+	padding: 0;
+	line-height:30px;
+	font-family: 'FacitWeb';
+}
+.choose-paln {
+	margin: 40px 0 0
+}
+.choose-paln ul {
+	margin:0;
+	padding:0;
+	border-bottom: 1px solid #e1e3e6
+}
+.choose-paln li {
+	margin:0;
+	padding:0;
+	width:22%;
+	float:left;
+	display:inline-block;
+	min-height:120px;
+}
+
+.choose-paln h2{
+	font-size: 26px;
+	margin: 0;
+	padding: 0;
+	line-height:26px;
+	font-family: 'FacitWeb';
+}
+.choose-paln h3{
+	font-size: 18px;
+	margin: 0;
+	padding: 15px 0 0 0;
+	line-height:22px;
+	font-family: 'FacitWeb';
+}
+.choose-paln li:nth-child(1) {
+	text-align:left;
+	color:#231f20;
+	width:34%;
+	padding-top:45px;
+}
+.choose-paln li:nth-child(2) {
+	text-align:center;
+	background-color:#e1e3e6;
+	color: #818283;
+	padding-top:30px;
+}
+.choose-paln li:nth-child(3) {
+	text-align:center;
+	background-color:#ebecea;
+	color: #818283;
+	padding-top:30px;
+}
+.choose-paln li:nth-child(4) {
+	text-align:center;
+	background-color:#ffd75d;
+	color: #d4a411;
+	padding-top:30px;
+}
+
+
+
+
+.choose-paln-list ul {
+	margin:0;
+	padding:0;
+	border-bottom: 1px solid #e1e3e6
+}
+.choose-paln-list li {
+	margin:0;
+	padding:0;
+	width:22%;
+	float:left;
+	display:inline-block;
+	min-height:110px;
+	text-align:center;
+	position:relative
+}
+.choose-paln-list .height li {
+	min-height:150px;
+}
+.choose-paln-list li:nth-child(1) {
+	color:#231f20;
+	width:34%;
+	padding-top:45px;
+}
+
+.choose-paln-list h2{
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	line-height:18px;
+	font-family: 'FacitWeb';
+	color:#1c9ad6;
+	text-align:left;
+}
+.choose-paln-list h3{
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	line-height:18px;
+	font-family: 'FacitWeb';
+}
+.choose-paln-list h5{
+	font-size: 16px;
+	margin: 5px 0 0;
+	padding: 0;
+	line-height:18px;
+	font-family: 'FacitWeb';
+	text-align:left;
+}
+.choose-paln-list .text {
+	right:0; left:0; top:50%; transform:translate(0,-50%); -webkit-transform:translate(0,-50%);  
+	position:absolute;
+	text-align:center
+}
+.gold-member-btn {
+	float:right;
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 195px;
+	font-size: 14px;
+	margin: 30px 0 10px 10px;
+	display: table;
+}
+.gold-member-btn:hover, .gold-member-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 33px 0 7px 10px;
+}
+.silver-member-btn {
+	float:right;
+	background-color: #e1e3e6;
+	border-color: #818283;
+	color: #000;
+	width: 195px;
+	font-size: 14px;
+	margin: 30px 0 10px 0;
+	display: table;
+}
+.silver-member-btn:hover, .silver-member-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #e1e3e6;
+	margin: 33px 0 7px 0;
+}	
+.upcoming-payments {
+    border: 1px solid #E1E3E6;
+	border-top:none;
+	width:480px;
+	margin: -35px auto 20px;
+	padding: 0 0 0 20px
+}
+.upcoming-payments h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.upcoming-payments h3 {
+    color: #505050;
+    display: inline-block;
+	font-family: 'FacitWeb';
+    font-size: 36px;
+    line-height: 30px;
+    margin: 20px 0 0;
+    padding: 0;
+    text-align: center;
+	width:49%;
+	height:50px;
+	float:left
+}
+.upcoming-payments h4 {
+    color: #505050;
+    display: inline-block;
+	font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 24px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    text-align: left;
+	width:50%;
+	height:50px;
+	float:left
+}
+hr {
+    border: #EEEEEE solid 1px ;
+    display: block;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.pay-now-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 195px;
+	font-size: 14px;
+	margin: 10px 10px 10px 0;
+	float:left
+}
+.pay-now-btn:hover, .pay-now-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 13px 10px 7px 0;
+}
+.remind-me-btn {
+	background-color: #e1e3e6;
+	border-color: #818283;
+	color: #000;
+	width: 195px;
+	font-size: 14px;
+	margin: 10px 10px 10px 0;
+	float:left
+}
+.remind-me-btn:hover, .remind-me-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #e1e3e6;
+	margin: 13px 10px 7px 0;
+}
+.upcoming-payments a {
+    color: #CCCCCC;
+    display: inline-block;
+    font-family: 'FacitWeb';
+    font-size: 16px;
+    line-height: 18px;
+    margin: 5px 20px 20px 0;
+    padding: 0;
+    text-align: left;
+    border-bottom: 1px solid #E1E3E6;
+	float:left
+}
+.upcoming-payments a:hover {
+	color:#999;
+    border-bottom: 1px solid #999;
+}
+.payment-log ul {
+	margin:0;
+	padding:0;
+}
+.payment-log li {
+	margin:0;
+	padding:0;
+	height:70px;
+    border-bottom: 1px solid #E1E3E6;
+}
+.payment-log  h2 {
+    color: #1C9AD6;
+    display: inline-block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 40px;
+    margin: 0 50px 10px 0;
+    padding: 30px 0 5px;
+    text-align: left;
+}
+.payment-log  h3 {
+    color: #ccc;
+    display: inline-block;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 50px 10px 0;
+    text-align: left;
+	padding:0
+}
+.payment-log  h4 {
+    color: #000;
+    display: inline-block;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 18px;
+    margin: 25px 0 10px 0;
+    text-align: left;
+	padding:0;
+	width:31%
+}
+.paid{
+    color: #A6DF53;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+    text-align: left;
+	padding:0;
+	display:table;
+	float:right;
+	width:44px;
+	position:relative;
+	top:-5px
+}
+.txn{
+    color: #e60020;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 14px;
+    margin: 0;
+    text-align: left;
+	padding:0;
+	display:table;
+	float:right;
+	width:44px;
+	position:relative;
+	top:-5px
+}
+p.info-para {
+    color: #505050;
+    display: block;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 18px;
+    margin: 20px 0;
+    text-align: left;
+	padding: 10px;
+	border:1px solid #8FC146
+}
+p.info-para .text {
+	display:block;
+	overflow:hidden
+}
+p.info-para .text em {
+    color: #303030;
+}
+p.info-para .text strong {
+    text-decoration:underline
+}
+.dashboard-wrap {
+    max-width: 950px;
+}
+.applying > label {
+	float:left;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+	font-weight:normal;
+	margin-right:20px;
+    line-height: 18px;
+}
+.applying  label.css-label3 {
+    font-family: 'FacitWeb';
+    font-size: 14px !important;
+	font-weight:normal !important;
+}
+.dashboard-wrap-hold {
+	padding:0 !important;
+}
+.form-element .validate-line {
+	width:100%;
+}
+.form-element .input-field {
+	left:0;
+	width:98%;
+	bottom:2px;
+    font-size: 14px;
+    padding-left:2px
+}
+.form-element .input-wrapper {
+	width:105%;
+	height:20px;
+	bottom:5px;
+}
+.form-element label {
+    font-family: 'FacitWeb';
+    font-size: 14px;
+	font-weight:normal;
+    line-height: 18px;
+	text-align:left;
+	margin-top:10px
+}
+.form-element .pad-zero {
+	padding: 0 !important;
+}
+.form-element {
+	margin-top:5px
+}
+.form-element .validate-line {
+    float: left;
+    width: 80%;
+}
+.form-element .small {
+	width:25%;
+	float:left
+}
+.form-element .medium {
+	width:50%;
+	float:left;
+	margin-left:10px
+}
+.dashboard-wrap .main-heading {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 25px;
+    margin: 10px 0 0 0;
+    padding: 0 0 5px;
+    text-align: left;
+}
+.dashboard-wrap .sub-heading {
+    border-bottom: 1px solid #E1E3E6;
+    color: #000;
+    display: block;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0 0 0;
+    padding: 0 0 5px;
+    text-align: left;
+	text-transform:uppercase;
+	position:relative
+}
+.dashboard-wrap  .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]) {
+	width: 100%
+}
+.dashboard-wrap  .btn-default, .dashboard-wrap  .btn-default:hover, .dashboard-wrap  .btn-default:active, .dashboard-wrap  .btn-default:focus {
+	border: none;
+	padding:0
+}
+.dashboard-wrap  .btn-group.open .dropdown-toggle, {
+ box-shadow:none
+}
+.dashboard-wrap  .btn-default:hover, .dashboard-wrap  .btn-default:focus, .dashboard-wrap  .btn-default:active, .dashboard-wrap  .btn-default.active, .dashboard-wrap  .open .dropdown-toggle.btn-default {
+	border: none;
+	background: none;
+	box-shadow: none
+}
+.dashboard-wrap .dropdown-menu {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
+}
+.css-checkbox2-hold.autofill {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: -13px;
+}
+.css-checkbox2-hold.autofill input.css-checkbox2[type="checkbox"] + label.css-label2 {
+    font-family: 'FacitWeb';
+    font-size: 12px;
+	font-weight:normal;
+	text-transform:none;
+	padding-top:2px
+}
+.dashboard-wrap button.close {
+	margin: 2px 5px 0 0
+}
+.point-table .table > tbody > tr > td {
+	width:20%;
+    vertical-align:middle
+}
+.point-table .table > tbody > tr > td:nth-child(2) {
+	width:30%
+}
+.point-table .table > tbody > tr > td:nth-child(3) {
+	width:20%
+}
+.point-table .table > tbody > tr > td:nth-child(4) {
+	width:30%
+}
+.file-upload-wrap {
+	margin:10px 0
+}
+/*.file-upload-wrap input {
+	height:30px;
+	margin-right:10px;
+    border:none;
+    background-color:#fff;
+    width: 80%;
+}*/
+
+.file-upload-wrap input {
+height: 27px;
+margin-right: 10px;
+/* border: none; */
+background-color: #fff;
+width: 78%;
+}
+.file-upload-btn  {
+	background-color: #1C9AD6;
+	border-bottom: 1px solid #238DC0;
+	color: #fff;
+	width: 87px;
+	height: 30px;
+	font-size: 14px;
+	margin: 0 5px 0 0;
+	float:left
+}
+.file-upload-btn:hover, .file-upload-btn:focus {
+	color: #000;
+	color: #fff;
+	border-bottom: 1px solid #1C9AD6;
+	margin: 1px 5px -1px 0;
+	height: 30px;
+}
+.dashboard-wrap.end-hr {
+    border-top: #EEEEEE solid 1px ;
+	margin-top:10px;
+}
+.dashboard-wrap.end-hr .mc-btn {
+	float:right;
+}
+.dashboard-wrap.end-hr .mc-btn,.dashboard-wrap.end-hr .mc-btn-prev {
+	margin: 20px 0 10px 10px;
+}
+.dashboard-wrap.end-hr .mc-btn:hover,.dashboard-wrap.end-hr .mc-btn:focus, .dashboard-wrap.end-hr.mc-btn-prev:hover, .dashboard-wrap.end-hr.mc-btn-prev:focus {
+	margin: 23px 0 7px 10px;
+}
+.example-h {
+    font-family: 'FacitWeb';
+    font-size: 16px;
+	font-weight:normal;
+    line-height: 18px;
+	text-align:left;
+	margin: 0 0 5px 0;
+	padding:0;
+}
+.example-p {
+    font-family: 'FacitWeb';
+    font-size: 14px;
+	font-weight:normal;
+    line-height: 18px;
+	text-align:left;
+	color:#505050;
+	margin: 0 0 5px 0;
+	padding:0
+}
+.form-element textarea {
+	border:1px solid #818283;
+	border-top:none;
+	width:80%;
+	float:left;
+	padding: 0 5px;
+	margin-top:10px
+}
+.form-element.total-expense {
+    font-family: 'FacitWeb-Bold';
+	border-top:1px solid #818283;
+	margin-top:10px;
+	padding-top:7px
+}
+.form-element.total-expense label{
+    font-family: 'FacitWeb-Bold';
+	font-size:16px
+}
+.form-element.total-expense .input-field{
+    font-family: 'FacitWeb-Bold';
+}
+.trending-pro-thumb h4 {
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 30px;
+    margin: 0 auto 30px;
+    padding: 60px 0 10px;
+    text-align: center;
+}
+.feed-hold h4 {
+    font-family: 'FacitWeb';
+	font-size:18px;
+	margin-top:0;
+}
+.basicPriorEmploy1, .basicPriorEmploy2 {
+	display:none;
+}
+#add-other-employ, #add-other-employ-2 {
+	display:none;
+}
+.social-signin {
+	margin: 10px  0 0 0;
+	border-top:1px solid #E1E3E6;
+	display:none;
+	width:100%
+}
+.social-signin .social-sprite {
+	margin: 15px 15px 10px 0
+}
+
+.be-borrower-btn { 
+	float: none;
+    font-size: 14px;
+    height: 30px;
+    line-height: 18px;
+    margin: 5px 0 10px 25px;
+    width: 175px;
+	border-bottom:1px #7BAB36 solid;
+}
+.be-borrower-btn:hover, .be-borrower-btn:focus {
+	margin:6px 0 9px 25px;
+}
+
+
+.find-out-btn {
+	background-color:#198AC0;
+	color:#fff;
+	border-bottom: 1px solid #107AB0;
+    float: right;
+    font-size: 14px;
+    height: 30px;
+    line-height: 18px;
+    margin: 5px 25px 10px 0;
+    width: 115px;
+}
+.find-out-btn:hover, .find-out-btn:focus {
+	margin:6px 25px 9px 0;
+	border-bottom: 3px solid #198AC0;
+	color:#fff
+}
+.sign-up-text p.info-para {
+	line-height:40px;
+	margin:20px 0 0
+}
+.tab-container-list-hold {
+	border-bottom:1px solid #8FC146
+}
+.form-element .bootstrap-select.input-field {
+		bottom:2px
+}
+.required-feilds {
+    font-family: 'FacitWeb';
+	font-size:12px;
+    line-height:12px;
+    color: #505050;
+    margin: 5px 0 0;
+    padding:0;
+}
+.find-out-more {
+    margin-bottom: 20px !important
+}
+.find-out-more h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.find-out-more .link-in {
+    color:#1C9AD6;
+    text-decoration:underline
+}
+.find-out-more .link-in:hover {
+    color:#198AC0;
+    text-decoration:underline !important
+}
+.find-out-more h3 {
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 22px;
+    margin: 20px 0 10px;
+    padding: 5px 0 2px;
+    line-height: 24px;
+    border-bottom: 1px solid #E1E3E6;
+}
+.find-out-more p {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 5px 0;
+}
+.find-out-more ul {
+    margin: -5px 0 0;
+    padding:0;
+}
+.find-out-more li {
+    color: #B7E4F9;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 18px;
+    list-style: disc inside none;
+    margin: 10px 10px 0 20px;
+    padding: 0;
+    text-align: left;
+}
+.find-out-more li .list-color {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 18px;
+    list-style: disc outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.find-out-more-left {
+    padding:0 !important;
+}
+.find-out-more-right {
+    padding:0 !important;
+}
+.rental-pro {
+    border-top: 1px solid #E1E3E6;
+    margin: 0 0 15px 0 !important;
+    padding: 15px 0 0;
+}
+.view-verified {
+    background-image:url(../img/Landing_page.jpg);
+    padding:40px 0;
+    background-position:center
+}
+.rental-pro .pro-image {
+    padding-left:0 !important
+}
+.rental-pro h2 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 5px 0 20px;
+}
+.rental-pro h3 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 5px 0;
+}
+.rental-pro h4 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    padding: 5px 0;
+}
+.rental-pro h5 {
+    color: #92C83E;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    padding: 5px 0;
+}
+.rental-pro h6 {
+    color: #1C9AD6;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    padding: 5px 0;
+}
+.blue-1 {
+    background-color:#75B5CE;
+}
+.blue-2 {
+    background-color:#53ACCC;
+}
+.blue-3 {
+    background-color:#0174A3;
+}
+.green-1 {
+    background-color:#93D06D;
+}
+.green-2 {
+    background-color:#50AC6A;
+}
+
+.rental-pro-table td:first-child, .rental-pro-table th {
+    font-family: 'FacitWeb-Bold';
+    font-weight:normal;
+}
+.faq h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 10px;
+    padding: 20px 0 5px;
+    text-align: left;
+}
+.faq .panel-group .panel , .faq  .panel-heading{
+    border-radius: 0;
+}
+.faq .panel-group .panel:last-child {
+    margin-bottom:30px;
+}
+.faq .panel-title {
+    color: #000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 16px;
+    margin: 0;
+    padding: 5px 0;
+}
+.faq .panel-body p {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    padding: 5px 0;
+}
+.faq .panel-default > .panel-heading {
+    background-color: #fff;
+    border: none;
+    padding-left:0
+}
+.faq .panel {
+    background-color: #FFFFFF;
+    border:none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+.how-it-works {
+    position:relative;
+}
+.how-it-works-drop {
+	min-width: 200px;
+	min-height: 140px;
+	background-color: #fff;
+	position: absolute;
+	z-index: 12;
+	border: 1px solid #f4f4f4;
+	border-top: none;
+	top: 100px;
+	left: -37px;
+    display:none
+}
+.how-it-works:hover .how-it-works-drop {
+    display:inherit;
+}
+.how-it-works-drop li {
+	padding-top: 15px;
+	display: block;
+}
+.how-it-works-drop li a {
+	display: block;
+}
+.how-it-works-drop li a .head-text {
+	font-family: 'FacitWeb';
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+.how-it-works-drop li .text-block {
+	border-bottom: 1px solid #E1E3E6;
+	display: block;
+	margin-left: 15px;
+	padding-bottom: 5px
+}
+.how-it-works-drop li:last-child .text-block {
+	border-bottom: 1px solid #fff;
+}
+.contact-us h3 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 5px 0;
+}
+.contact-us li {
+    color: #B7E4F9;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 18px;
+    list-style: disc inside none;
+    margin: 10px 10px 0 20px;
+    padding: 0;
+    text-align: left;
+}
+.contact-us li .list-color {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 18px;
+    list-style: disc outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.properties-bids .media p.accepted  {
+    float:left;
+    margin-top:7px
+}
+
+
+.scr-pro-btn {
+	float:left !important;
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 280px;
+	font-size: 18px;
+	margin: 30px 0 10px;
+	display: table;
+}
+.scr-pro-btn:hover, .scr-pro-btn:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 33px 0 7px;
+}
+.signup-modal .modal-header {
+	margin-left:20px;
+	padding: 15px 15px 10px 0;
+}
+.signup-modal .modal-title {
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0;
+    padding: 15px 0 0;
+    text-align: left;
+}
+.signup-modal .modal-body {
+	padding: 0 20px 20px
+}
+.signup-modal-btn {
+    background-color: #A6DF53;
+    border-color: #7BAB36;
+    color: #000000;
+    display: table;
+    font-size: 18px;
+    margin: 25px 0 20px 0px;
+    width: 185px;
+}
+.signup-modal-btn:hover, .signup-modal-btn:focus {
+    border-bottom: 3px solid #A6DF53;
+    color: #000000;
+    margin: 28px 0 17px 0px;
+}
+.signup-modal .main-form {
+	display:table
+}
+.textfeild {
+    border:1px solid #818283;
+    box-shadow:none;
+    padding: 5px
+}
+.upload-spl label {
+    font-size:16px;
+    margin:10px 0
+}
+.upload-spl .file-upload-wrap {
+    margin: 3px 0
+}
+.banner-header {
+    position:relative;
+}
+.adjust-top {
+    margin-top:100px !important
+}
+.banner-header .banner-content {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 120px;
+    width: 550px;
+}
+.banner-header .banner-content.borrower {
+    width: 820px;
+}
+.banner-header .banner-content h2 {
+    color: #FFFFFF;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 36px;
+    text-align: center;
+}
+.contact-us p {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 24px;
+    list-style: disc outside none;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: left;
+}
+.journey .red1 {    
+    margin-top: 100%;
+    position: relative;
+}
+.journey  p {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 20px;
+    list-style: disc outside none;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: left;
+}
+.find-out-more-calc h3 {
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 22px;
+    margin: 20px 0 10px;
+    padding: 5px 0 2px;
+    line-height: 24px;
+    border-bottom: 1px solid #E1E3E6;
+}
+.find-out-more-calc h2 {
+    color: #000;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 22px;
+    margin: 20px 0 10px;
+    padding: 5px 0 2px;
+    line-height: 24px;
+    border-bottom: 1px solid #E1E3E6;
+    text-align:center
+}
+.find-out-more-calc img {
+    width: 40%;
+}
+.find-out-more-calc input.css-checkbox2[type="checkbox"] + label.css-label2 {
+    color: #000000;
+    font-family: 'FacitWeb';
+    font-size: 14px;
+    line-height: 20px;
+    font-weight:normal
+}
+.find-out-more-calc-show {
+    display:none;
+}
+
+.start-auction-btn5 {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	color: #000;
+	width: 170px;
+	font-size: 16px;
+	margin: 0 0 30px 20px;
+	display: table;
+    float:left;
+}
+.start-auction-btn5:hover, .start-auction-btn5:focus {
+	color: #000;
+	border-bottom: 3px solid #A6DF53;
+	margin: 3px 0 27px 20px;
+}
+
+.start-auction-btn6 {
+	background-color: #D8524E;
+	border-color: #B8322E;
+	color: #000;
+	width: 170px;
+	font-size: 16px;
+	margin: 0 0 30px 20px;
+	display: table;
+    float:left;
+}
+.start-auction-btn6:hover, .start-auction-btn6:focus {
+	color: #000;
+	border-bottom: 3px solid #D8524E;
+	margin: 3px 0 27px 20px;
+}
+.mp-btn {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 95px;
+	height: 30px;
+	font-size: 14px;
+	margin: 15px 10px 0 0;
+	display: table;
+	float: right;
+}
+.mp-btn:hover, .mp-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 16px 10px -1px 0;
+	height: 30px;
+}
+.message-details .nav-tabs li{
+	color: #221f1f;
+	font-size: 22px;
+	padding:0;
+	line-height:26px;
+	display: inline-block;
+	font-family: 'FacitWeb';
+	float:left
+}
+
+.message-details .nav-tabs {
+	border-top:none;
+	border-bottom: 1px solid #e1e3e6;
+	margin-bottom:10px;
+}
+.message-details .nav-tabs>li.active>a, .message-details .nav-tabs>li.active>a:hover, .message-details .nav-tabs>li.active>a:focus {
+	color: #ffffff;
+	background-color: #1C9AD6;
+	border: none;
+	border-bottom: none ;
+}
+.message-details .nav-tabs>li >a, .message-details .nav-tabs>li >a:hover, .message-details .nav-tabs>li >a:focus {
+	color: #555555;
+	background-color: #ffffff;
+}
+
+.message-details .nav-tabs>li>a {
+    color: #505050;
+	line-height: 30px;
+	border: none;
+	border-radius:0;
+	width:220px;
+	height:55px;
+    font-family: 'FacitWeb';
+	font-size:16px;
+	background-color: #ffffff;
+	border: 1px solid #dddddd !important;
+	margin:0;
+    text-align:center
+}
+.message-details .nav-tabs>li:last-child >a {
+	border-right: none !important;
+}
+.message-details .nav-tabs > li {
+    display: inline-block;
+    float: none;
+	margin-left:-4px
+}
+.message-details .msg-footer {
+	border: 1px solid #CCC;
+	border-top: none;
+	padding:5px;
+}
+.message-details .file-upload-wrap {
+    margin: 0;
+}
+.compose-mail {
+    display:none
+}
+
+.property-calc {
+   	/*border: 1px solid #f2f2f2; 
+   	background:#fff;
+	margin: 20px 0 0;
+	border-radius:4px;*/
+	padding-left:20px;
+	/*padding-right: 8px;*/
+}
+.property-calc h2 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 24px;
+    margin: 25px 0 0 ;
+    padding: 0 0 5px;
+    text-align: left;
+}
+
+.class_video{
+	width : 300px; 
+	height :250px;
+}
+.label_class {
+	display: inline-block;
+	margin-bottom: 5px;
+	margin-left: 270px;
+	font-weight: bold;
+	font-family: cursive;
+	font-size: 14px;
+}

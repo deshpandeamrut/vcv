@@ -1,0 +1,98 @@
+.admin-pannel  h3 {
+    border-bottom: 1px solid #E1E3E6;
+    color: #1C9AD6;
+    display: block;
+    font-family: 'P22UndergroundPro-Book';
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0 0 15px;
+    padding: 0;
+    text-align: left;
+}
+.admin-search-btn { 
+	float: left;
+    font-size: 14px;
+    height: 30px;
+    line-height: 18px;
+    margin: 30px 0 10px 0;
+    width: 125px;
+	border-bottom:1px #7BAB36 solid;
+}
+.admin-search-btn:hover, .admin-search-btn:focus {
+	margin:31px 0 9px 0;
+}
+.admin-pannel .form-element {
+    padding-left:0 !important;
+}
+.admin-success-btn  {
+	background-color: #A6DF53;
+	border-color: #7BAB36;
+	border-bottom: 1px solid #7BAB36;
+	color: #000;
+	width: 95px;
+	height: 30px;
+	font-size: 14px;
+	margin: 0 5px 0 0;
+	display: table;
+    float:left
+}
+.admin-success-btn:hover, .admin-success-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #A6DF53;
+	margin: 1px 5px -1px 0;
+	height: 30px;
+}
+.adminVerifyTxt {
+	color: #7BAB36;
+	font-weight: bold;
+}
+.adminNotVerifytxt {
+	color: #D94836;
+	font-weight: bold;
+}
+.admin-details-btn  {
+	background-color: #1C9AD6;
+	border-color: #238DC0;
+	border-bottom: 1px solid #238DC0;
+	color: #000;
+	width: 95px;
+	height: 30px;
+	font-size: 14px;
+	margin: 0 5px 0 0;
+	display: table;
+    float:left
+}
+.admin-details-btn:hover, .admin-details-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #1C9AD6;
+	margin: 1px 5px -1px 0;
+	height: 30px;
+}
+.admin-notverfied-btn  {
+	background-color: #F96856;
+	border-color: #D94836;
+	border-bottom: 1px solid #D94836;
+	color: #000;
+	width: 95px;
+	height: 30px;
+	font-size: 14px;
+	margin: 0 5px 0 0;
+	display: table;
+    float:left
+}
+.admin-notverfied-btn:hover, .admin-notverfied-btn:focus {
+	color: #000;
+	border-bottom: 1px solid #F96856;
+	margin: 1px 5px -1px 0;
+	height: 30px;
+}
+.usersListTable {
+	font-size: 13px !important;
+	font-family: 'FacitWeb';
+}
+.uploadPaymentBtn {
+	width: 132px !important;
+}
+.paymentForm {
+	width : 500px !important;
+}
