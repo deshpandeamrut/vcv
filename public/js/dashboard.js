@@ -722,14 +722,14 @@ function ($scope, $http, $upload) {
               "passing_percentage" : "",
               "basis_of_education" : "b_degree"    
             },
-            "more_projects" : [
-
-            ],
             "project_details" : {
                 "project_name" : "",
                 "project_description" : "",
                 "project_link    " : ""
-            }
+            },
+            "more_projects" : [
+
+            ]
         };
 
     $http({
@@ -743,26 +743,10 @@ function ($scope, $http, $upload) {
         }
     });
 
-    $scope.personalDetails = {};
-    $scope.personalDetails.no_of_applicants = 1;
-    $scope.regEmploymentData = {};
-    $scope.regFinancialData = {};
-    $scope.regFinancialData.no_of_applicants = 1;
+    // $scope.personalDetails = {};
+    // $scope.regEmploymentData = {};
+//    $scope.regFinancialData = {};
     $scope.registrationResponse = '';
-    console.log($scope.personalDetails.applicants);
-    
-    $scope.borrower2show = function () {
-        $scope.displayborrower2 = true;
-        $scope.personalDetails.no_of_applicants = 2;
-        $scope.regFinancialData.no_of_applicants = 2;
-    };
-
-    $scope.borrower2hide = function () {
-        $scope.displayborrower2 = false;
-        $scope.personalDetails.no_of_applicants = 1;
-        $scope.regFinancialData.no_of_applicants = 1;
-    }
-
     $scope.filesList =  [];
     $scope.loanDetailsData.files_reference = {}
     $scope.onFileSelect = function($files,$event) {
@@ -834,8 +818,7 @@ function ($scope, $http, $upload) {
             console.log(data);
         });
     }
-
-
+    
     $scope.addEmployment = function() {
         var newEmploymentObject = {
             "yearly_salary": "",
@@ -897,6 +880,22 @@ function ($scope, $http, $upload) {
       });
     }
 
+
+    $scope.add_more_projects = function() {
+        
+        var new_project_object = {
+            "project_name" : "",
+            "project_description" : "",
+            "project_link" : ""
+        }
+        
+        $scope.regFinancialData.more_projects.push(new_project_object);
+    }
+
+    $scope.removeProjects = function(index) {
+            $scope.regFinancialData.more_projects.splice(index,1);
+    }
+    
     $scope.financialDetails = function () {
         console.log($scope.regFinancialData);
         console.log($scope['financialForm']);
@@ -934,18 +933,6 @@ function ($scope, $http, $upload) {
         });
     }
 
-    $scope.addMoreProjects = function() {
-        var newProjectObject = {
-            "project_name" : "",
-            "project_description" : "",
-            "project_link" : ""
-        }
-        $scope.regFinancialData.more_projects.push(newProjectObject);
-    }
-
-    $scope.removeProjects = function(index) {
-            $scope.regFinancialData.more_projects.splice(index,1);
-    }
     // $scope.extraDetails = function () {
     //     console.log($scope.extraDetails);
     //      if(!$scope['extraDetailsForm'].$valid) {
@@ -995,8 +982,6 @@ function ($scope, $http, $upload) {
                 var personalObject = data.data.personal
                 if(data.data.no_of_applicants == 2){
                     $scope.displayborrower2 = true;
-                    $scope.personalDetails.no_of_applicants = 2;
-                    $scope.regFinancialData.no_of_applicants = 2;
                 }
                 jQuery('.borrowerUserDetails').removeClass('hide');
                 $scope.profile_status = data.data.profile_status;

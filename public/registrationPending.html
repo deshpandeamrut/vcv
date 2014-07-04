@@ -758,12 +758,13 @@
                                             </div>
                                         </div>
                                         <!-- More Projects -->
-                                                <span class="sub-heading">Add Prior Employments
-                                                    <span class="sprite add-new-icon tip" data-toggle="tooltip" ng-click="addMoreProjects()" data-original-title="Add" ></span>
+                                            
+                                            <span class="sub-heading">Add More  Projects
+                                                    <span class="sprite add-new-icon tip" data-toggle="tooltip" ng-click="add_more_projects()" data-original-title="Add" ></span>
                                                 </span>
                                                 <div class="basicPriorEmploye1" ng-repeat="(index,more_project) in regFinancialData.more_projects">
-                                                    <span class="sub-heading subheadsmall">Prior Employments
-                                                    <span class="sprite remove-icon tip" data-toggle="tooltip" data-original-title="Remove" ng-click="removeEmployment(index)"></span>    
+                                                    <span class="sub-heading subheadsmall">More Projects
+                                                    <span class="sprite remove-icon tip" data-toggle="tooltip" data-original-title="Remove" ng-click="removeProjects(index)"></span>    
                                                     </span>
 
                                                     <div class="form-element clearfix">
@@ -771,7 +772,7 @@
                                                         <div class="col-sm-7 pad-zero">
                                                             <span class="form-hold2 clearfix">
                                                                 <div class="validate-line">
-                                                                    <input type="text" class="input-field" ng-model="more_projects.project_name" required form-name="loanDetailForm">
+                                                                    <input type="text" class="input-field" ng-model="more_project.project_name" required form-name="financialForm">
                                                                     <div class="input-wrapper"></div>
                                                                     <div class="message"></div>
                                                                 </div>
@@ -783,7 +784,7 @@
                                                         <div class="col-sm-7 pad-zero">
                                                             <span class="form-hold2 clearfix">
                                                                 <div class="validate-line">
-                                                                    <input type="text" class="input-field" ng-model="more_projects.project_description"  required form-name="loanDetailForm" name="profession">
+                                                                    <input type="text" class="input-field" ng-model="more_project.project_description"  required form-name="financialForm" name="profession">
                                                                     <div class="input-wrapper"></div>
                                                                     <div class="message"></div>
                                                                 </div>
@@ -795,7 +796,7 @@
                                                         <div class="col-sm-7 pad-zero">
                                                             <span class="form-hold2 clearfix">
                                                                 <div class="validate-line">
-                                                                    <input type="text" class="input-field" ng-model="more_projects.project_link" required form-name="loanDetailForm" name="industry">
+                                                                    <input type="text" class="input-field" ng-model="more_project.project_link" required form-name="financialForm" name="industry">
                                                                     <div class="input-wrapper"></div>
                                                                     <div class="message"></div>
                                                                 </div>
@@ -803,6 +804,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
                                         <!--End of More Projects -->
                                     <!-- project Details -->
                                     

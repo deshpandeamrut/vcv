@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html ng-app="homepage">
+<head>
+<title>VCV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+
+<link href="css/main.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+<link href="css/main2.css" rel="stylesheet">
+<link href="js/pnotify/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery.ui.all.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+ <body ng-app="signUp" ng-controller="signUpController">
+
+<form name="forgotPasswordForm">
+  <div class="modal fade bid-property-modal" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Forgot Password</h4>
+      </div>
+      <div class="modal-body">
+          <div class="main-form">
+
+              <!--Expiry Date-->
+              <label>Email Address</label>
+              <br clear="all">
+              <span class="form-hold2 clearfix">
+                <div class="validate-line">
+                 <input type="email" required class="input-field" name="fname" ng-model="forgotPasswordData.email">
+                 <div class="input-wrapper"></div>
+                 <div class="message"></div>
+                </div>
+             </span> <br clear="all">
+          <button type="submit" class="mc-btn bid-property-btn" ng-click="forgotPassword()">Submit</button>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</form>
+
+<!----------------------------SIGN IN Header---------------------------->
+<div class="mc-header clearfix">
+  <div class="mc-logo"> <a href="index.html"><img src="img/vcv.png"></a> </div>
+  <div class="sign-in">
+    <ul>
+      <li class="sign-in-drop"> <a class="menu" id="sign_in_click" href "#">SIGN IN</a>
+        <div class="sign-in-dropdown">
+          <form name="signInForm" id="sign-in-form">
+            <span class="grey-caret"></span> 
+            
+            <!-- <a class="user-search" href="#">
+                    <span class="sign-img"><img src="img/sigin-up-img.jpg"></span>
+                    <h2>Michael Moore, Borrower</h2>
+                    </a> -->
+            
+            <label>Username/Email</label>
+            <br clear="all">
+            <span class="form-hold4 clearfix">
+            <div class="validate-line">
+              <input type="text" validate-type="email" required class="input-field" ng-model="signInData.username" name="username">
+              <div class="input-wrapper"></div>
+            </div>
+            </span>
+            <label class="signin-space">Password</label>
+            <br clear="all">
+            <span class="form-hold4 clearfix">
+            <div class="validate-line">
+              <input type="password" validate-type="novalid" validate-on-blur required class="input-field" ng-model="signInData.login_password" name="login_password">
+              <div class="input-wrapper"></div>
+            </div>
+            <button class="mc-btn sign-in-dropdown-btn2" type="submit" ng-click="submitSignIn()">SIGN IN</button>
+             <div class="pull-right pointer"><a data-toggle="modal" data-target="#forgotPasswordModal" href="#">Forgot your password?</a></div>
+            </span>
+          </form>
+          <div class="social-signin"> <a id="facebook-link" href="social/facebook/borrower"><span class="social-sprite fb-icon transition"></span></a> <a id="google-link" href="social/google/borrower"><span class="social-sprite gplus-icon transition"></span></a> <a id="linkedin-link" href="social/linkedIn/borrower"><span class="social-sprite lin-icon transition"></span></a> </div>
+        </div>
+      </li>
+      <li><a class="menu" href="aboutus.html">ABOUT US</a></li>
+      <li class="how-it-works"><a class="menu hw" href="how-it-works.html" >HOW IT<br>
+        WORKS</a>
+        </li>
+    </ul>
+  </div>
+</div>
+<!---------------------------- End SIGN IN Header----------------------------> 
+
+<!---------------------------- Banner ----------------------------> 
+<div class="container adjust-top ">
+       <div class="row banner-header">
+            <img class="img-responsive" src="img/about-us.jpg">
+                <div class="banner-content">
+                    <h2>What is VCV ?</h2>
+                </div>
+       </div>
+</div>
+<!---------------------------- End Banner----------------------------> 
+
+
+
+<!--contct-us-->
+<div class="container">
+   <div class="row contact-us">
+        <h5>What is VCV ?</h5>
+        
+        
+        <p>Videoocv.com is a career website catering recruitment solutions to job seekers and employer with a intension to ease the process of recruitment. We specialize in the  career enhancement for job seekers  by preparing / option to upload video CV’s to the website .</p>
+        
+        <p>At the same time Recruiters / employers can also upload Video JD by which candidates understand the job profile very precisely. .</p>  
+
+        <h5>VCV  services</h5>
+
+
+        <ul class="clearfix">
+
+        <!-- <li><span class="list-color">A multi-region marketplace for a unique type of cash flow positive investment product (fully secured by real property),</span></li>
+
+        <li><span class="list-color">A means for second chance borrowers to achieve competitive interest rates by taking advantage of the Mortgage Chance unique mortgage finance auction service,</span></li>
+
+        <li><span class="list-color">Professional legal and advisory services to clients (both investor and borrower), </span></li>
+
+        <li><span class="list-color">Outstanding management services including loan repayment management, outgoing payment management, monthly statement of accounts and comprehensive loan statements. </span></li>
+
+        <li><span class="list-color">Assistance with borrower refinance. </span></li>
+
+        <li><span class="list-color">Offers "investor direct" properties for sale.</span></li>
+
+        <li><span class="list-color">Round the clock customer support.</span></li> -->
+
+
+        </ul>
+
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--contct-us-->
+<div class="container">
+   <div class="row contact-us">
+   		<h5>Help</h5>
+       <h4> Do you have any issues? Want to know something? Our <a href="#" class="faq-link transition">FAQ</a> page will have you covered.</h4>
+       <h5>Or contact us through phone, mail or social media</h5>
+      <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 felid">
+      
+                  <!--Your valuable feedback here...-->
+                  <span class="form-hold2 clearfix">
+                  <div class="validate-line">
+                     <input type="text" name="fname" class="input-field" placeholder="Your query or valuable feedback here...">
+                     <div class="input-wrapper"></div>
+                     <div class="message"></div>
+                  </div>
+                  </span> <br clear="all">
+                  <!--Your e-mail...-->
+                  <span class="form-hold2 clearfix">
+                  <div class="validate-line">
+                     <input type="text" name="fname" class="input-field" placeholder="Your e-mail...">
+                     <div class="input-wrapper"></div>
+                     <div class="message"></div>
+                  </div>
+                  </span> <br clear="all">
+                  <!--Your phone number...-->
+                  <span class="form-hold2 clearfix">
+                  <div class="validate-line">
+                     <input type="text" name="fname" class="input-field" placeholder="Your phone number...">
+                     <div class="input-wrapper"></div>
+                     <div class="message"></div>
+                  </div>
+                  </span> <br clear="all">
+                  <button type="submit" class="mc-btn send-btn">SEND</button>
+                  
+                  <h6>We will get back within 2 working days.</h6>
+      </div>
+      <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 links">
+      
+      	 <a href="tel:+919591366626"><span class="sprite phone-icon"></span>+919591366626</a>
+      	<a href="mailto:girish@videoocv.com"><span class="sprite mail-icon"></span>girish@videoocv.com</a>
+        <span class="social">
+        <a href="#"><span class="sprite contact-fb-icon transition"></span></a>
+        <a href="#"><span class="sprite contact-gp-icon transition"></span></a>
+        <a href="#"><span class="sprite contact-tw-icon transition"></span></a>
+        <a href="#"><span class="sprite contact-in-icon transition"></span></a>
+        </span>
+        <br clear="right">
+        <hr>
+        <span class="sprite contact-map-icon"></span>
+        <span class="map-address">
+        #23, Lincoln Towers, <br>
+        5th Floor, Newland street,  <br>
+		Sydney, Australia. <br>
+        <a href="#" class="map-arrow">Show on google maps <span class="sprite map-arrow-icon"></span></a>
+
+        </span>
+        </div>
+      </div>
+ 
+</div>
+
+
+
+<!---------------------footer--------------------->
+<div class="footer row">
+	<div class="footer-container clearfix">
+    		
+        	<div class="col-lg-9 col-md-8 col-sm-6 col-xs-6">
+            	<div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    	<h4>HOW TO INVEST</h4>
+                        <ul>
+                        	<li><a href="#">Create Investor Account</a></li>
+                        	<li><a href="find-out-more-investor.html">How it works</a></li>
+                        	<li><a href="#">Search for Auctions</a></li>
+                        	<li><a href="#">Manage Portfolio</a></li>
+                        	<li><a href="#">Get Updates</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    	<h4>HOW TO BORROW</h4>
+                        <ul>
+                        	<li><a href="#">Apply for a Loan</a></li>
+                        	<li><a href="find-out-more-borrower.html">How it works</a></li>
+                        	<li><a href="#">Manage Auctions</a></li>
+                        	<li><a href="#">Get Updates</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    	<h4>ABOUT US</h4>
+                        <ul>
+                        	<li><a href="#">Who we are</a></li>
+                        	<li><a href="#">The MC story</a></li>
+                        	<li><a href="#">Jobs at MC</a></li>
+                        	<li><a href="#">Blog</a></li>
+                        	<li><a href="contact-us.html">Contact us</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    	<h4>HELP & TRAINING</h4>
+                        <ul>
+                        	<li><a href="faq.html">Frequently asked questions</a></li>
+                        	<li><a href="#">Raise support ticket</a></li>
+                        	<li><a href="#">What is Second Chance Finance?</a></li>
+                        	<li><a href="#">What is Peer to Peer lending?</a></li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+        	<div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                    	<h4>SOCIAL</h4>
+                        <div class="footer-icon-hold">
+                            <span class="sprite fb-footer-icon transition"></span>
+                            <span class="sprite gp-footer-icon"></span>
+                            <span class="sprite tw-footer-icon"></span>
+                            <span class="sprite in-footer-icon"></span>
+                        </div>
+            </div>
+           
+    </div>
+    
+            <div class="footer-copyright" align="center">
+            	<span class="copyright">&copy; Mortgage Chance</span>  <span class="website">Website by <a target="_blank" href="http://www.langoor.com/">Langoor</a></span>
+            </div>
+</div>
+<!---------------------End footer------------------- -->
+
+
+
+<script src="./js/jquery2.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap-select.js"></script> 
+<script src="./js/angular.min.js" type="text/javascript"></script> 
+<script src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/pnotify/jquery.pnotify.js"></script> 
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    $.pnotify.defaults.styling = "jqueryui";
+  });
+  $(window).on('load', function () {
+    $('.selectpicker').selectpicker({
+    });
+  });
+
+
+  $("#sign_in_click").on('click',function(){
+      $('.sign-in-dropdown').css('display','block');
+  });
+
+  $(document).mouseup(function (e)
+  {
+      var container = $(".sign-in-drop");
+
+      if (!container.is(e.target) // if the target of the click isn't the container...
+          && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+          jQuery('.sign-in-dropdown').hide();
+      }
+  });
+</script>
+<script src="js/homepage.js" type="text/javascript"></script> 
+<script type="text/javascript">
+var userType = "borrower";
+var userType1 = "/borrower";
+var url = $(location).attr('href');
+if(url.match(/borrower/)){
+ userType = "borrower";
+ userType1 = "/borrower";
+}
+if(url.match(/investor/)){
+ userType = "investor";
+ userType1 = "/investor";
+}
+  // var facebookLink = "http://mortgagechance.dev2.langoor.it/social/facebook"+userType1;
+  // var googleLink = "http://mortgagechance.dev2.langoor.it/social/google"+userType1;
+  // var twitterLink = "http://mortgagechance.dev2.langoor.it/social/twitter"+userType1;
+  // var linkedinLink = "http://mortgagechance.dev2.langoor.it/social/linkedIn"+userType1;
+  var facebookLink = "social/facebook"+userType1;
+  var googleLink = "social/google"+userType1;
+  var twitterLink = "social/twitter"+userType1;
+  var linkedinLink = "social/linkedIn"+userType1;
+  $('#facebook-link').attr('href',facebookLink);
+  $('#google-link').attr('href',googleLink);
+  $('#twitter-link').attr('href',twitterLink);
+  $('#linkedin-link').attr('href',linkedinLink);
+  
+  var signUp = angular.module('signUp', []); 
+  signUp.directive('validateOnBlur', function() {
+   return {
+    restrict: 'A',
+    require: 'ngModel',
+    link: function(scope, elm, attr, ngModelCtrl) {
+      var allowedTypes = ['text', 'email', 'password'];
+      if (allowedTypes.indexOf(attr.type)  === -1) {
+        return;
+      }
+
+              // Unbind onchange event so that validation will be triggerd onblur
+              elm.unbind('input').unbind('keydown').unbind('change');
+              
+              // Set OnBlur event listener
+              elm.bind('blur', function() {
+                  //alert('hi');
+                  var fieldName = attr.name;
+                  console.log(attr.name);
+                  var errorMessage = "";
+                  var inputValue = elm.val();
+                  var isOk = false;
+                  var isEmpty = false;
+                  if(attr.validateType == 'name'){
+                    if(inputValue.match(/^[a-zA-Z0-9]{1,30}$/g)){
+                      isOk = true;
+                    }else{
+                      errorMessage = scope.nameCharacters;
+                      isOk = false;
+                    }
+                    if(inputValue.length < 3){
+                      errorMessage = scope.nameLengthShort;
+                      isOk = false;
+                    }
+                    if(inputValue.length > 30){
+                      errorMessage = scope.nameLengthLong;
+                      isOk = false;
+                    }                    
+                  }
+                  if(attr.validateType == 'email'){
+                     // if(inputValue.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)){
+                      if(inputValue.match(/^[a-zA-Z0-9._]+@[a-zA-Z0-9-_]+?\.[a-zA-Z]{2,4}$/)){
+                        isOk = true;
+                      }else{
+                        errorMessage = scope.emailInvalid;
+                        isOk = false;
+                      }                    
+                    }
+                    if(attr.validateType == 'password'){
+                      if(inputValue.length < 5){
+                        errorMessage = scope.passwordLengthShort;
+                        isOk = false;
+                      }else
+                      if(inputValue.length > 250){
+                        errorMessage = scope.passwordLengthLong;
+                        isOk = false;
+                      }else{
+                        isOk = true;
+                      }  
+                    }
+                    if(attr.validateType == 'novalid'){
+                      isOk = true;
+                    }
+                    if(attr.validateType == 'same'){
+                      var validateClass = "."+attr.validateType+attr.validateId;
+                      if(inputValue == angular.element(validateClass).val()){
+                        isOk = true;
+                      }else{
+                          isOk = false;//errorMessage = scope.confirmEmail;alert(attr.type);
+                          if(attr.type == "text"){
+                            errorMessage = scope.confirmEmail;
+                          }
+                          if(attr.type == "password" ){
+                            errorMessage = scope.confirmPassword;
+                          }
+                        }   
+                      }
+                      if(inputValue.length ==0){
+                        isEmpty = true;
+                      }
+                      elm.parent().find('.validation-message').remove();
+                      elm.parent().find('p').remove();
+                      if(isOk == true){
+                        elm.parent().css("border-color","#8fc146");
+                      //scope.signForm[attr.name].$valid = true;
+                      if(scope.signForm[attr.name]){
+                        scope.signForm[attr.name].$setValidity('valid',true);
+                      }else{
+                        scope.signInForm[attr.name].$setValidity('valid',true);
+                      }
+                      //return;
+                    }                
+                    if(isOk == false){
+                      if(scope.signForm[attr.name]){
+                        scope.signForm[attr.name].$setValidity('valid',false);
+                      }else{
+                        scope.signInForm[attr.name].$setValidity('valid',false);
+                      }
+                      
+                      elm.parent().css("border-color","#e60020"); 
+                      //scope.signForm[attr.name].$valid = false;  
+
+                      elm.parent().append("<p class='validation-message'>"+errorMessage+"<p>");
+                      //console.log("<p class='validation-message'>"+errorMessage+"<p>");
+                      //elm.parent().css("border-color":"red") ;
+                    }
+                    if(isEmpty == true){
+                      //scope.signForm[attr.name].$setValidity(false);
+                      elm.parent().css("border-color","#000000");
+                      elm.parent().find('.validation-message').remove();
+                      elm.parent().find('p').remove();
+                      if(scope.signForm[attr.name]){
+                        scope.signForm[attr.name].$setValidity('valid',false);
+                      }else{
+                        scope.signInForm[attr.name].$setValidity('valid',false);
+                      }
+                      //return;
+                    }
+                });
+}
+};
+});
+
+
+function signUpController($scope, $http) {
+  $scope.dataToSend = {};
+  $scope.requestLocation = '';
+  $scope.successLocation = '';
+  $scope.failureLocation = '';
+  $scope.signUpData = {};
+  $scope.signInData = {};
+  $scope.formData = {};
+  $scope.nameLengthShort = "Name should be more than 3 characters";
+  $scope.nameLengthLong = "Name should not be more than 255 characters";
+  $scope.nameCharacters = "Name should contain only characters and numbers";
+  $scope.emailInvalid = "Not a valid email";
+  $scope.emailLengthLong = "Email should not be more than 255 characters";
+  $scope.confirmEmail = "Emails are different";
+  $scope.passwordLengthShort = "Password should be more than 4 characters";
+  $scope.passwordLengthLong = "Password should not be more than 30 characters";
+  $scope.setPassword = "Password should contain atleast 5 characters";
+  $scope.confirmPassword = "Passwords are different";
+  $scope.signUpData.title ="mr";
+  $scope.isError = false;
+  $scope.displayError = "";
+  $scope.oppositeUserType = ""
+  if(userType == 'borrower') {
+    $scope.userType = 'A BORROWER';
+    $scope.oppositeUserType = "investors";
+  } else {
+    $scope.userType = 'AN INVESTOR';
+    $scope.oppositeUserType = "borrowers"
+  }
+  $scope.showPassword = function() {
+    if($('#show-password').prop("checked")){
+      $('#passwordFirst').attr('type','text');
+    }else{
+      $('#passwordFirst').attr('type','password');
+    }
+  }
+  $scope.forgotPassword = function() {
+      if(!$scope['forgotPasswordForm'].$valid) {
+            jQuery.pnotify({
+                        text: "Invalid form",
+                        type: 'error'
+                    });
+           return;
+        }
+      $scope.loading = true;
+      $http({
+        method : 'POST',
+        url : 'password/reset',
+        data: $scope.forgotPasswordData
+      }).success(function(data) {
+         $scope.loading = false;
+         if(data.status_code == 200 || data.status_code =="200" ){
+           $scope.successMessage = data.data.Reason;
+                    jQuery.pnotify({
+                        text: $scope.successMessage,
+                        type: 'success'
+                    });
+                    jQuery('#forgotPasswordModal').modal('hide');
+         } else {
+           $scope.errorMessage = data.data.Reason;
+                    jQuery.pnotify({
+                        text: $scope.errorMessage,
+                        type: 'error'
+                    });
+         }  
+
+      });
+    }
+  $scope.submitSignIn = function(){
+    $( "#sign-in-form .input-field" ).trigger('input').trigger('change').trigger('keydown').blur();
+    console.log($scope.signInData);
+    console.log($scope['signInForm'])
+    if(!$scope['signInForm'].$valid) {
+      console.log('invalid form');
+      return;
+    }else{
+      console.log('valid form');
+      $scope.loading = true;
+      $http({
+        method  : 'POST',
+        url     : 'login',
+              data    : $scope.signInData  // pass in data as strings
+            }).success(function(data) {
+              $scope.loading = false;
+              console.log(data);
+              if(data.status_code!=200){
+                  $scope.isError = true;
+                  $scope.displayError = data.data.Reason;
+                  jQuery.pnotify({
+                      text: $scope.displayError,
+                      type: 'error'
+                  });
+              }else{
+                $scope.isError = false;
+                $scope.isBorrower = data.data.is_borrower;
+              
+                if($scope.isBorrower) {
+                  window.location.href = "/dashboard.html#/RegistrationPending"
+                } else {
+                   window.location.href = "/dashboard.html#/oneStepRegistration"
+                }
+              //  window.location.href = "/dashboard.html";
+              }
+            });
+          }   
+        }
+        $scope.processForm = function(formName,formFieldsData,requestURL,successURL,failureURL ) {
+          $('#signUpForm .input-field').blur();
+          // $('#signUpForm .input-field').trigger('input').trigger('change').trigger('keydown').blur();
+          var country = $('#selectCountry.selectpicker').selectpicker('val');
+          console.log(country);
+          $scope.requestLocation = requestURL;
+          $scope.successLocation = successURL;
+          $scope.failureLocation = failureURL;
+          console.log($scope[formName]);
+          console.log($scope[formName].$valid);
+          if(!$scope[formName].$valid) {
+            console.log('invalid form');
+            return;
+          }
+     
+          $scope.formData.country_code = country; 
+          $scope.formData.user_type = userType;
+
+          $scope.formData.username = angular.element('#username').val();
+          $scope.formData.email = angular.element('#emailAddress').val();
+          $scope.formData.email_confirmation =  angular.element('#emailAddresss').val();
+          $scope.formData.password =  angular.element('#passwordFirst').val();
+          $scope.formData.password_confirmation =  angular.element('#passwordConfirm').val();
+          console.log($scope.formData);
+          $scope.loading = true;
+          $http({
+            method  : 'POST',
+            url     : $scope.requestLocation,
+              data    : $scope.formData  // pass in data as strings
+            }).success(function(data) {
+                 //$scope.serverResponse = data.status_message;
+                 //$scope.statusCode = data.status_code;
+                 console.log(data);
+                 $scope.loading = false;
+                 if(data.status_code!=200){
+                  $scope.isError = true;
+                  $scope.displayError = data.data.Reason;
+                  jQuery.pnotify({
+                      text: $scope.displayError,
+                      type: 'error'
+                  });
+                }else{
+                  $scope.isError = false;
+                  $scope.isBorrower = data.data.is_borrower;
+                  if($scope.isBorrower) {
+                    window.location.href = "/dashboard.html#/RegistrationPending"
+                  } else {
+                     window.location.href = "/dashboard.html#/oneStepRegistration"
+                  }
+                }
+              });
+          };
+        }; 
+         </script>
+</body>
+</html>
