@@ -636,7 +636,7 @@ function ($scope, $http, $upload) {
     $scope.loginEmail = $scope.$parent.dashboardData.email;
     $scope.previous_employment1_no = 0;
     $scope.messagesIsEmpty = true;
-    $scope.profile_status = 'financial';
+    $scope.profile_status = 'personal';
     $scope.no_of_applicants = 1;
     jQuery('#userEmailId').val(jQuery('#userEmailFromRequest').val());
 
