@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'vcv',
 			'username'  => 'root',
-			'password'  => 'zovi',
+			'password'  => 'vijaybhava',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
