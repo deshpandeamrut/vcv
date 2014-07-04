@@ -3605,10 +3605,12 @@ h2.search-explore-sub {
     z-index: 100;
     top:0
 }
+
 .mc-logo {
 	float:left;
-	padding: 20px 0 0 50px;
+	margin-top: -70px;	
 }
+
 .sign-in {
 	background-color:#1c9ad6;
 	float:right;
