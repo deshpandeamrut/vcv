@@ -382,7 +382,7 @@ class UserController extends BaseController {
 							$imageFileDetails = $input["file$fileCounter"];
 							if(!empty($imageFileDetails)){
 								$attachmentInfo = $fileReferencesKeys[$fcounter];
-								$destinationPath = '/home/springfield/src/vcv/public/resumes/';
+								$destinationPath = '/home/ubuntu/vcv/public/resumes/';
 								$dbPath = 'resumes/';
 								$filename = $imageFileDetails->getClientOriginalName();
 								$imageFileDetails->move($destinationPath, $filename);

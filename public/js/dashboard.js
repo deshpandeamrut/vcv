@@ -795,7 +795,7 @@ function ($scope, $http, $upload) {
         }).success(function (data) {
             jQuery('#overlay').addClass('hide');
             if (data.status_code == 200 || data.status_code == '200') {
-                $scope.loanMessage = "Successfully entered Loan details.";
+                $scope.loanMessage = "Successfully entered Job details.";
                 $('.nav-tabs > .active').next('li').find('a').trigger('click');
                 jQuery.pnotify({
                   text: $scope.loanMessage,
