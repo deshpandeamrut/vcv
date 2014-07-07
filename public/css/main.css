@@ -491,13 +491,13 @@ input[placeholder], [placeholder], *[placeholder] {
 	background-position: 0 -2206px;
 }
 .right-arrow-icon {
-	background-position: 0 -2146px;
+	background-position: 0 -2136px;
 	height:56px;
 	float:right;
 	margin-top:15%
 }
 .left-arrow-icon {
-	background-position: 0 -2090px;
+	background-position: 0 -2080px;
 	height:56px;
 	margin-top:15%
 }
@@ -900,7 +900,8 @@ h2.get-a-2nd {
 	margin: 0;
 }
 .sign-in-dropdown .input-field {
-    background-color:#FAF8F8
+    background-color:#FAF8F8;
+    width:236px;
 }
 .sign-up-text .media:first-child {
 	margin-top: 30px
@@ -3572,7 +3573,7 @@ h2.search-explore-sub {
 	opacity:1
 }
 .footer-copyright  .copyright,.footer-copyright  .website {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-family: 'FacitWeb';
     font-size: 16px;
     line-height: 24px;
@@ -3603,7 +3604,8 @@ h2.search-explore-sub {
     position: fixed;
     width: 100%;
     z-index: 100;
-    top:0
+    top:0;
+    background: #4c66a4;
 }
 
 .mc-logo {
@@ -3614,7 +3616,7 @@ h2.search-explore-sub {
 .sign-in {
 	background-color:#1c9ad6;
 	float:right;
-	height:100px
+	height:45px
 }
 .sign-in ul {
 	margin:0;
@@ -3624,14 +3626,14 @@ h2.search-explore-sub {
     z-index:11
 }
 .sign-in li a.menu {
-	width:105px;
+	width:auto;
 	height:89px;
     color: #FFFFFF;
     font-family: 'P22UndergroundPro-Book';
     font-size: 16px;
     line-height: 20px;
     margin: 0 ;
-    padding: 20px 0 50px 10px ;
+    padding: 10px ;
 	display:block;
     text-align:center
 }
@@ -3641,8 +3643,8 @@ h2.search-explore-sub {
     left:-10px
 }
 .sign-in li a.menu.hw {
-	position:relative;
-	top:10px;
+	/*position:relative;
+	top:10px;*/
 }
 .select-country {
 	width:120px;
@@ -7147,4 +7149,25 @@ width: 78%;
 	font-weight: bold;
 	font-family: cursive;
 	font-size: 14px;
+}
+.sign-in > ul {
+	height:40px;
+}
+.sign-in ul.menu{
+background: #444;
+vertical-align: bottom;
+position: absolute;
+bottom: 0px;
+right: 20%;
+}
+.sign-in ul.menu li a {
+padding: 10px 25px 10px !important;
+font-weight: lighter;
+color: #fff !important;
+background-image: url('/img/stick.png');
+background-repeat: no-repeat;
+background-position: 100% 15%;
+}
+.sign-in ul.menu li a.menu.hw{
+	background-image:none;
 }
