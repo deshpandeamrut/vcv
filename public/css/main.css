@@ -653,7 +653,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	float:none
 }
 .contact-map-icon {
-	background-position: 0 -1098px;
+	background-position: 0 -1086px;
 	top:-5px;
 	right:5px;
 	position:relative;
@@ -788,54 +788,54 @@ input[placeholder], [placeholder], *[placeholder] {
 	right:5px;
 }
 .phone-icon {
-	background-position: 0 -738px;
+	background-position: 0 -725px;
 	float: left;
 	position:relative;
 	top:-5px;
 	right:5px;
 }
 .mail-icon {
-	background-position: 0 -774px;
+	background-position: 0 -763px;
 	float: left;
 	position:relative;
 	top:-5px;
 	right:5px;
 }
 .contact-fb-icon {
-	background-position: 0 -810px;
+	background-position: 0 -805px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-fb-icon:hover {
-	background-position: 0 -846px;
+	background-position: 0 -840px;
 }
 .contact-gp-icon {
-	background-position: 0 -882px;
+	background-position: 0 -877px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-gp-icon:hover {
-	background-position: 0 -918px;
+	background-position: 0 -913px;
 }
 .contact-tw-icon {
-	background-position: 0 -954px;
+	background-position: 0 -949px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-tw-icon:hover {
-	background-position: 0 -990px;
+	background-position: 0 -985px;
 }
 .contact-in-icon {
-	background-position: 0 -1026px;
+	background-position: 0 -1021px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-in-icon:hover {
-	background-position: 0 -1062px;
+	background-position: 0 -1057px;
 }
 
 /*---------------------------------------------------------icons-end---------------------------------------------------------*/
@@ -3605,7 +3605,7 @@ h2.search-explore-sub {
     width: 100%;
     z-index: 100;
     top:0;
-    background: #4c66a4;
+    /*background: #4c66a4;*/
 }
 
 .mc-logo {
@@ -7158,7 +7158,7 @@ background: #444;
 vertical-align: bottom;
 position: absolute;
 bottom: 0px;
-right: 20%;
+right: 103px;
 }
 .sign-in ul.menu li a {
 padding: 10px 25px 10px !important;
