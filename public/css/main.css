@@ -310,7 +310,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	height:18px;
 }
 .info-logo-icon {
-    background-position: 0 -2674px;
+    background-position: 0 -2664px;
 	margin-right:10px;
 }
 .txn-failed-icon {
@@ -598,30 +598,30 @@ input[placeholder], [placeholder], *[placeholder] {
     position: relative;
 }
 .in-footer-icon {
-    background-position: 0 -1280px;
+    background-position: 0 -1277px;
     cursor: pointer;
-	border-bottom: 1px solid #1c9ad6;
+	/*border-bottom: 1px solid #1c9ad6;*/
 	opacity:.8
 }
 .tw-footer-icon {
     background-position: 0 -1242px;
     cursor: pointer;
 	margin-right:5px;
-	border-bottom: 1px solid #1c9ad6;
+	/*border-bottom: 1px solid #1c9ad6;*/
 	opacity:.8
 }
 .gp-footer-icon {
     background-position: 0 -1206px;
     cursor: pointer;
 	margin-right:5px;
-	border-bottom: 1px solid #1c9ad6;
+	/*border-bottom: 1px solid #1c9ad6;*/
 	opacity:.8
 }
 .fb-footer-icon {
     background-position: 0 -1170px;
     cursor: pointer;
 	margin-right:5px;
-	border-bottom: 1px solid #1c9ad6;
+	/*border-bottom: 1px solid #1c9ad6;*/
 	opacity:.8
 }
 .correct-icon {
@@ -1088,7 +1088,7 @@ textarea:hover, textarea:active, textarea:focus {
 	cursor: pointer;
 	background-image: none;
 	border: none;
-	border-bottom: 3px solid #7bab36;
+	/*border-bottom: 3px solid #7bab36;*/
 	white-space: nowrap;
 	padding: 8px 12px 4px;
 	font-size: 18px;
@@ -1108,10 +1108,10 @@ textarea:hover, textarea:active, textarea:focus {
 	transition: all 0.4s ease 0s;
 }
 .mc-btn:hover, .mc-btn:focus, .mc-btn-prev:hover, .mc-btn-prev:focus, .your-properties-btn:focus, .your-properties-btn:hover, .select-bid-btn:hover, .select-bid-btn:focus {
-	margin: 23px 0 27px 0;
+	/*margin: 23px 0 27px 0;*/
 	color: #333;
 	text-decoration: none;
-	border-bottom: 3px solid #a6df53;
+	/*border-bottom: 3px solid #a6df53;*/
 }
 .mc-btn .next-in-btn, .mc-btn-prev .prev-in-btn {
 	border-bottom: 7px solid rgba(0, 0, 0, 0);
@@ -3518,7 +3518,8 @@ h2.search-explore-sub {
 	margin: 11px 0 19px 0;
 }
 .footer {
-	background-color: #1c9ad6;
+	/*background-color: #1c9ad6;*/
+	background-color: #3b5998;
 }
 .footer-container {
 	max-width:980px;
@@ -3614,7 +3615,8 @@ h2.search-explore-sub {
 }
 
 .sign-in {
-	background-color:#1c9ad6;
+	/*background-color:#1c9ad6;*/
+	background-color: #3b5998;
 	float:right;
 	height:45px
 }
@@ -4871,7 +4873,7 @@ label.click-here-link {
 	margin:10px 0 20px;
 }
 .interested-btn:hover ,.interested-btn:focus {
-	margin:13px 0 17px
+	/*margin:13px 0 17px*/
 }
 .numberings {
 	border-top:	1px solid #a4a6aa;
@@ -7170,4 +7172,45 @@ background-position: 100% 15%;
 }
 .sign-in ul.menu li a.menu.hw{
 	background-image:none;
+}
+.mc-btn, .mc-btn-prev, .your-properties-btn, .select-bid-btn, .reject-bid-btn, .auction-pro-btn {
+color: #000;
+background-color: #444 !important;
+border-color: #000;
+display: inline-block;
+margin: 20px 0 30px 0;
+font-weight: normal;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: none;
+/*border-bottom: 3px solid #7bab36;
+*/white-space: nowrap;
+padding: 8px 12px 4px;
+font-size: 18px;
+font-family: 'P22UndergroundPro-Book';
+width: 250px;
+height: 48px;
+line-height: normal;
+border-radius: 3px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+-webkit-transition: all 0.4s ease 0s;
+-moz-transition: all 0.4s ease 0s;
+-o-transition: all 0.4s ease 0s;
+transition: all 0.4s ease 0s;
+color: white !important;
+}
+.be-borrower-btn {
+float: none;
+font-size: 14px;
+height: 30px;
+line-height: 18px;
+margin: 5px 0 10px 25px;
+width: 175px;
+border-bottom: 1px #4a4a4a solid !important;
 }
