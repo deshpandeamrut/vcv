@@ -310,7 +310,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	height:18px;
 }
 .info-logo-icon {
-    background-position: 0 -2664px;
+    background-position: 0 -2674px;
 	margin-right:10px;
 }
 .txn-failed-icon {
@@ -491,13 +491,13 @@ input[placeholder], [placeholder], *[placeholder] {
 	background-position: 0 -2206px;
 }
 .right-arrow-icon {
-	background-position: 0 -2136px;
+	background-position: 0 -2146px;
 	height:56px;
 	float:right;
 	margin-top:15%
 }
 .left-arrow-icon {
-	background-position: 0 -2080px;
+	background-position: 0 -2090px;
 	height:56px;
 	margin-top:15%
 }
@@ -598,30 +598,30 @@ input[placeholder], [placeholder], *[placeholder] {
     position: relative;
 }
 .in-footer-icon {
-    background-position: 0 -1277px;
+    background-position: 0 -1280px;
     cursor: pointer;
-	/*border-bottom: 1px solid #1c9ad6;*/
+	border-bottom: 1px solid #1c9ad6;
 	opacity:.8
 }
 .tw-footer-icon {
     background-position: 0 -1242px;
     cursor: pointer;
 	margin-right:5px;
-	/*border-bottom: 1px solid #1c9ad6;*/
+	border-bottom: 1px solid #1c9ad6;
 	opacity:.8
 }
 .gp-footer-icon {
     background-position: 0 -1206px;
     cursor: pointer;
 	margin-right:5px;
-	/*border-bottom: 1px solid #1c9ad6;*/
+	border-bottom: 1px solid #1c9ad6;
 	opacity:.8
 }
 .fb-footer-icon {
     background-position: 0 -1170px;
     cursor: pointer;
 	margin-right:5px;
-	/*border-bottom: 1px solid #1c9ad6;*/
+	border-bottom: 1px solid #1c9ad6;
 	opacity:.8
 }
 .correct-icon {
@@ -653,7 +653,7 @@ input[placeholder], [placeholder], *[placeholder] {
 	float:none
 }
 .contact-map-icon {
-	background-position: 0 -1086px;
+	background-position: 0 -1098px;
 	top:-5px;
 	right:5px;
 	position:relative;
@@ -788,54 +788,54 @@ input[placeholder], [placeholder], *[placeholder] {
 	right:5px;
 }
 .phone-icon {
-	background-position: 0 -725px;
+	background-position: 0 -738px;
 	float: left;
 	position:relative;
 	top:-5px;
 	right:5px;
 }
 .mail-icon {
-	background-position: 0 -763px;
+	background-position: 0 -774px;
 	float: left;
 	position:relative;
 	top:-5px;
 	right:5px;
 }
 .contact-fb-icon {
-	background-position: 0 -805px;
+	background-position: 0 -810px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-fb-icon:hover {
-	background-position: 0 -840px;
+	background-position: 0 -846px;
 }
 .contact-gp-icon {
-	background-position: 0 -877px;
+	background-position: 0 -882px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-gp-icon:hover {
-	background-position: 0 -913px;
+	background-position: 0 -918px;
 }
 .contact-tw-icon {
-	background-position: 0 -949px;
+	background-position: 0 -954px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-tw-icon:hover {
-	background-position: 0 -985px;
+	background-position: 0 -990px;
 }
 .contact-in-icon {
-	background-position: 0 -1021px;
+	background-position: 0 -1026px;
 	top:-5px;
 	right:5px;
 	position:relative;
 }
 .contact-in-icon:hover {
-	background-position: 0 -1057px;
+	background-position: 0 -1062px;
 }
 
 /*---------------------------------------------------------icons-end---------------------------------------------------------*/
@@ -900,8 +900,7 @@ h2.get-a-2nd {
 	margin: 0;
 }
 .sign-in-dropdown .input-field {
-    background-color:#FAF8F8;
-    width:236px;
+    background-color:#FAF8F8
 }
 .sign-up-text .media:first-child {
 	margin-top: 30px
@@ -1088,7 +1087,7 @@ textarea:hover, textarea:active, textarea:focus {
 	cursor: pointer;
 	background-image: none;
 	border: none;
-	/*border-bottom: 3px solid #7bab36;*/
+	border-bottom: 3px solid #7bab36;
 	white-space: nowrap;
 	padding: 8px 12px 4px;
 	font-size: 18px;
@@ -1108,10 +1107,10 @@ textarea:hover, textarea:active, textarea:focus {
 	transition: all 0.4s ease 0s;
 }
 .mc-btn:hover, .mc-btn:focus, .mc-btn-prev:hover, .mc-btn-prev:focus, .your-properties-btn:focus, .your-properties-btn:hover, .select-bid-btn:hover, .select-bid-btn:focus {
-	/*margin: 23px 0 27px 0;*/
+	margin: 23px 0 27px 0;
 	color: #333;
 	text-decoration: none;
-	/*border-bottom: 3px solid #a6df53;*/
+	border-bottom: 3px solid #a6df53;
 }
 .mc-btn .next-in-btn, .mc-btn-prev .prev-in-btn {
 	border-bottom: 7px solid rgba(0, 0, 0, 0);
@@ -3518,8 +3517,7 @@ h2.search-explore-sub {
 	margin: 11px 0 19px 0;
 }
 .footer {
-	/*background-color: #1c9ad6;*/
-	background-color: #3b5998;
+	background-color: #1c9ad6;
 }
 .footer-container {
 	max-width:980px;
@@ -3574,7 +3572,7 @@ h2.search-explore-sub {
 	opacity:1
 }
 .footer-copyright  .copyright,.footer-copyright  .website {
-    color: #FFFFFF !important;
+    color: #FFFFFF;
     font-family: 'FacitWeb';
     font-size: 16px;
     line-height: 24px;
@@ -3605,8 +3603,7 @@ h2.search-explore-sub {
     position: fixed;
     width: 100%;
     z-index: 100;
-    top:0;
-    /*background: #4c66a4;*/
+    top:0
 }
 
 .mc-logo {
@@ -3615,10 +3612,9 @@ h2.search-explore-sub {
 }
 
 .sign-in {
-	/*background-color:#1c9ad6;*/
-	background-color: #3b5998;
+	background-color:#1c9ad6;
 	float:right;
-	height:45px
+	height:100px
 }
 .sign-in ul {
 	margin:0;
@@ -3628,14 +3624,14 @@ h2.search-explore-sub {
     z-index:11
 }
 .sign-in li a.menu {
-	width:auto;
+	width:105px;
 	height:89px;
     color: #FFFFFF;
     font-family: 'P22UndergroundPro-Book';
     font-size: 16px;
     line-height: 20px;
     margin: 0 ;
-    padding: 10px ;
+    padding: 20px 0 50px 10px ;
 	display:block;
     text-align:center
 }
@@ -3645,8 +3641,8 @@ h2.search-explore-sub {
     left:-10px
 }
 .sign-in li a.menu.hw {
-	/*position:relative;
-	top:10px;*/
+	position:relative;
+	top:10px;
 }
 .select-country {
 	width:120px;
@@ -4873,7 +4869,7 @@ label.click-here-link {
 	margin:10px 0 20px;
 }
 .interested-btn:hover ,.interested-btn:focus {
-	/*margin:13px 0 17px*/
+	margin:13px 0 17px
 }
 .numberings {
 	border-top:	1px solid #a4a6aa;
@@ -7151,66 +7147,4 @@ width: 78%;
 	font-weight: bold;
 	font-family: cursive;
 	font-size: 14px;
-}
-.sign-in > ul {
-	height:40px;
-}
-.sign-in ul.menu{
-background: #444;
-vertical-align: bottom;
-position: absolute;
-bottom: 0px;
-right: 103px;
-}
-.sign-in ul.menu li a {
-padding: 10px 25px 10px !important;
-font-weight: lighter;
-color: #fff !important;
-background-image: url('/img/stick.png');
-background-repeat: no-repeat;
-background-position: 100% 15%;
-}
-.sign-in ul.menu li a.menu.hw{
-	background-image:none;
-}
-.mc-btn, .mc-btn-prev, .your-properties-btn, .select-bid-btn, .reject-bid-btn, .auction-pro-btn {
-color: #000;
-background-color: #444 !important;
-border-color: #000;
-display: inline-block;
-margin: 20px 0 30px 0;
-font-weight: normal;
-text-align: center;
-vertical-align: middle;
-cursor: pointer;
-background-image: none;
-border: none;
-/*border-bottom: 3px solid #7bab36;
-*/white-space: nowrap;
-padding: 8px 12px 4px;
-font-size: 18px;
-font-family: 'P22UndergroundPro-Book';
-width: 250px;
-height: 48px;
-line-height: normal;
-border-radius: 3px;
--webkit-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
--o-user-select: none;
-user-select: none;
--webkit-transition: all 0.4s ease 0s;
--moz-transition: all 0.4s ease 0s;
--o-transition: all 0.4s ease 0s;
-transition: all 0.4s ease 0s;
-color: white !important;
-}
-.be-borrower-btn {
-float: none;
-font-size: 14px;
-height: 30px;
-line-height: 18px;
-margin: 5px 0 10px 25px;
-width: 175px;
-border-bottom: 1px #4a4a4a solid !important;
 }
