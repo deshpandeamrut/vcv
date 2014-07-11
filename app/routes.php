@@ -27,6 +27,7 @@ Route::get('getUserBasicDetails', 'UserController@getUserBasicDetails');
 Route::post('login', 'UserController@postLogin');
 Route::get('dashboardDetails', 'UserController@getDashboardDetails');
 Route::post('getResumses', 'UserController@getResumeDetails');
+Route::get('myAccountDetails', 'UserController@getUserAccountDetailsForId');
 
 Route::get('userDetails', 'UserController@getuserDataById');
 

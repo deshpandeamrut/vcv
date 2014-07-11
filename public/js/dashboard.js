@@ -668,15 +668,6 @@ function ($scope, $http, $upload) {
                     "phone_number": ""
                 }
             },
-            "idproof": [{
-                "id_proof_id": "",
-                    "id_proof_number": "",
-                    "file": ""
-                }, {
-                "id_proof_id": "",
-                    "id_proof_number": "",
-                    "file": ""
-                }],
             "image": ""
         };
 
@@ -933,51 +924,12 @@ function ($scope, $http, $upload) {
         });
     }
 
-    // $scope.extraDetails = function () {
-    //     console.log($scope.extraDetails);
-    //      if(!$scope['extraDetailsForm'].$valid) {
-    //         jQuery.pnotify({
-    //           text: 'Invalid Form',
-    //           type: 'error'
-    //         });
-    //         return;
-    //     } else {
-    //         console.log('form is valid');
-    //     }
-    //     jQuery('#overlay').removeClass('hide');
-    //     console.log($scope.extraDetails);
-    //     $http({
-    //         method: 'POST',
-    //         url: 'extraDetails',
-    //         data: $scope.extraDetails // pass in data as strings
-    //     }).success(function (data) {
-    //         jQuery('#overlay').addClass('hide');
-    //         if (data.status_code == 200 || data.status_code == '200') {
-    //             $scope.registrationResponse = "Registration is Completed.";
-    //             jQuery.pnotify({
-    //               text: $scope.registrationResponse,
-    //               type: 'success'
-    //             });
-    //            window.location.reload();
-    //         } else {
-    //             $scope.personalMessage = data.data.Reason;
-    //             jQuery.pnotify({
-    //               text: $scope.personalMessage,
-    //               type: 'error'
-    //             });
-    //         }
-    //     });
-    // }
-
     $scope.$on('getBorrwerDetails', function(e) {  
         var userId = jQuery('#userId').val();
         $http({
             method : "GET",
             url : "myAccountDetails?user_id="+userId
         }).success(function(data) {
-            // jQuery('.usersListContainer').addClass('hide');
-            // jQuery('.userDetails').removeClass('hide');
-            // console.log(data);
             if(data.data.user_type == 'borrower') {
                 var personalObject = data.data.personal
                 if(data.data.no_of_applicants == 2){

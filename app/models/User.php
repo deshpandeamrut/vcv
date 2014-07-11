@@ -97,4 +97,26 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $result;
 	}
 
+	public function getBasicDetailsByUserId($userId){
+		$result = DB::table('users')
+					->where('id', $userId)
+					->select( 'title', 
+							  'first_name',
+							  'profile_rating', 
+							  'middle_name', 
+							  'last_name', 
+							  'dob', 
+							  'email', 'username', 
+							  'user_type',
+							  'membership_type'
+							 )
+					->get();
+		if(empty($result)){
+			return '';
+		}
+		else{
+			return $result;
+		}
+	}
+
 }

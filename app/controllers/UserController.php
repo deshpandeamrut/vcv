@@ -780,7 +780,7 @@ class UserController extends BaseController {
 
 	public function getUserAccountDetails(){
 		$input = Input::all();
-		Log::info("postEmploymentDetails --> value of Params Recvd".var_export($input,true));
+		Log::info("getUserAccountDetails --> value of Params Recvd".var_export($input,true));
 		$rules = array(
 						'user_id' => 'Required'
 					);
@@ -793,7 +793,7 @@ class UserController extends BaseController {
 		}
 		$userId = intval($input['user_id']);
 		try{
-			$data = UserDetails::getUserAccountDetails($userId);
+			$data = $this->getUserDetails($userId);
 			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Received data for user ".$userId,"data"=> $data));
 			Log::info("getUserAccountDetails --> Sending of Response Params myAccount ".$responseJson);
 			return $responseJson;
@@ -820,7 +820,7 @@ class UserController extends BaseController {
 		}
 		$userId = intval($input['user_id']);
 		try{
-			$data = UserDetails::getUserAccountDetailsById($userId);
+			$data = $this->getUserAccountDetailsById($userId);
 			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Received data for user ".$userId,"data"=> $data));
 			Log::info("getUserAccountDetails --> Sending of Response Params myAccount ".$responseJson);
 			return $responseJson;
@@ -903,7 +903,7 @@ class UserController extends BaseController {
 		}
 		try{
 			$userId = Input::get('user_id');
-			$responseArray = UserDetails::getUserAccountDetails($userId);
+			$responseArray = $this->getUserDetails($userId);
 			Log::info("viewUserProfileDetails --> User With Id ".$userId." Retrieved Successfully");
 			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Success","data"=> $responseArray));
 		}catch(Exception $e){
@@ -1009,207 +1009,26 @@ class UserController extends BaseController {
 			Log::info("getDashboardDetails --> Sending of Response Params".$responseJson);
 			return $responseJson;
 		}
-		// $objPropertyModel = new PropertyListingModel();
-		// $objPropertyHouseDetailsModel = new PropertyHouseDetailsModel();
-		// $objAddressModel = new AddressModel();
-		// $objBidModel = new BidModel();
-		// $objMessageModel = new MessageModel();
-		// $objAuctionModel = new AuctionModel();
-		// $userId = Auth::user()->id;
-		// $userStatus = Auth::user()->status;
-		// $userProfileComplete = Auth::user()->is_profile_complete;
-		// $userType = Auth::user()->user_type;
-		// $responseArray = array("dashboard_flag"=>"incomplete_profile","property_flag"=>'no_property_added',"username"=>Auth::user()->username,"user_type"=>$userType,"rating"=>Auth::user()->credit_rating);
-		// if( Auth::user()->user_type == 'borrower'){
-		// 	$propertyType = 'auction';
-		// }else if(Auth::user()->user_type == 'investor'){
-		// 	$propertyType = 'sale';
-		// }
-		// $messageData = $objMessageModel->getDashBoardMessageDetails($userId);
-		// if(!empty($messageData)){
-		// 	$responseArray['inbox_message'] = $messageData[0];
-		// 	$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Message Details","data"=>$responseArray));
-		// }else{
-		// 	$responseArray['inbox_message'] = array();
-		// 	$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Message Details","data"=>$responseArray));
-		// }
-		// if(!($userProfileComplete)){
-		// 	$responseArray['dashboard_flag'] = "incomplete_profile";
-		// 	$responseArray["property_flag"] = 'no_property_added';
-		// 	$responseJson = json_encode(array("status_code" => 200,"status_message"=>"User Profile Not Complete","data"=>$responseArray));
-		// 	Log::info("getDashboardDetails --> Response Params".var_export($responseJson,true));
-		// 	return $responseJson;
-		// }
-		// if($userStatus == 'unverified'){
-		// 	$responseArray['dashboard_flag'] = "unverified_user";
-		// 	$responseArray["property_flag"] = 'no_property_added';
-		// 	$responseJson = json_encode(array("status_code" => 200,"status_message"=>"User Profile Not Verified","data"=>$responseArray));
-		// 	Log::info("getDashboardDetails --> Response Params".var_export($responseJson,true));
-		// 	return $responseJson;
-		// }
-		 //$responseArray['dashboard_flag'] = "verified_user";
-		// $responseArray["property_status"] = '';
-		// $auctionId = '';
-		// Log::info("getDashboardDetails --> Value of User Id".$userId);
-		// $addedPropertyDetails = $objPropertyModel->dashboardProperty($userId,$propertyType);
-		// if(empty($addedPropertyDetails)){
-		// 	$responseJson = json_encode(array("status_code" => 200,"status_message"=>"User Has Not Added Any Property","data"=>$responseArray));
-		// }else{
-		// 	$responseArray["property_flag"] = 'added_property';
-		// 	$addedPropertyDetails = $addedPropertyDetails[0];
-		// 	Log::info("getDashboardDetails --> Added Property Details".var_export($addedPropertyDetails,true));
-		// 	$propertyId = $addedPropertyDetails['id'];
-		// 	$isAuction = $addedPropertyDetails['is_running'];
-		// 	$isBidAccepted = $addedPropertyDetails['is_accepted'];
-		// 	$isPropertyVerified = $addedPropertyDetails['is_verified'];
-		// 	$propertyAddress = $objAddressModel->getAddressForProperty($userId,$propertyId);
-		// 	$propertyHouseDetails = $objPropertyHouseDetailsModel->getPropertyBriefDetails($propertyId);
-		// 	if(!($isPropertyVerified)){
-		// 		$responseArray["property_status"] = 'not_verified';
-		// 		$propertyHouseDetails = $propertyHouseDetails[0];
-		// 		$responseArray['property_details'] = array_merge((array)$addedPropertyDetails, (array)$propertyHouseDetails);
-		// 		$responseArray['property_details']['address'] = $propertyAddress[0];
-		// 		$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Property Verification Pending","data"=>$responseArray));
-		// 	}else{
-		// 		if(!empty($propertyHouseDetails)){
-		// 			$responseArray["property_status"] = 'auction_not_started';
-		// 			$propertyHouseDetails = $propertyHouseDetails[0];
-		// 			$responseArray['property_details'] = array_merge((array)$addedPropertyDetails, (array)$propertyHouseDetails);
-		// 			$responseArray['property_details']['address'] = $propertyAddress[0];
-		// 			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Property Verified","data"=>$responseArray));
-		// 		}
-		// 		if($userType == 'borrower'){
-		// 			if($isAuction){
-		// 				$responseArray["property_status"] = 'auction_started';
-		// 				$auctionData = $objAuctionModel->getAuctionsByPropertyId($propertyId);
-		// 				if(!(empty($auctionData))){
-		// 					$auctionData = $auctionData[0];
-		// 					Log::info("getDashboardDetails --> Auction Details".var_export($auctionData,true));
-		// 					$auctionId = $auctionData['id'];
-		// 					$auctiondate = $auctionData['auction_expiry_date'];
-		// 					Log::info("getDashboardDetails --> Value of Auction Date".$auctiondate);
-		// 					$auctiondate = strtotime($auctiondate);
-	 // 						$currentDate = time();
-	 // 						$dateDiff = ($auctiondate - $currentDate);
-  //    						$dateDiff = intval($dateDiff/(60*60*24));
-		//      				$auctionData['no_days_left'] = $dateDiff;
-		// 					$responseArray['auction_details'] = $auctionData;
-		// 				}else{
-		// 					$responseArray['auction_details'] = array();
-		// 				}
-		// 				$countOfBids = $objBidModel->getCountOfBids($auctionId);
-		// 				Log::info("getDashboardDetails --> Value of Count of Bids".var_export($countOfBids,true));
-		// 				if(empty($countOfBids)){
-		// 					$responseArray['bid_count'] = 0;
-		// 				}else{
-		// 					$responseArray['bid_count'] = $countOfBids;
-		// 				}
-		// 				$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Property Auction Started","data"=>$responseArray));
-		// 			}
-		// 			$responseArray["accepted_bid_details"] = array();
-		// 			if($isBidAccepted){
-		// 				$responseArray["property_status"] = 'auction_completed';
-		// 				$acceptedBidDetails = $objBidModel->getBidAcceptedDetails($auctionId);
-		// 				if(!empty($acceptedBidDetails)){
-		// 					$acceptedBidDetails = $acceptedBidDetails[0];
-		// 					$responseArray["accepted_bid_details"] = $acceptedBidDetails;
-		// 				}
-		// 				$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Auction completed","data"=>$responseArray));
-		// 			}else{
-		// 				Log::info("getDashboardDetails --> Value of Auction Id".$auctionId);
-		// 				$lastBidDetails = $objBidModel->getLastBid($auctionId);
-		// 				$bestBidDetails = $objBidModel->getBestBid($auctionId);
-		// 				$bestPremiumDetails = $objBidModel->getBestPremiumRates($auctionId);
-		// 				if(!(empty($lastBidDetails))){
-		// 					$lastBidDetails = $lastBidDetails[0];
-		// 					$bidCreatedDate = $lastBidDetails['created_at'];
-		// 					$lastBidDetails['created_at'] = date('jS F y',strtotime($bidCreatedDate));
-		// 					$responseArray['last_bid_details'] = $lastBidDetails;
-		// 				}else{
-		// 					$responseArray['last_bid_details'] = array();
-		// 				}
-		// 				if(!(empty($bestBidDetails))){
-		// 					$responseArray['best_bid_details'] = $bestBidDetails[0];
-		// 				}else{
-		// 					$responseArray['best_bid_details'] = array();
-		// 				}
-		// 				if(!(empty($bestPremiumDetails))){
-		// 					$responseArray['best_bid_premium_details'] = $bestPremiumDetails[0];
-		// 				}else{
-		// 					$responseArray['best_bid_premium_details'] = array();
-		// 				}
-		// 				$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Bids On property","data"=>$responseArray));
-		// 			}
-		// 	 	} // end of if userType Borrower
-		// 	} // end of else 
-		// } // end of else addedPropertyDetails
-		// if($userType == 'investor'){
-		// 	$bidDetails = $objBidModel->dashBoardBidDetails($userId);
-		// 	Log::info("getDashboardDetails --> Value of Investor Bid Details".var_export($bidDetails,true));
-		// 	if(!(empty($bidDetails))){
-		// 		$i=0;
-		// 		$bidDetailsDetailsArray = array();
-		// 		foreach ($bidDetails  as $value) {
-		// 			$auctionId = $value['linkable_aid'];
-		// 			$value['bid_status'] = 'pending';
-		// 			if($value['is_accepted']){
-		// 				$value['bid_status'] = 'accepeted';
-		// 			}
-		// 			if($value['is_deleted']){
-		// 				$value['bid_status'] = 'rejected';
-		// 			}
-		// 			$propertyAddress = $objPropertyModel->getPropertyAddressForAuctionId($auctionId);
-		// 			Log::info("getDashboardDetails --> Property Address".var_export($propertyAddress,true));
-		// 			$propertyAddress = $propertyAddress[0];
-		// 			$value['property_id'] = $propertyAddress['property_id'];
-		// 			unset($propertyAddress["property_id"]);
-		// 			$value['address'] = $propertyAddress;
-		// 			$bidDetailsDetailsArray[$i] = $value;
-		// 			$i++;
-		// 		}
-		// 		$responseArray['bid_details'] = $bidDetailsDetailsArray;
-
-		// 		$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Investor Bids On property","data"=>$responseArray));
-		// 	}else{
-		// 		$responseArray['bid_details'] = array();
-		// 		$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Investor Bids On property","data"=>$responseArray));
-		// 	}
-		// 	$trendingAuctions = $objAuctionModel->getTrendingAuctions();
-		// 	if(!empty($trendingAuctions)){
-		// 		$i = 0;
-		// 		foreach($trendingAuctions as $row){
-		// 			$acutionId =  $row['auction_id'];
-		// 			$propertyId =  $row['property_id'];
-		// 			$auctiondate = $row['auction_expiry_date'];
-		// 			$auctiondate = strtotime($auctiondate);
- 	// 				$currentDate = time();
- 	// 				$dateDiff = ($auctiondate - $currentDate);
- 	// 				$dateDiff = intval($dateDiff/(60*60*24));
-  //    				log::info("******Value of auctionData".$dateDiff);
- 	// 				$trendingAuctions[$i]['no_days_left'] = $dateDiff;
-		// 			$bidData = $objBidModel->getAuctionedPropertiesbyId($acutionId);
-		// 			$countBidData = count($bidData);
-		// 			if(empty($bidData)){
-		// 				$trendingAuctions[$i]['floating_rate'] = '';
-		// 				$trendingAuctions[$i]['mark_up_premium'] = '';
-		// 				$trendingAuctions[$i]['no_bids'] = '0';
-		// 				$trendingAuctions[$i]['is_accepted'] = 0;
-		// 			}else{
-		// 				$bidData = $bidData[0];
-		// 				$trendingAuctions[$i]['floating_rate'] = $bidData['rate_of_interest'];
-		// 				$trendingAuctions[$i]['mark_up_premium'] = $bidData['mark_up_premium'];
-		// 				$trendingAuctions[$i]['no_bids'] = $countBidData;
-		// 				$trendingAuctions[$i]['is_accepted'] = $bidData['is_accepted'];
-		// 			}
-		// 			$i++;
-		// 		}
-		// 		$responseArray['trending_auction_details'] = $trendingAuctions;
-		// 		$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Investor Bids On property","data"=>array()));
-		// 	}else{
-		// 		$responseArray['trending_auction_details'] = array();
-				
-		// 	}
-		// }
+		$objAddressModel = new Addresses();
+		$userId = Auth::user()->id;
+		$userStatus = Auth::user()->status;
+		$userProfileComplete = Auth::user()->is_profile_complete;
+		$userType = Auth::user()->user_type;
+		$responseArray = array("dashboard_flag"=>"incomplete_profile","username"=>Auth::user()->username,"user_type"=>$userType);
+		if(!($userProfileComplete)){
+			$responseArray['dashboard_flag'] = "verified_user";//"incomplete_profile";
+			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"User Profile Not Complete","data"=>$responseArray));
+			Log::info("getDashboardDetails --> Response Params".var_export($responseJson,true));
+			return $responseJson;
+		}
+		if($userStatus == 'unverified'){
+			$responseArray['dashboard_flag'] = "unverified_user";
+			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"User Profile Not Verified","data"=>$responseArray));
+			Log::info("getDashboardDetails --> Response Params".var_export($responseJson,true));
+			return $responseJson;
+		}
+		$responseArray['dashboard_flag'] = "verified_user";
+		Log::info("getDashboardDetails --> Value of User Id".$userId);	
 		$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Investor Bids On property","data"=>$responseArray));
 		Log::info("getDashboardDetails --> Response Params".var_export($responseJson,true));
 		return $responseJson;
@@ -1513,5 +1332,360 @@ class UserController extends BaseController {
 			return $responseJson;
 		}
 	} // end of function 
+
+	public function getUserDetails($userId){	
+		$userObj = new User();
+		$addressObj = new Addresses();
+		$phoneObj = new Phones();
+		$jobSeekerObj = new JobSeekerDetails();
+		$jobSeekerEmpObj = new JobSeekerEmploymentDetails();
+		$jobSeekerEduObj = new JobSeekerEducationDetails();
+		$jobSeekerProj = new JobSeekerProjectDetails();
+		$attachmentObj = new Attachments();
+		$data = array();
+		$userType = $userObj::find($userId)->user_type;
+		Log::info("getUserDetails --> Sending of Response Params myAccount ".var_export($userType,true));
+		if(empty($userType)){
+			return array();
+		}
+		$basicData = $userObj->getBasicDetailsByUserId($userId);
+		if(empty($basicData)){
+			return array();
+		}
+		$data['user_type'] = $basicData[0]->user_type;
+		if($userType == 'employee'){
+			/* employee basic Details */
+			$data['personal']['title'] = $basicData[0]->title;
+			$data['personal']['first_name'] = $basicData[0]->first_name;
+			$data['personal']['middle_name'] = $basicData[0]->middle_name;
+			$data['personal']['last_name'] = $basicData[0]->last_name;
+			$data['personal']['dob'] = $basicData[0]->dob;
+			/* employee basic Details Ends*/
+
+			/* employee Address Details */
+			Log::info("getUserDetails --> value of User Id".$userId);
+			$addressData = $addressObj->getAddressDetailsByUserId($userId);
+			if(empty($addressData)){
+				$data['personal']['address'] = array();
+			}else{
+				$data['personal']['address'] = $addressData[0];
+			}
+			/* employee Address Details Ends */
+
+			/* employee Phone Details */
+			$phoneData = $phoneObj->getContactDetailsByUserId($userId);
+			if(empty($phoneData)){
+				$data['personal']['phone'] = array();
+			}else{
+				$phoneData = json_decode(json_encode($phoneData),true);
+				foreach ($phoneData as $key => $value) {
+					if($value['phone_type'] == 'work'){
+					$data['personal']['phone']['work']['phone_city_code'] = $value['phone_city_code'];
+					$data['personal']['phone']['work']['phone_number'] = $value['phone_number'];
+					}
+					if($value['phone_type'] == 'mobile'){
+					$data['personal']['phone']['mobile']['phone_city_code'] = $value['phone_city_code'];
+					$data['personal']['phone']['mobile']['phone_number'] = $value['phone_number'];
+					}
+					if ($value['phone_type'] == 'home'){
+					$data['personal']['phone']['home']['phone_city_code'] = $value['phone_city_code'];
+					$data['personal']['phone']['home']['phone_number'] = $value['phone_number'];
+					}
+				}
+			}
+			/* employee Phone Details Ends*/
+
+			/* employee Attachment Details */
+
+			// $attachmentData = $attachmentsObj->GetMessageAttachments('user', $userId,'id_proof');
+			// if(empty($attachmentData)){
+			// 	$data['personal']['idproof'] = array();
+			// }else{
+			// 	$data['personal']['idproof'] = $attachmentData;
+			// }
+
+			/* Borrower 1 Attachment Details Ends */
+
+			/* employee jobSeeker Details */
+
+			$jobSeekerData = $jobSeekerObj->getJobSeekerDetailsByUserId($userId);
+			if(empty($jobSeekerData)){
+				$data['loan'] = array();
+			}else{
+				$data['loan'] = $loanData[0];
+			}
+
+			/* employee jobSeeker Details End*/
+
+			/* employee Employment Details*/
+
+			$currEmpData = $jobSeekerEmpObj->getEmploymentDetailsByUserId($userId, 'current');
+			if(empty($currEmpData)){
+				$data['loan']['current_employment'] = array();
+			}else{
+				$data['loan']['current_employment'] = $currEmpData[0];
+			}
+
+			$prevEmpData = $jobSeekerEmpObj->getEmploymentDetailsByUserId($userId, 'prior');
+			if(empty($prevEmpData)){
+				$data['loan']['previous_employments'] = array();
+			}else{
+				$data['loan']['previous_employments'] = $prevEmpData;
+			}
+
+			/* employee Educational Details End*/
+
+			$class_10_details = $jobSeekerEduObj->getEducationDetailsByUserId($userId, 'class_10');
+			if(empty($class_10_details)){
+				$data['financial']['class_10_details'] = array();
+			}else{
+				$data['financial']['class_10_details'] = $class_10_details[0];
+			}
+
+			$class_12_details = $jobSeekerEduObj->getEducationDetailsByUserId($userId, 'class_12');
+			if(empty($class_12_details)){
+				$data['financial']['class_10_details'] = array();
+			}else{
+				$data['financial']['class_10_details'] = $class_12_details[0];
+			}
+
+			$class_deg_details = $jobSeekerEduObj->getEducationDetailsByUserId($userId, 'b_degree');
+			if(empty($class_deg_details)){
+				$data['financial']['class_10_details'] = array();
+			}else{
+				$data['financial']['class_10_details'] = $class_deg_details[0];
+			}
+			/* employee Educational Details End*/
+
+			$projectDetails = $jobSeekerProj->getProjectDetailsByUserId($userId);
+			if(empty($projectDetails)){
+				$data['financial']['project_details'] = array();
+			}else{
+				$data['financial']['project_details'] = $class_deg_details[0];
+			}
+		}else if($userType =='employer'){
+			Log::info("getUserAccountDetails --> coming inside Investor");
+			$data['oneStepRegistration']['title'] = $basicData[0]->title;
+			$data['oneStepRegistration']['first_name'] = $basicData[0]->first_name;
+			$data['oneStepRegistration']['middle_name'] = $basicData[0]->middle_name;
+			$data['oneStepRegistration']['last_name'] = $basicData[0]->last_name;
+			$data['oneStepRegistration']['dob'] = $basicData[0]->dob;
+			$data['oneStepRegistration']['email'] = $basicData[0]->email;
+			$addressData = $addressObj->getAddressDetailsByUserId($userId);
+			if(empty($addressData)){
+				$data['oneStepRegistration']['address'] = array();
+			}else{
+				$data['oneStepRegistration']['address'] = $addressData[0];
+			}
+			$phoneData = $phoneObj->getContactDetailsByUserId($userId);
+			if(empty($phoneData)){
+				$data['oneStepRegistration']['phone'] = array();
+			}else{
+				$data['oneStepRegistration']['phone'] = $phoneData;
+			}
+			$bankDetailsObj = new BankDetailsModel();
+			$bankData = $bankDetailsObj->getBankDetailsByUserId($userId);
+			if(empty($bankData)){
+				$data['oneStepRegistration']['bankdetail'] = array();
+			}
+			else{
+				$data['oneStepRegistration']['bankdetail'] = $bankData[0];
+			}
+		}
+
+		return $data;
+	}
+
+
+	public static function getUserAccountDetailsById($userId){
+		$userObj = new User();
+		$addressObj = new Addresses();
+		$phoneObj = new Phones();
+		$jobSeekerObj = new JobSeekerDetails();
+		$jobSeekerEmpObj = new JobSeekerEmploymentDetails();
+		$jobSeekerEduObj = new JobSeekerEducationDetails();
+		$jobSeekerProj = new JobSeekerProjectDetails();
+		$attachmentObj = new Attachments();
+		$data = array();
+		$userType = $userObj::find($userId)->user_type;
+		Log::info("getUserAccountDetailsById --> Sending of Response Params myAccount ".var_export($userType,true));
+		if(empty($userType)){
+			return array();
+		}
+		$basicData = $userObj->getBasicDetailsByUserId($userId);
+		if(empty($basicData)){
+			return array();
+		}
+		$data['user_type'] = $basicData[0]->user_type;
+		//$data['profile_status'] = $basicData[0]->profile_status;
+		$data['email'] = $basicData[0]->email;
+		if($userType == 'employee'){
+			$data['personal']['title'] = $basicData[0]->title;
+			$data['personal']['first_name'] = $basicData[0]->first_name;
+			$data['personal']['middle_name'] = $basicData[0]->middle_name;
+			$data['personal']['last_name'] = $basicData[0]->last_name;
+			$dob = '';
+			if(!empty($basicData[0]->dob)){
+				$dob = date('m/d/Y',strtotime($basicData[0]->dob));
+			}
+			$data['personal']['dob'] = $dob;
+			Log::info("getUserAccountDetailsById --> value of User Id".$userId);
+			$addressData = $addressObj->getAddressDetailsByUserId($userId);
+			if(empty($addressData)){
+				$data['personal']['address']['street_no'] = '';
+				$data['personal']['address']['street_name'] = '';
+				$data['personal']['address']['suburb'] = '';
+				$data['personal']['address']['postcode'] = '';
+				$data['personal']['address']['city_name'] = '';
+				$data['personal']['address']['state_name'] = '';
+			}else{
+				$data['personal']['address'] = $addressData[0];
+			}
+			$phoneData = $phoneObj->getContactDetailsByUserId($userId);
+			if(empty($phoneData)){
+				$data['personal']['phone']['work']['phone_city_code'] = '';
+				$data['personal']['phone']['work']['phone_number'] = '';
+				$data['personal']['phone']['mobile']['phone_city_code'] = '';
+				$data['personal']['phone']['mobile']['phone_number'] = '';
+				$data['personal']['phone']['home']['phone_city_code'] = '';
+				$data['personal']['phone']['home']['phone_number'] = '';
+			}else{
+				$phoneData = json_decode(json_encode($phoneData),true);
+				foreach ($phoneData as $key => $value) {
+					if($value['phone_type'] == 'work'){
+						$data['personal']['phone']['work']['phone_city_code'] = $value['phone_city_code'];
+						$data['personal']['phone']['work']['phone_number'] = $value['phone_number'];
+					}
+					if($value['phone_type'] == 'mobile'){
+						$data['personal']['phone']['mobile']['phone_city_code'] = $value['phone_city_code'];
+						$data['personal']['phone']['mobile']['phone_number'] = $value['phone_number'];
+					}
+					if ($value['phone_type'] == 'home'){
+						$data['personal']['phone']['home']['phone_city_code'] = $value['phone_city_code'];
+						$data['personal']['phone']['home']['phone_number'] = $value['phone_number'];
+					}
+				}
+			}
+			
+			$jobSeekerData = $jobSeekerObj->getJobSeekerDetailsByUserId($userId);
+			if(empty($jobSeekerData)){
+				$data['loan']['resume_headline'] = '';
+				$data['loan']['job_category'] = '';
+				$data['loan']['skill_sets'] = '';
+				$data['loan']['preferred_location'] = '';
+				$data['loan']['is_relocate'] = '';
+				$data['loan']['total_experience'] = '';
+				$data['loan']['comments'] = '';
+			}else{
+				$jobSeekerData = $jobSeekerData[0];
+				$data['loan']['resume_headline'] = $jobSeekerData['resume_headline'];
+				$data['loan']['job_category'] = $jobSeekerData['job_category'];
+				$data['loan']['skill_sets'] = $jobSeekerData['skill_sets'];
+				$data['loan']['is_relocate'] = $jobSeekerData['is_relocate'];
+				$data['loan']['total_experience'] = $jobSeekerData['total_experience'];
+			}
+			
+			$currEmpData = $jobSeekerEmpObj->getEmploymentDetailsByUserId($userId, 'current');
+			if(empty($currEmpData)){
+				$data['loan']['current_employment']['yearly_salary'] = '';
+				$data['loan']['current_employment']['basis_of_employment'] = '';
+				$data['loan']['current_employment']['profession'] = '';
+				$data['loan']['current_employment']['industry'] = '';
+				$data['loan']['current_employment']['employment_period_years'] = '';
+				$data['loan']['current_employment']['employment_period_months'] = '';
+				$data['loan']['current_employment']['functional_area'] = '';
+				$data['loan']['current_employment']['employment_role'] = '';
+			}else{
+				$data['loan']['employment'] = $currEmpData[0];
+			}
+
+			$prevEmpData = $jobSeekerEmpObj->getEmploymentDetailsByUserId($userId, 'prior');
+			if(empty($prevEmpData)){
+				$data['loan']['previous_employments']["yearly_salary"] =  "";
+				$data['loan']['previous_employments']["basis_of_employment"] =  "";
+				$data['loan']['previous_employments']["profession"] =  "";
+				$data['loan']['previous_employments']["industry"] = "";
+				$data['loan']['previous_employments']["employment_period_years"] =  "";
+				$data['loan']['previous_employments']["employment_period_months"] =  "";
+				$data['loan']['previous_employments']['functional_area'] = '';
+				$data['loan']['previous_employments']['employment_role'] = '';
+			}else{
+				$data['loan']['previous_employments'] = $prevEmpData;
+			}
+			$data['no_of_applicants'] = 1;
+
+			$class_10_details = $jobSeekerEduObj->getEducationDetailsByUserId($userId, 'class_10');
+			if(empty($class_10_details)){
+				$data['financial']['class_10_details']['year_of_passing'] = '';
+				$data['financial']['class_10_details']['school_name'] = '';
+				$data['financial']['class_10_details']['passing_percentage'] = '';
+				$data['financial']['class_10_details']['basis_of_education'] = '';
+			}else{
+				$data['financial']['class_10_details'] = $class_10_details[0];
+			}
+
+			$class_12_details = $jobSeekerEduObj->getEducationDetailsByUserId($userId, 'class_12');
+			if(empty($class_12_details)){
+				$data['financial']['class_12_details']['year_of_passing'] = '';
+				$data['financial']['class_12_details']['school_name'] = '';
+				$data['financial']['class_12_details']['passing_percentage'] = '';
+				$data['financial']['class_12_details']['basis_of_education'] = '';
+			}else{
+				$data['financial']['class_12_details'] = $class_12_details[0];
+			}
+
+			$class_deg_details = $jobSeekerEduObj->getEducationDetailsByUserId($userId, 'b_degree');
+			if(empty($class_deg_details)){
+				$data['financial']['b_degree_details']['year_of_passing'] = '';
+				$data['financial']['b_degree_details']['school_name'] = '';
+				$data['financial']['b_degree_details']['passing_percentage'] = '';
+				$data['financial']['b_degree_details']['basis_of_education'] = '';
+			}else{
+				$data['financial']['b_degree_details'] = $class_deg_details[0];
+			}
+
+			/* employee Educational Details End*/
+
+			$projectDetails = $jobSeekerProj->getProjectDetailsByUserId($userId);
+			if(empty($projectDetails)){
+				$data['financial']['project_details']['project_name'] = '';
+				$data['financial']['project_details']['project_description'] = '';
+				$data['financial']['project_details']['project_link'] = '';
+			}else{
+				$data['financial']['project_details'] = $class_deg_details[0];
+			}
+		}else if($userType =='investor'){
+			Log::info("getUserAccountDetails --> coming inside Investor");
+			$data['oneStepRegistration']['title'] = $basicData[0]->title;
+			$data['oneStepRegistration']['first_name'] = $basicData[0]->first_name;
+			$data['oneStepRegistration']['middle_name'] = $basicData[0]->middle_name;
+			$data['oneStepRegistration']['last_name'] = $basicData[0]->last_name;
+			$data['oneStepRegistration']['dob'] = $basicData[0]->dob;
+			$data['oneStepRegistration']['email'] = $basicData[0]->email;
+			$addressData = $addressObj->getAddressDetailsByUserId($userId);
+			if(empty($addressData)){
+				$data['oneStepRegistration']['address'] = array();
+			}else{
+				$data['oneStepRegistration']['address'] = $addressData[0];
+			}
+			$phoneData = $phoneObj->getContactDetailsByUserId($userId);
+			if(empty($phoneData)){
+				$data['oneStepRegistration']['phone'] = array();
+			}else{
+				$data['oneStepRegistration']['phone'] = $phoneData;
+			}
+			$bankDetailsObj = new BankDetailsModel();
+			$bankData = $bankDetailsObj->getBankDetailsByUserId($userId);
+			if(empty($bankData)){
+				$data['oneStepRegistration']['bankdetail'] = array();
+			}
+			else{
+				$data['oneStepRegistration']['bankdetail'] = $bankData[0];
+			}
+		}
+
+		return $data;
+	}
+
 
 } // end of class
