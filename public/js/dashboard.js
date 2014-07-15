@@ -1154,9 +1154,8 @@ dashboardApp.controller('oneStepRegistration', function ($scope, $http,$upload) 
         jQuery('#overlay').removeClass('hide');
         $scope.upload = $upload.upload({
             method: 'POST',
-            url: 'regInvestorDetails',
-            data: $scope.oneStepRegistration, // pass in data as strings
-            file: $scope.filesList
+            url: 'postJob',
+            data: $scope.oneStepRegistration// pass in data as strings
         }).progress(function(evt) {
             console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
         }).success(function(data, status, headers, config) {

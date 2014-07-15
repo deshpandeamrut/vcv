@@ -19,7 +19,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
       <![endif]-->
   </head>
-  <body ng-app="dashboardApp" ng-controller="currentAuctionsSignedIn">
+  <body ng-app="dashboardApp" ng-controller="postJob">
     <div class="spinner hide" id="overlay" ng-cloak ></div>
     <!----------------------------DASHBOARD Header---------------------------->
     <div class="mc-header clearfix" ng-show="isLogged">
@@ -84,16 +84,7 @@
 </li>
 <li><a class="menu" href="aboutus.html">ABOUT US</a></li>
 <li class="how-it-works"><a class="menu hw" href >HOW IT<br>
-    WORKS</a>
-
-    <div class="how-it-works-drop">
-        <ul>
-         <li><a href="find-out-more-borrower.html"> <span class="text-block"> <span class="head-text">For a Borrower</span> </span> </a> </li>
-         <li><a href="find-out-more-investor.html"> <span class="text-block"> <span class="head-text">For an Investor</span> </span> </a> </li>
-         <li><a href="faq.html"> <span class="text-block"> <span class="head-text">FAQ</span> </span> </a> </li>
-     </ul>
- </div>
-
+    WORKS</a>   
 </li>
 </ul>
 </div>
@@ -103,12 +94,11 @@
 
 <div class="container">
     <div class="row">
-        <h2 class="search-explore">Active Resumes</h2>
-        <h2 class="search-explore-sub">Use filter options and get search results very faster.</h2>
+        <h2 class="search-explore">Post a Job</h2>
     </div>
 </div>
 <form>
-    <div class="container">
+   <!--  <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 collapse-menu-fliter">
                 <div class="panel-group" id="accordion">
@@ -233,7 +223,7 @@
 
                                 <!--Country-->
                                 <label>Country</label>
-                                <!-- <br clear="all"> -->
+                                <br clear="all">
                                 <span class="form-hold3 clearfix">
                                     <div class="validate-line">
                                         <select class="input-field" ng-model="sendingData.country_name">
@@ -359,8 +349,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> 
+    <!-- </div> -->
 </form>
 
 
@@ -499,7 +489,7 @@ $('a.accordion-toggle').click(function() {
 });
 
 
-function currentAuctionsSignedIn($scope, $http){
+function postJob($scope, $http){
 
     $scope.dashboardData = {};
     $scope.isLogged = false;

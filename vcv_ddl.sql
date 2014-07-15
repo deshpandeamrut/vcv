@@ -176,3 +176,29 @@ create table if not exists attachments (
   updated_by varchar(128),
   is_deleted tinyint(1) not null default 0
 )ENGINE=InnoDB;
+
+
+create table if not exists job_postings (
+  id int(11) not null primary key AUTO_INCREMENT,
+  linkable_uid int(11) not null,
+  job_type varchar(16) not null default 'permanent' check (status in ('permanent', 'contract')),
+  job_industry varchar(256) not null,
+  job_description text not null,
+  job_designation varchar(256) not null,
+  min_exp_level int(11) not null default 0,
+  max_exp_level int(11) not null default 0,
+  min_salary_range varchar(256) not null default 'Best in Industry',
+  max_salary_range varchar(256),
+  company_name varchar(256),
+  company_logo text,
+  link_to_compnay varchar(256),
+  company_description text,
+  job_requirement text not null,
+  status varchar(16) not null default 'active' check (status in ('active', 'inactive')),
+  created_at timestamp not null default CURRENT_TIMESTAMP,
+  updated_at timestamp not null default '0000-00-00 00:00:00',
+  created_by varchar(128),
+  updated_by varchar(128),
+  is_deleted tinyint(1) not null default 0,
+  FOREIGN KEY(linkable_uid) REFERENCES users(id)
+)ENGINE=InnoDB;

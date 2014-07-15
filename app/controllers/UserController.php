@@ -1687,5 +1687,56 @@ class UserController extends BaseController {
 		return $data;
 	}
 
+	public function postJob(){
+		if(empty(Auth::user()->id)){
+   			Log::info("postJob -->User Not Logged In.. Please Check");
+   			$repsonseArray = array("Reason"=>"User Not Logged in");
+   			$responseJson = json_encode(array("status_code" => 401,"status_message"=>"Unauthorized","data"=> $repsonseArray));
+   			Log::info("postJob -->Sending of Response Params postLoanDetails ".$responseJson);
+			return $responseJson;
+  		}
+  		$input = Input::all();
+  		Log::info("postJob -->value of Params Recvd postJobSeekerDetails ".var_export($input,true));
+
+  		$rules = array(	'job_type' =>'Required',
+						'job_description' =>'Required',
+						'job_designation' =>'Required',
+						'min_exp_level' =>'Required',
+						'max_exp_level' =>'Required',
+						'min_salary_range' =>'Required',
+						'max_salary_range' =>'Required',
+						'job_requirement' => 'Required',
+						'job_industry' => 'Required'
+					);
+		$v = Validator::make($input, $rules);
+		if($v->fails()){
+			Log::error("postJob -->There was some Validation Failures");
+			$validationFailure = $v->messages();
+			$validationFailure = json_decode($validationFailure,true);
+			Log::error("postJob -->There was some Validation Failures postJobSeekerDetails: ".var_export($validationFailure,true));
+			foreach($validationFailure as $row){
+				$validationFailure = $row;
+			}
+			$responseJson = json_encode(array("status_code" => 400,"status_message"=>"Validation Failure","data"=>array("Reason"=>$validationFailure)));
+			Log::info("postJob -->Sending of Response Params".$responseJson);
+			return $responseJson;
+		}
+		try{
+			$input['linkable_uid'] = Auth::user()->id;
+			$input['email_id'] = Auth::user()->email;
+			$objJobPosting = new JobPostings();
+			$result = $objJobPosting->addprojectDetails($input);
+			Log::info("postJob -->Succesfully Saved postJob Details");
+			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Succesfully Registered","data"=> array("Reason"=>"Successfully posted a Job")));
+			Log::info("postJob --> Sending of Response Params ".$responseJson);
+			return $responseJson;
+		}catch(Exception $e){
+			Log::error("There was some Error".$e->getMessage());
+			$responseJson = json_encode(array("status_code" => 500,"status_message"=>"Internal Server Error","data"=>array("Reason"=>$e->getMessage())));
+			Log::info("postJob --> Sending of Response Params ".$responseJson);
+			return $responseJson;
+		}
+
+	}
 
 } // end of class
