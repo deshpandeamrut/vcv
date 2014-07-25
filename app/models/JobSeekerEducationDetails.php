@@ -27,4 +27,12 @@ class JobSeekerEducationDetails extends Eloquent{
 					->get();
 		return json_decode(json_encode($result),true);
 	}
+
+	public function getEducationDetailsforUser($userId){
+		$result = DB::table('job_seeker_education_details')
+					->where('linkable_uid', $userId)
+					->where('status', 'active')
+					->get();
+		return json_decode(json_encode($result),true);
+	}
 } // end of class

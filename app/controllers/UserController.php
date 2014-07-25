@@ -1299,7 +1299,7 @@ class UserController extends BaseController {
 				$responseData['prioremp'] = $priorEmpData;
 			}
 
-			$educationData = $objJobSeekerEducationDetails->getEducationDetailsByUserId($userId);
+			$educationData = $objJobSeekerEducationDetails->getEducationDetailsforUser($userId);
 			if(empty($educationData)){
 				$responseData['education'] = array();
 			}else{
