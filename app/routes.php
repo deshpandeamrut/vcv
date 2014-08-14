@@ -29,6 +29,8 @@ Route::get('dashboardDetails', 'UserController@getDashboardDetails');
 Route::post('getResumses', 'UserController@getResumeDetails');
 Route::get('myAccountDetails', 'UserController@getUserAccountDetailsForId');
 Route::post('postJob', 'UserController@postJob');
+Route::post('currentJobs', 'UserController@getPostedJobs');
+
 
 Route::get('userDetails', 'UserController@getuserDataById');
 

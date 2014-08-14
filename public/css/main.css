@@ -3219,6 +3219,10 @@ h2.search-explore-sub {
 	height:60px;
 	width:760px;
     float: left;
+    padding-left: 30px;
+}
+.main-menu .head-section{
+	width: 100%;
 }
 .main-menu .head-section li {
 	float: left;
@@ -3226,9 +3230,11 @@ h2.search-explore-sub {
 	width: 11%;
 	color: #1c9ad6;
 	font-family: 'FacitWeb';
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 16px;
 	padding-top: 15px;
+	width: 18.5% !important;
+	text-align: center;
 }
 .main-menu .head-section li:first-child {
 	width: 14%
@@ -3250,19 +3256,24 @@ h2.search-explore-sub {
 	margin:20px;
 }
 .sub-list .second-menu {
-	width:550px;
-    float: right;
-    border-bottom: 2px solid #e1e3e6;
-    height: 255px;
+	width:760px;
+    float: left;
+    padding-left: 30px;
 }
 .sub-list .head-section li {
-	float: right;
-	height: 140px;
+	float: left;
+	height: 60px;
 	color: #000;
 	font-family: 'FacitWeb';
-	font-size: 16px;
+	font-size: 13px;
 	line-height: 16px;
 	padding-top: 45px;
+	width: 18.5% !important;
+	text-align: center;
+}
+
+.sub-list .head-section {
+	width: 100%;
 }
 .sub-list .head-section li:first-child {
 	width: 10%
@@ -3934,7 +3945,7 @@ li.select-country a.menu {
 .bid-media-text {
 	overflow:hidden;
     font-family: 'FacitWeb';
-	font-size:14px;
+	font-size:10px;
 	line-height:20px;
 	color:#000;
 	padding-top:10px;
@@ -7147,4 +7158,26 @@ width: 78%;
 	font-weight: bold;
 	font-family: cursive;
 	font-size: 14px;
+}
+.company-logo{
+	height: 23px;
+	width: 62px;
+}
+
+.main-third-menu {
+    border: 1px solid;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main-third-menu .third-menu p {
+	float: none;
+	height: 60px;
+	color: #000;
+	font-family: 'FacitWeb';
+	font-size: 13px;
+	line-height: 16px;
+	padding-top: 25px;
+	text-align: center;
 }

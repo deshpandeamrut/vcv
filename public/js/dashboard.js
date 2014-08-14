@@ -1162,7 +1162,7 @@ dashboardApp.controller('oneStepRegistration', function ($scope, $http,$upload) 
             console.log(data);
             jQuery('#overlay').addClass('hide');
             if (data.status_code == 200 || data.status_code == '200') {
-                window.location.href = "/currentAuctionsSignedIn.html";
+                window.location.href = "/currentProfiles.html";
             } else {
                 $scope.isError = true;
                 $scope.displayError = data.data.Reason;

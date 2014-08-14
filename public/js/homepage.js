@@ -5,7 +5,7 @@ homepage.controller('homepageController',['$scope', '$http',
 		$scope.currentAuctions = {};
 		$http({
             method  : 'POST',
-            url     : '/currentAuctions',
+            url     : '/currentJobs',
         }).success(function(data) {
         	$scope.currentAuctions = data.data;
         });

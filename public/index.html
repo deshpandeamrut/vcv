@@ -128,33 +128,35 @@
 </div>
 <div class="row trending-pro-thumb">
   <div class="container">
-    <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="currentAuction in currentAuctions.auctioned_prpoerties">
-      <div class="trend-thumbnail clearfix">
-        <div class="days-left-hold"> <span class="days-left">{{currentAuction.no_days_left}}<br>
-          days <br>
-          left</span> <img class="img-responsive" src="img/your-properties-image-big.jpg">
-          <div class="price-on-img">$ {{currentAuction.pricing}}</div>
-        </div>
-        <div class="bids-media clearfix"> <span class="pull-left bid-circle">{{currentAuction.no_bids}}<br>
-          bids </span>
-          <div class="bid-media-text">{{currentAuction.num_beds}} BHK Apartment, {{currentAuction.suburb}}, {{currentAuction.state_name}}</div>
-        </div>
-        <div class="list-rates clearfix">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="currentAuction in currentAuctions">
+      <div class="trend-thumbnail clearfix"> 
+        <div class="list-rates clearfix" >
           <ul class="clearfix">
-            <li>
-              <h5>Floating Rate</h5>
-              <h6>{{currentAuction.floating_rate}} %</h6>
-            </li>
-            <li>
-              <h5>Markup</h5>
-              <h6>{{currentAuction.mark_up_premium}} %</h6>
-            </li>
+              <li>
+                <span class="pull-left"> <img class ="company-logo" src="{{currentAuction.company_logo}}" class="img-circle"> </span>  
+                <a ng-href="http://{{currentAuction.link_to_compnay}}" target="_blank">{{currentAuction.company_name}}</a>
+              </li>
+              <li>
+                  <h6>{{currentAuction.job_type}}</h6>
+              </li>
+
           </ul>
         </div>
+        <!-- <div class="bids-media clearfix" >
+
+        </div> -->
+        <div class="bids-media clearfix"> <span class="pull-left bid-circle">{{currentAuction.min_exp_level}} 
+        -{{currentAuction.max_exp_level}}<br>
+          Exp</span>
+          <div class="padding-div">
+            <div class="bid-media-text">{{currentAuction.job_designation}}</div>
+            <div class="bid-media-text">{{currentAuction.job_requirement}}</div>
+          </div>
+        </div>
       </div>
-    </div> -->
+    </div>
   </div>
-  <div class="row" align="center"> <a class="mc-btn interested-btn" href="currentAuctionsSignedIn.html">Search Jobs</a> </div>
+  <div class="row" align="center"> <a class="mc-btn interested-btn" href="currentJobs.html">Search Jobs</a> </div>
 </div>
 <!----------------------------End Trending Property Auctions----------------------------> 
 

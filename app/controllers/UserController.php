@@ -1739,4 +1739,40 @@ class UserController extends BaseController {
 
 	}
 
+
+	public function getPostedJobs(){
+		
+		$limitClause = False;
+		$input = Input::all();
+		if(empty($input))
+			$limitClause = True;
+		$ratingArray = array();
+		Log::info('getPostedJobs -->Params recvd for '.var_export($input,true));
+		
+		$queryString = " select * from job_postings ";
+		$queryString = $queryString . " order by created_at desc ";
+
+		if( $limitClause ){
+			$queryString = $queryString . " limit 4 " ;
+		}
+		Log::info("getPostedJobs--> Query String " . $queryString);
+		try {
+				$resultData = DB::select(DB::raw($queryString));
+				if(sizeof($resultData) > 0) {
+					Log::info("getPostedJobs --> Size of Result Data  > 0 ");
+					$jsonData = json_decode(json_encode($resultData),true);
+					$responseJson = json_encode(array("status_code" => 200,"status_message"=>"success","data"=>$jsonData));
+				}else{
+					Log::info("getPostedJobs --> Size of Result Data  < 0 ");
+					$responseJson = json_encode(array("status_code" => 404,"status_message"=>"No records","data"=>array()));
+				}
+		}catch(Exception $e){
+			Log::error('There was some problem while executing Query getPostedJobs');
+			$responseJson = json_encode(array("status_code" => 500,"status_message"=>"Internal Server Error","data"=>$e->getMessage()));
+		}
+		Log::info('Json Response sent getPostedJobs '.var_export($responseJson,true));
+		return $responseJson;
+	} // end of function 
+	/* getPostedJobs */ 
+
 } // end of class

@@ -305,9 +305,9 @@ textarea {
 .CalFieldsBlock {
 	border-right: 1px solid #e1e3e6;
 }
-.calculatorResultsBox label,span, .calculator .input-field{
+/*.calculatorResultsBox label,span, .calculator .input-field{
 	color: #808080 !important;
-}
+}*/
 .rentingCalculator .calculatorResultsBox .form-hold2,.comparisionCal .calculatorResultsBox .form-hold2 {
 	float: right;
 }
@@ -336,4 +336,20 @@ textarea {
 }
 .propertyProfileTabContent > div {
 	margin : 20px 0 0 !important;
+}
+
+.padding-div{
+	width:16em; 
+	word-wrap:break-word;
+}
+
+.currjob-tb{
+    table-layout: fixed;
+    width: 200px;
+}
+
+.currjob-tb th,td {
+    
+    overflow: hidden;
+    width: 150px;
 }
