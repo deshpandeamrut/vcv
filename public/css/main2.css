@@ -353,3 +353,278 @@ textarea {
     overflow: hidden;
     width: 150px;
 }
+
+/*--------------------Satarupa-----------------------*/
+/*.adjust-top {
+	background: url('../img/vcv-wallpaper.jpg') no-repeat;
+	background-size: cover;
+}
+.inner-wrap {
+	width: 990px;
+	margin: 0 auto;
+}*/
+.page {
+	width: 1126px !important;
+}
+.no-padding-col {
+	padding: 0;
+}
+/*--------------------Sidebar-----------------*/
+.logo{
+	width: 100%;
+	height: 140px;
+	background: #FFF;
+	padding: 52px 10px;
+	text-align: center;
+}
+.sidebar-section {
+	background-color: #242b2e;
+	position: relative;
+	/*width: 100%;
+	height: 100%;*/
+}
+.main-menu {
+	text-align: right;
+	color: #fff;
+}
+.main-menu li {
+	background: -webkit-linear-gradient(#323A3E,#2F363A 60%);
+	height: 46px;
+	padding: 10px 18px;
+}
+.copy-right {
+	position: absolute;
+	bottom: 9px;
+	text-align: center;
+	right: 10px;
+	font-size: 10px;
+	color: #53585a;
+}
+.main-menu li:focus,
+.main-menu li:hover,
+.main-menu li:active {
+	background: -webkit-linear-gradient(#48a2de,#308ac6 60%);
+}
+.main-menu li a {
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+.big .flipper,
+.big .small-box {
+	/*width: 490px;
+	height: 494px;*/
+}
+.small-box {
+	width: 411px;
+	height:316px;
+	text-align: center;
+	text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    position: relative;
+}
+.small-box h3 {
+	color: white;
+	margin: 15px 19px;
+}
+.tile {
+	width: 411px;
+	height: 316px;
+}
+.tile1-reverse {
+
+}
+.flip-button {
+	cursor: pointer;
+	width: 215px;
+	height: 45px;
+	border: 1px solid #FFF;
+	background-color: #000;
+	color: #FFF;
+	opacity: .5;
+}
+.flip-button:focus {
+	outline: #FFF;
+}
+.flip-button a {
+	display: block;
+	color: white;
+	height: 100%;
+	width: 100%;
+	padding: 8px 0;
+	font-size: 20px;
+}
+.overlay {
+	position: absolute;
+	right: 0;
+	width:100%;
+	display: table-cell;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.button-wrap {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+/*.overlay:hover {
+	width: 100%;
+	height: 100%;
+}*/
+.tile:hover .overlay {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+}
+.tile:hover #tile1 {
+	background-color: #008984;
+	display:block;
+    opacity:0.75;
+}
+.tile:hover #tile2 {
+	background-color: #ae5f47;
+	display:block;
+    opacity:0.75;
+}
+.tile:hover #tile3 {
+	background-color: #5f917a;
+	display:block;
+    opacity:0.75;
+}
+.tile:hover #tile4 {
+	background-color: #7e7aa9;
+	display:block;
+    opacity:0.75;
+}
+.tile-section {
+
+}
+/*.footer {
+	width: 100%;
+	color: #FFF;
+	height: 600px;
+	margin: 0;
+	padding: 200px 0 260px 0;
+	background-size: cover;
+}*/
+
+
+
+
+
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	/*border: 1px solid #CCC;*/
+	ms-perspective: 1000;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000px;
+	/*border: 4px solid transparent;
+	border-left-width: 0;
+	border-bottom-width: 0;*/
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper-y, .fli
+p-container.hover .flipper-y {
+	transform: rotateY(180deg);
+	ms-transform: rotateY(180deg); /* IE 9 */
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotateY(180deg);
+}
+/*------------------------------------------IE-------------------------------------------*/
+/*.flip-container:hover .flipper-y .back {
+	transform: rotateY(0deg);
+}
+.flip-container:hover .flipper-y .front {
+    transform: rotateY(180deg);
+}
+.flip-container:hover .flipper-x .back {
+	transform: rotateX(0deg);
+}
+.flip-container:hover .flipper-x .front {
+    transform: rotateX(180deg);
+}*/
+/*--------------------------------------IE ends------------------------------------------*/
+.flip-container:hover .flipper-x, .flip-container.hover .flipper-x {
+	transform: rotateX(180deg);
+	ms-transform: rotateX(180deg); /* IE 9 */
+    -webkit-transform: rotateX(180deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotateX(180deg);
+}
+
+.flip-container, .front, .back {
+	/*width: 320px;
+	height: 480px;*/
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.9s;
+	ms-transition: 0.9s;
+	-webkit-transition: 0.9s;
+	-moz-transition: 0.9s;
+
+	transform-style: preserve-3d;
+	ms-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+
+	position: relative;
+	/*width: 241px;*/
+	height: 316px;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	ms-backface-visibility : hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+
+	transform-style: preserve-3d;
+    transition: all 0.9s ease 0s;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back-y {
+	transform: rotateY(180deg);
+	ms-transform: rotateY(180deg); /* IE 9 */
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotateY(180deg);
+}
+.back-x {
+	transform: rotateX(180deg);
+	ms-transform: rotateX(180deg); /* IE 9 */
+    -webkit-transform: rotateX(180deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotateX(180deg);
+}
+/*----------------Footer----------------*/
+.footer {
+	height: 136px;
+	background: -webkit-linear-gradient(left,#7f4131,#ceb286 80%);
+}
