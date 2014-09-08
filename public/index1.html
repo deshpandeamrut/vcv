@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html ng-app="homepage">
+<head>
+<title>VideooCV</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+
+<link href="css/main.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+<link href="css/main2.css" rel="stylesheet">
+<link href="js/pnotify/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery.ui.all.css">
+</head>
+<body ng-controller="homepageController">
+
+<!----------------------------SIGN IN Header---------------------------->
+<div class="mc-header clearfix">
+  <div class="mc-logo"> <a href="index.html"><img src="img/vcv.png"></a> </div>
+  <div class="sign-in">
+    <ul>
+      <li class="sign-in-drop"> <a class="menu" id="sign_in_click" href "#">SIGN IN</a>
+        <div class="sign-in-dropdown">
+          <form name="signInForm" id="sign-in-form">
+            <span class="grey-caret"></span>             
+            <label>Username/Email</label>
+            <br clear="all">
+            <span class="form-hold4 clearfix">
+            <div class="validate-line">
+              <input type="text" validate-type="email" required class="input-field" ng-model="signInData.username" name="username">
+              <div class="input-wrapper"></div>
+            </div>
+            </span>
+            <label class="signin-space">Password</label>
+            <br clear="all">
+            <span class="form-hold4 clearfix">
+            <div class="validate-line">
+              <input type="password" validate-type="novalid" validate-on-blur required class="input-field" ng-model="signInData.login_password" name="login_password">
+              <div class="input-wrapper"></div>
+            </div>
+            <button class="mc-btn sign-in-dropdown-btn2" type="submit" ng-click="submitSignIn()">SIGN IN</button>
+            <div class="pull-right pointer"><a data-toggle="modal" data-target="#forgotPasswordModal" href="#">Forgot your password?</a></div>
+            </span>
+          </form>
+          <div class="social-signin"> <a id="facebook-link" href="social/facebook/borrower"><span class="social-sprite fb-icon transition"></span></a> <a id="google-link" href="social/google/borrower"><span class="social-sprite gplus-icon transition"></span></a> <a id="linkedin-link" href="social/linkedIn/borrower"><span class="social-sprite lin-icon transition"></span></a> </div>
+        </div>
+      </li>
+      <li><a class="menu" href="aboutus.html">ABOUT US</a></li>
+      <li class="how-it-works"><a class="menu hw" href="how-it-works.html" >HOW IT<br>WORKS</a></li>
+      </ul>
+  </div>
+</div>
+<!---------------------------- End SIGN IN Header----------------------------> 
+
+<!----------------------------Slider---------------------------->
+<div class="row adjust-top"  ng-click="pay()">
+  <div data-ride="carousel" class="carousel slide main-slider" id="carousel-example-captions">
+    <!-- <ol class="carousel-indicators">
+      <li class="active" data-slide-to="0" data-target="#carousel-example-captions"></li>
+      <li data-slide-to="1" data-target="#carousel-example-captions" class=""></li>
+    </ol> -->
+    <div class="carousel-inner">
+      <div class="item active"><img src="img/slider-image-1.jpg">
+        <div class="carousel-caption">
+          <h3>We help you spend time wisely</h3>
+          <a href="#" class="learn-how-it-works"></a> </div>
+      </div>
+      <div class="item"> <img src="img/slider-image-1.jpg">
+        <div class="carousel-caption">
+          <h3>Get Resumes with Videos and Save Time  As there is saying Time is Money</h3>
+          <a href="#" class="learn-how-it-works"></a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!----------------------------End Slider----------------------------> 
+
+<!----------------------------borrower - investor - tab---------------------------->
+<div class="row dotpattern be-a-borrower clearfix">
+  <div class="container">
+    <div class="tab-container active" id="borrower-select">
+      <h3>BECOME A EMPLOYEE </h3>
+      <p>Skip your first round interview  by uploading video CV</p>
+      <div class="row"> <a href="signUp.html#employee" class="mc-btn be-borrower-btn">BECOME A EMPLOYEE</a> 
+      <!-- <a href="find-out-more-borrower.html" class="mc-btn find-out-btn">Find Out More</a> --> </div>
+    </div>
+    <div class="tab-container" id="investor-select">
+      <h3>BECOME AN EMPLOYER</h3>
+      <p>Get Video Resumes and Simplify your recruitment process And get the Best Talent recruited</p>
+      <div class="row"> <a href="signUp.html#employer" class="mc-btn be-borrower-btn">BECOME AN EMPLOYER</a> 
+      <!-- <a href="find-out-more-investor.html" class="mc-btn find-out-btn">Find Out More</a> --> </div>
+    </div>
+  </div>
+</div>
+<!----------------------------services offered ---------------------------->
+<div class="container services-offered">
+  <div class="row">
+    <h4>Services offered by VideooCV</h4>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="pull-left"> <img class="pull-left" src="img/services-offered-1.png" alt="service-1"/> </div>
+      <p>Our platform  connects Job Seekeers directly with Recruiters in order to get a Job. </p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="pull-left"> <img class="pull-left" src="img/services-offered-2.png" alt="service-2"/> </div>
+      <p>You are legally covered,  our tier one legal contracts are specifically written to protect the interests of both employee and employer. </p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="pull-left"> <img class="pull-left" src="img/services-offered-3.png" alt="service-3"/> </div>
+      <p>We're experienced, our team has exceptional management processes in place.  We will manage the whole process and provide you with monthly resumes,statements, annual reports and employer summary reports. </p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="pull-left"> <img class="pull-left" src="img/services-offered-4.png" alt="service-4"/> </div>
+      <p>We're professional, your questions or concerns will be answered in a timely manner. </p>
+    </div>
+  </div>
+</div>
+<!----------------------------End service offered----------------------------> 
+
+<!----------------------------Trending Property Auctions---------------------------->
+
+<div class="row trending-pro">
+  <div class="container">
+    <h1><span class="star-house-icon"></span>Search Jobs</h1>
+  </div>
+</div>
+<div class="row trending-pro-thumb">
+  <div class="container">
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" ng-repeat="currentAuction in currentAuctions">
+      <div class="trend-thumbnail clearfix"> 
+        <div class="list-rates clearfix" >
+          <ul class="clearfix">
+              <li>
+                <span class="pull-left"> <img class ="company-logo" src="{{currentAuction.company_logo}}" class="img-circle"> </span>  
+                <a ng-href="http://{{currentAuction.link_to_compnay}}" target="_blank">{{currentAuction.company_name}}</a>
+              </li>
+              <li>
+                  <h6>{{currentAuction.job_type}}</h6>
+              </li>
+
+          </ul>
+        </div>
+        <!-- <div class="bids-media clearfix" >
+
+        </div> -->
+        <div class="bids-media clearfix"> <span class="pull-left bid-circle">{{currentAuction.min_exp_level}} 
+        -{{currentAuction.max_exp_level}}<br>
+          Exp</span>
+          <div class="padding-div">
+            <div class="bid-media-text">{{currentAuction.job_designation}}</div>
+            <div class="bid-media-text">{{currentAuction.job_requirement}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" align="center"> <a class="mc-btn interested-btn" href="currentJobs.html">Search Jobs</a> </div>
+</div>
+<!----------------------------End Trending Property Auctions----------------------------> 
+
+<!----------------------------testimonials---------------------------->
+
+<div class="container testimonials">
+  <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" align="center">
+      <div class="item active">
+        <div class="row">
+          <div class="loan-apply-hold"> <span class="pull-left"> <img src="img/borrower-profile-1.jpg" class="img-circle"> </span>
+            <div class="loan-apply-text">
+              <h2>I had some difficulties in my past.It was very difficult to get Job.After Upload My Video Resume On VideooCV,I was able to connect with all recruiters online who provided me with the Job I needed.Thanks VideooCV. </h2>
+              <h3>Kirit, Employee</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row"> <a class="mc-btn apply-loan-btn" href="signUp.html#borrower">BECOME A EMPLOYEE</a> </div>
+      </div>
+      
+      <div class="item ">
+        <div class="row">
+          <div class="loan-apply-hold"> <span class="pull-left"> <img src="img/borrower-profile-2.jpg" class="img-circle"> </span>
+            <div class="loan-apply-text">
+              <h2>VideooCV is all about Video Resumes ! I have been able to connect with many Empployer's and Judge an Employee by seeing his video resume,which has helped a lot by saving a lot of time and making the right call ! </h2>
+              <h3>Girish, K-Consultancy </h3>
+            </div>
+          </div>
+        </div>
+        <div class="row"> <a class="mc-btn apply-loan-btn" href="signUp.html#investor">BECOME AN EMPLOYER</a> </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#testimonials-carousel" data-slide="prev"> <span class="sprite left-arrow-icon"></span> </a> <a class="right carousel-control" href="#testimonials-carousel" data-slide="next"> <span class="sprite right-arrow-icon"></span> </a> </div>
+</div>
+
+<!----------------------------End testimonials----------------------------> 
+
+
+
+<!----------------------------Numberings---------------------------->
+<!-- {{currentAuctions.investor_count}} -->
+<div class="row numberings">
+  <div class="container">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <h2>200</h2>
+        <h3>Total Employer's</h3>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <h2>1500</h2>
+        <h3>Employee's benefited</h3>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <h2>6000</h2>
+        <h3>Total Number Of Resumes</h3>
+      </div>
+    </div>
+</div>
+
+<!----------------------------End Numberings---------------------------->
+
+
+
+<!--  footer  -->
+<div class="footer row">
+  <div class="footer-container clearfix">
+        
+          <div class="col-lg-9 col-md-8 col-sm-6 col-xs-6">
+              <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                      <h4>Employer Zone</h4>
+                        <ul>
+                          <li><a href="#">Registration</a></li>
+                          <li><a href="find-out-more-investor.html">How it works</a></li>
+                          <li><a href="#">Search Profiles</a></li>
+                          <li><a href="#">Manage Portfolio</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                      <h4>Employee Zone</h4>
+                        <ul>
+                          <li><a href="#">Registration</a></li>
+                          <li><a href="find-out-more-borrower.html">How it works</a></li>
+                          <li><a href="#">Apply for Job</a></li>
+                          <li><a href="#">Manage Portfolio</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                      <h4>ABOUT US</h4>
+                        <ul>
+                          <li><a href="#">Who we are</a></li>
+                          <li><a href="#">Our story</a></li>
+                          <li><a href="#">careers @ VideooCV</a></li>
+                         </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                      <h4>HELP</h4>
+                        <ul>
+                          <li><a href="faq.html">Frequently asked questions</a></li>
+                          <li><a href="#">How to make VideooCV</a></li>
+                          <li><a href="contactus.html">Contact us</a></li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                      <h4>SOCIAL</h4>
+                        <div class="footer-icon-hold">
+                          <span class="sprite fb-footer-icon transition"></span>
+                          <span class="sprite gp-footer-icon"></span>
+                          <span class="sprite tw-footer-icon"></span>
+                          <span class="sprite in-footer-icon"></span>
+                        </div>
+            </div>
+           
+    </div>
+    
+            <div class="footer-copyright" align="center">
+              <span class="copyright">&copy; VideooCV</span>  <span class="website">Website by <a href="#">VideooCV</a></span>
+            </div>
+</div>
+<form name="forgotPasswordForm">
+  <div class="modal fade bid-property-modal" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Forgot Password</h4>
+      </div>
+      <div class="modal-body">
+          <div class="main-form">
+
+              <!--Expiry Date-->
+              <label>Email Address</label>
+              <br clear="all">
+              <span class="form-hold2 clearfix">
+                <div class="validate-line">
+                 <input type="email" required class="input-field" name="fname" ng-model="forgotPasswordData.email">
+                 <div class="input-wrapper"></div>
+                 <div class="message"></div>
+                </div>
+             </span> <br clear="all">
+          <button type="submit" class="mc-btn bid-property-btn" ng-click="forgotPassword()">Submit</button>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</form>
+<!---------------------End footer---------------------> 
+
+<script src="./js/jquery2.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap-select.js"></script> 
+<script src="./js/angular.min.js" type="text/javascript"></script> 
+<script src=" http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/pnotify/jquery.pnotify.js"></script> 
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('.selectpicker').selectpicker({
+            //'selectedText': 'cat'
+        });
+        // $('.selectpicker').selectpicker('hide');
+    });
+
+    jQuery(document).ready(function() {
+      $.pnotify.defaults.styling = "jqueryui";
+    });
+
+</script> 
+<!-- <script src="./js/script.js" type="text/javascript"></script> --> 
+<script src="js/homepage.js" type="text/javascript"></script> 
+<script type="text/javascript">
+  $('#borrower-select').on('click',function(){
+    $('#steps-borrower').css('display','block');
+    $('#steps-investor').css('display','none'); 
+     $('#borrower-select').addClass("active");
+     $('#investor-select').removeClass("active");
+  });
+  $('#investor-select').on('click',function(){
+    $('#steps-borrower').css('display','none');
+    $('#steps-investor').css('display','block');
+     $('#investor-select').addClass("active");
+     $('#borrower-select').removeClass("active");
+     
+  });
+  $("#sign_in_click").on('click',function(){
+    $('.sign-in-dropdown').css('display','block');
+  });
+
+  $(document).mouseup(function (e)
+  {
+      var container = $(".sign-in-drop");
+
+      if (!container.is(e.target) // if the target of the click isn't the container...
+          && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+          jQuery('.sign-in-dropdown').hide();
+      }
+  });
+</script>
+</body>
+</html>
