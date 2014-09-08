@@ -1688,6 +1688,7 @@ class UserController extends BaseController {
 	}
 
 	public function postJob(){
+
 		if(empty(Auth::user()->id)){
    			Log::info("postJob -->User Not Logged In.. Please Check");
    			$repsonseArray = array("Reason"=>"User Not Logged in");
@@ -1695,37 +1696,52 @@ class UserController extends BaseController {
    			Log::info("postJob -->Sending of Response Params postLoanDetails ".$responseJson);
 			return $responseJson;
   		}
-  		$input = Input::all();
-  		Log::info("postJob -->value of Params Recvd postJobSeekerDetails ".var_export($input,true));
 
-  		$rules = array(	'job_type' =>'Required',
-						'job_description' =>'Required',
-						'job_designation' =>'Required',
-						'min_exp_level' =>'Required',
-						'max_exp_level' =>'Required',
-						'min_salary_range' =>'Required',
-						'max_salary_range' =>'Required',
-						'job_requirement' => 'Required',
-						'job_industry' => 'Required'
+  		$input = Input::all();
+  		Log::info("postJob -->value of Params Recvd ".var_export($input,true));
+  		$rules = array(	
+  						'job_designation' => 'Required',
+						'no_of_vacancies' => 'Required',
+						'job_description' => 'Required',
+						'keywords' => 'Required',
+						'min_exp_level' => 'Required',
+						'max_exp_level' => 'Required',
+						'min_salary_range' => 'Required',
+						'max_salary_range' => 'Required',
+						'is_salary_hidden' => 'Required',
+						'job_industry' => 'Required',
+						'functional_area' => 'Required',
+						'job_type' => 'Required',
+						'company_name' => 'Required',
+						'company_description' => 'Required'
 					);
 		$v = Validator::make($input, $rules);
 		if($v->fails()){
-			Log::error("postJob -->There was some Validation Failures");
-			$validationFailure = $v->messages();
-			$validationFailure = json_decode($validationFailure,true);
-			Log::error("postJob -->There was some Validation Failures postJobSeekerDetails: ".var_export($validationFailure,true));
-			foreach($validationFailure as $row){
-				$validationFailure = $row;
-			}
-			$responseJson = json_encode(array("status_code" => 400,"status_message"=>"Validation Failure","data"=>array("Reason"=>$validationFailure)));
-			Log::info("postJob -->Sending of Response Params".$responseJson);
+			$reasonData = $v->messages()->all();
+			Log::error("postJob -->There was some Validation Failures : ".var_export($reasonData,true));
+			$responseJson = json_encode(array("status_code" => 400,"status_message"=>"Validation Failure","data"=>array("Reason"=>$reasonData[0])));
+			Log::error("postJob -->Sending of Response Params".$responseJson);
 			return $responseJson;
 		}
 		try{
 			$input['linkable_uid'] = Auth::user()->id;
 			$input['email_id'] = Auth::user()->email;
-			$objJobPosting = new JobPostings();
-			$result = $objJobPosting->addprojectDetails($input);
+			$objJobPosting = new JobPostingsDetails();
+			$objAddresses = new Addresses();
+			$addressData['user_id'] = Auth::user()->id;
+			$addressData['street_no'] = $input['street_no'];
+			$addressData['street_name'] = $input['street_name'];
+			$addressData['suburb'] = $input['area'];
+			$addressData['postcode'] =$input['postcode'];
+			$addressData['city_name'] =$input['city'];
+			$addressData['state_name'] =$input['state'];
+			$addressData['address_type'] ='company';
+			$addressData['email_id'] = $input['email_id'];
+			$addressId = $objAddresses->addUpdateAddress($addressData);
+			Log::info("postJob -->Value of Address Id".var_export($addressId,true));
+			$input['company_address_id'] = $addressId;
+			Log::info("postJob -->Params Being sent to Post of a Job".var_export($input,true));
+			$result = $objJobPosting->addjobDetails($input);
 			Log::info("postJob -->Succesfully Saved postJob Details");
 			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Succesfully Registered","data"=> array("Reason"=>"Successfully posted a Job")));
 			Log::info("postJob --> Sending of Response Params ".$responseJson);
