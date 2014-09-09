@@ -14,15 +14,15 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery.ui.all.css">
 </head>
 <body ng-controller="homepageController">
-	<div class="container page">
+	<div class="container-fluid page">
 		<div class="row">
 			<div class="col-md-3 sidebar-section no-padding-col">
 				<!-- <div class="sidebar-section"> -->
 					<div class="logo">
 						<img src="img/vcv/vcv-logo.png">
 					</div>
-					<div class="main-menu">
-						<ul>
+					<!-- <div class="main-menu"> -->
+						<!-- <ul>
 							<li><a href="/public/index.html">Home</a></li>
 							<li><a href="#">Work</a></li>
 							<li><a href="#">About Us</a></li>
@@ -32,70 +32,162 @@
 						</ul>
 						<div class="copy-right">
 							&copy; 2014 VideoCV. All Rights Reserved.
+						</div> -->
+						<div class="sidebar_outer_container">
+						<div class="sidebar_holder">
+								<div class="panel-group" id="leftMenu">
+								  <div class="panel-group" id="leftMenu">
+				                    <div class="panel panel-default">
+				                        <div class="panel-heading">
+				                            <a class="sidebar-toggle each_left_sec_title" target="_self" data-toggle="collapse" data-parent="#leftMenu" href="#">
+				                                  <i class="icon-th"></i> Home
+				                            </a>
+				                        </div>
+				                    </div>
+				                    
+				                    <div class="panel panel-default">
+				                        <div class="panel-heading">
+				                            <a class="sidebar-toggle each_left_sec_title" target="_self" data-toggle="collapse" data-parent="#leftMenu" href="#collapseTwo">
+				                                <i class="icon-th"></i> Work
+				                            </a>
+				                        </div> 
+				                    </div>
+				                    <div class="panel panel-default">
+				                        <div class="panel-heading">
+				                            <a class="sidebar-toggle each_left_sec_title" target="_self" data-toggle="collapse" data-parent="#leftMenu" href="#collapseThree">
+				                                <i class="icon-th-list"></i> About Us
+				                            </a>
+				                        </div>
+				                    </div>
+				                    <div class="panel panel-default">
+				                        <div class="panel-heading">
+				                            <a class="sidebar-toggle each_left_sec_title" target="_self" data-toggle="collapse" data-parent="#leftMenu" href="#collapseFour">
+				                                <i class="icon-list-alt"></i> Sign In
+				                            </a>
+				                        </div>
+				                        <div id="collapseFour" class="panel-collapse collapse" style="height: 0px; ">
+				                            <div class="panel-body">
+				                                <div class="sub_each_section">
+													<a href="">Job Seeker</a>
+												</div><hr>
+												<div class="sub_each_section">
+													<a href="">Recruiter</a>  
+												</div>          
+				                            </div>
+				                         </div>
+				                    </div>
+				                    <div class="panel panel-default">
+				                        <div class="panel-heading">
+				                            <a class="sidebar-toggle each_left_sec_title" target="_self" data-toggle="collapse" data-parent="#leftMenu" href="#collapseFive">
+				                                <i class="icon-cog"></i> Service
+				                            </a>
+				                        </div>				                        
+				                    </div>
+				                    <div class="panel panel-default">
+				                        <div class="panel-heading">
+				                            <a class="sidebar-toggle each_left_sec_title" target="_self" data-toggle="collapse" data-parent="#leftMenu" href="#collapseSix">
+				                                <i class="icon-cog"></i> Contact US
+				                            </a>
+				                        </div>
+				                    </div>
+				                    <div class="panel panel-default">
+				                        <div class="panel-heading">
+				                            <a class="sidebar-toggle each_left_sec_title" target="_self" data-toggle="collapse" data-parent="#leftMenu" href="#collapseSeven">
+				                                <i class="icon-list-alt"></i> Search
+				                            </a>
+				                        </div>
+				                        <div id="collapseSeven" class="panel-collapse collapse" style="height: 0px; ">
+				                            <div class="panel-body">
+				                                <div class="sub_each_section">
+													<a href=""><input type="search" class="search-submit" value="Search"></a>
+												</div><hr>          
+				                            </div>
+				                         </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+
 						</div>
-					</div>
+					<!-- </div> -->
 				<!-- </div> -->
 			</div>
 			<div class="col-md-9 no-padding-col">
 				<div class="tile-section no-padding-col">
 					<div class="row">
 						<div class="col-md-6 tile no-padding-col">
-							<div class="small-box">
+							<!-- <div class="small-box"> -->
 								<img src="img/vcv/tile1.png">
 								<div class="overlay" id="tile1">			
 									<div class="button-wrap tile1">
-										<h3>We help you spent time wisely</h3>
-										<button type="button" class="flip-button"><a href="#/view-assets">Learn how it works</a></button>
+										<h4>We help you spent time wisely</h4>
+										<button type="button" class="hover-button"><a href="#/view-assets">Learn how it works</a></button>
 									</div>
 								</div>
-							</div>
+							<!-- </div> -->
 						</div>
 						<div class="col-md-6 tile no-padding-col">
-							<div class="small-box">
+							<!-- <div class="small-box"> -->
 								<img src="img/vcv/tile2.png">
 								<div class="overlay" id="tile2">
 									<div class="button-wrap tile2">
-										<h3>Get resume with videos and save time as there is saying time is money</h3>
-										<button type="button" class="flip-button"><a href="#/view-assets">Learn how it works</a></button>
+										<h4>Get resume with videos and save time as there is saying time is money</h4>
+										<button type="button" class="hover-button"><a href="#/view-assets">Learn how it works</a></button>
 									</div>
 								</div>
-							</div>	
+							<!-- </div> -->	
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-6 tile no-padding-col">
-							<div class="small-box">
+							<!-- <div class="small-box"> -->
 								<img src="img/vcv/tile3.png">
 								<div class="overlay" id="tile3">
 									<div class="button-wrap">
-										<h3>We help you spent time wisely</h3>
-										<button type="button" class="flip-button"><a href="#/view-assets">Become an employee</a></button>
+										<h4>We help you spent time wisely</h4>
+										<button type="button" class="hover-button"><a href="#/view-assets">Become an employee</a></button>
 									</div>
 								</div>
-							</div>
+							<!-- </div> -->
 
 						</div>
 						<div class="col-md-6 tile no-padding-col">	
-							<div class="small-box">
+							<!-- <div class="small-box"> -->
 								<img src="img/vcv/tile4.png">
 								<div class="overlay" id="tile4">
 									<div class="button-wrap">
-										<h3>We help you spent time wisely</h3>
-										<button type="button" class="flip-button"><a href="#/view-assets">Become an employee</a></button>
+										<h4>We help you spent time wisely</h4>
+										<button type="button" class="hover-button"><a href="#/view-assets">Become an employee</a></button>
 									</div>
 								</div>
-							</div>
+							<!-- </div> -->
 						</div>
 					</div>
 
 				</div><!--tile-section-->
 				<div class="footer">
-					
+					<div class="row numberings">
+					  	<div class="container">
+						    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						        <h2>200</h2>
+						        <h3>Total Employer's</h3>
+						    </div>
+						    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						        <h2>1500</h2>
+						        <h3>Employee's benefited</h3>
+						    </div>
+						    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						        <h2>6000</h2>
+						        <h3>Total Number Of Resumes</h3>
+						    </div>
+					    </div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 <script src="./js/jquery2.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js"></script> 
 <script src="js/homepage.js" type="text/javascript"></script> 
 <script type="text/javascript">
 	$('#borrower-select').on('click',function(){
@@ -136,6 +228,19 @@
 			sidebar_height() ;
 		});
 		// $(".full_outer_container" ).css("height" , document_height-23) ;
+		$(".each_left_sec_title").click( function() {
+        if( $(this).closest(".panel.panel-default").hasClass("panel_panel_default_active") ) {    
+            $(this).closest(".panel.panel-default").removeClass("panel_panel_default_active") ;
+        } else {
+           $(".panel_panel_default_active").removeClass("panel_panel_default_active") ;
+           $(this).closest(".panel.panel-default").addClass("panel_panel_default_active") ;
+        }
+        
+      }) ;
+      $(".sub_each_section").click( function() {
+        $(".sub_each_section_active").toggleClass("sub_each_section_active") ;
+        $(this).toggleClass("sub_each_section_active") ;
+      }) ;
 		
 	});
 
@@ -143,8 +248,13 @@
 			setTimeout(function(){
 				$(".sidebar-section" ).css("height" , "auto") ;
 				var document_height1 = 0 ;
+				// var window_height1 = 0;
 				document_height1 = $(document).height() ;
 				$(".sidebar-section" ).css("height" , document_height1) ;
+				// window_height1 = $(window).height() ;
+				// $(".tile-section").css("height", window_height1 );
+				// $(".tile-section .tile").css("height", window_height1 /2 );
+				// $(".tile-section .tile img").css("height", window_height1 /2 );
 			}, 2000);
 			
 	}
