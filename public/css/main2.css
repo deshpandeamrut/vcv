@@ -399,7 +399,7 @@ textarea {
 }
 
 .sub_each_section_active {
-	border-left: solid 10px #70e3cd ;
+	border-left: solid 10px #48a2de ;
 
 }
 .each_left_sec_title {
@@ -485,9 +485,13 @@ textarea {
 .panel-group .panel-heading + .panel-collapse > .panel-body {
 	border-top: none; 
 }
-.sub_each_section a {
+.sub_each_section .sub-tab {
 	color: #FFFFFF;
 	display: block;
+	padding: 18px 46px;
+}
+.sub_each_section a {
+	color: #fff;
 }
 .search-submit {
 	display: inline-block;
