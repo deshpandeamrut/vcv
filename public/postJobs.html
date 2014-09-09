@@ -92,40 +92,37 @@
 
 <form>
     <p class="info-para" style="margin-left: 20%">
-      <span class="info-logo-icon sprite"></span>
-      <span class="text">Welcome to Mortgage Chance,  you are required to enter your personal details in order in help us verify and rate your profile.  Mortgage Chance will <strong>never</strong> disclose any of your personal details to investors.  If you see a * next to a field, that item is and always will be confidential.</span>
+      <span class="info-logo-icon sprite"></span>   
     </p>
     <span class="main-form-headings">Post A Job</span>
     <div class="main-form"> 
 
-      <!--Title-->
-      <label>Job Type*</label>
-      <br clear="all">
-      <span class="form-hold2 clearfix">
-        <div class="validate-line">
-          <select class="input-field" ng-model="sendingData.job_type" >
-            <option checked value="permanent">Permanent</option>
-            <option value="contract">Contract</option>
-          </select>
-          <div class="input-wrapper"></div>
-          <div class="message"></div>
-        </div>
-      </span> <br clear="all">
-
-      <div class="form-element clearfix">
-        <label for="inputEmail3" class="col-sm-14 pad-zero">Job Industry</label>
+    <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Job Designation*</label>
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
             <div class="validate-line ">
-              <input type="text" ng-model="sendingData.job_industry" class="input-field" >
+              <input type="text" ng-model="sendingData.job_designation" class="input-field" >
               <div class="input-wrapper"></div>
               <div class="message"></div>
             </div>
           </span>
         </div>
-      </div>
+    </div>
 
-      <!--First Name-->
+    <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">No of Vacancies*</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.no_of_vacancies" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+    </div>
+      
       <div class="form-element clearfix">
         <label for="inputEmail3" class="col-sm-14 pad-zero">Job Description</label>
         <div class="col-sm-9 pad-zero">
@@ -140,11 +137,11 @@
       </div>
 
       <div class="form-element clearfix">
-        <label for="inputEmail3" class="col-sm-14 pad-zero">Job Designation</label>
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Key Words</label>
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
-            <div class="validate-line ">
-              <input type="text" ng-model="sendingData.job_designation" class="input-field" >
+            <div class="">
+              <textarea type="text" required ng-model="sendingData.keywords" validate-type="name" class="input-field " name="keywords"></textarea>
               <div class="input-wrapper"></div>
               <div class="message"></div>
             </div>
@@ -152,15 +149,58 @@
         </div>
       </div>
 
+      <label>Job Type*</label>
+      <br clear="all">
+      <span class="form-hold2 clearfix">
+        <div class="validate-line">
+          <select class="input-field" ng-model="sendingData.job_type" >
+            <option value>Select</option>
+            <option value="permanent">Permanent</option>
+            <option value="contract">Contract</option>
+          </select>
+          <div class="input-wrapper"></div>
+          <div class="message"></div>
+        </div>
+      </span> <br clear="all">
 
        <div class="form-element clearfix">
         <label for="inputEmail3" class="col-sm-14 pad-zero">Min Experience</label>
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
             <div class="validate-line ">
-              <input type="text" ng-model="sendingData.min_exp_level" class="input-field" >
-              <div class="input-wrapper"></div>
-              <div class="message"></div>
+            <select class="input-field" ng-model="sendingData.min_exp_level" >
+                <option value>Minimum</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30>30</option>
+            </select>
             </div>
           </span>
         </div>
@@ -171,9 +211,39 @@
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
             <div class="validate-line ">
-              <input type="text" ng-model="sendingData.max_exp_level" class="input-field" >
-              <div class="input-wrapper"></div>
-              <div class="message"></div>
+              <select class="input-field" ng-model="sendingData.max_exp_level" >
+                <option value>Maximum</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+                <option value=15>15</option>
+                <option value=16>16</option>
+                <option value=17>17</option>
+                <option value=18>18</option>
+                <option value=19>19</option>
+                <option value=20>20</option>
+                <option value=21>21</option>
+                <option value=22>22</option>
+                <option value=23>23</option>
+                <option value=24>24</option>
+                <option value=25>25</option>
+                <option value=26>26</option>
+                <option value=27>27</option>
+                <option value=28>28</option>
+                <option value=29>29</option>
+                <option value=30>30</option>
+              </select>
             </div>
           </span>
         </div>
@@ -184,9 +254,63 @@
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
             <div class="validate-line ">
-              <input type="text" ng-model="sendingData.min_salary_range" class="input-field" >
-              <div class="input-wrapper"></div>
-              <div class="message"></div>
+            <select class="input-field" ng-model="sendingData.min_salary_range" >
+                <option value style="color: rgb(0, 0, 0);">Min Annual Salary</option>
+                <option value="12477">Less than 50000</option>
+                <option value="50000">50,000</option>
+                <option value="60000">60,000</option>
+                <option value="70000">70,000</option>
+                <option value="80000">80,000</option>
+                <option value="90000">90,000</option>
+                <option value="100000">1,00,000</option>
+                <option value="125000">1,25,000</option>
+                <option value="150000">1,50,000</option>
+                <option value="175000">1,75,000</option>
+                <option value="200000">2,00,000</option>
+                <option value="225000">2,25,000</option>
+                <option value="250000">2,50,000</option>
+                <option value="275000">2,75,000</option>
+                <option value="300000">3,00,000</option>
+                <option value="325000">3,25,000</option>
+                <option value="350000">3,50,000</option>
+                <option value="375000">3,75,000</option>
+                <option value="400000">4,00,000</option>
+                <option value="425000">4,25,000</option>
+                <option value="450000">4,50,000</option>
+                <option value="475000">4,75,000</option>
+                <option value="500000">5,00,000</option>
+                <option value="550000">5,50,000</option>
+                <option value="600000">6,00,000</option>
+                <option value="650000">6,50,000</option>
+                <option value="700000">7,00,000</option>
+                <option value="750000">7,50,000</option>
+                <option value="800000">8,00,000</option>
+                <option value="850000">8,50,000</option>
+                <option value="900000">9,00,000</option>
+                <option value="950000">9,50,000</option>
+                <option value="1000000">10,00,000</option>
+                <option value="1100000">11,00,000</option>
+                <option value="1200000">12,00,000</option>
+                <option value="1300000">13,00,000</option>
+                <option value="1400000">14,00,000</option>
+                <option value="1500000">15,00,000</option>
+                <option value="1600000">16,00,000</option>
+                <option value="1700000">17,00,000</option>
+                <option value="1800000">18,00,000</option>
+                <option value="1900000">19,00,000</option>
+                <option value="2000000">20,00,000</option>
+                <option value="2250000">22,50,000</option>
+                <option value="2500000">25,00,000</option>
+                <option value="2750000">27,50,000</option>
+                <option value="3000000">30,00,000</option>
+                <option value="3250000">32,50,000</option>
+                <option value="3500000">35,00,000</option>
+                <option value="3750000">37,50,000</option>
+                <option value="4000000">40,00,000</option>
+                <option value="4500000">45,00,000</option>
+                <option value="5000000">50,00,000</option>
+                <option value="10000000">50,00,000 &amp; above</option>
+              </select>
             </div>
           </span>
         </div>
@@ -198,7 +322,80 @@
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
             <div class="validate-line ">
-              <input type="text" ng-model="sendingData.max_salary_range" class="input-field" >
+              <select class="input-field" ng-model="sendingData.max_salary_range" >
+                <option value style="color: rgb(0, 0, 0);">Max Annual Salary</option>
+                <option value="12477">Less than 50000</option>
+                <option value="50000">50,000</option>
+                <option value="60000">60,000</option>
+                <option value="70000">70,000</option>
+                <option value="80000">80,000</option>
+                <option value="90000">90,000</option>
+                <option value="100000">1,00,000</option>
+                <option value="125000">1,25,000</option>
+                <option value="150000">1,50,000</option>
+                <option value="175000">1,75,000</option>
+                <option value="200000">2,00,000</option>
+                <option value="225000">2,25,000</option>
+                <option value="250000">2,50,000</option>
+                <option value="275000">2,75,000</option>
+                <option value="300000">3,00,000</option>
+                <option value="325000">3,25,000</option>
+                <option value="350000">3,50,000</option>
+                <option value="375000">3,75,000</option>
+                <option value="400000">4,00,000</option>
+                <option value="425000">4,25,000</option>
+                <option value="450000">4,50,000</option>
+                <option value="475000">4,75,000</option>
+                <option value="500000">5,00,000</option>
+                <option value="550000">5,50,000</option>
+                <option value="600000">6,00,000</option>
+                <option value="650000">6,50,000</option>
+                <option value="700000">7,00,000</option>
+                <option value="750000">7,50,000</option>
+                <option value="800000">8,00,000</option>
+                <option value="850000">8,50,000</option>
+                <option value="900000">9,00,000</option>
+                <option value="950000">9,50,000</option>
+                <option value="1000000">10,00,000</option>
+                <option value="1100000">11,00,000</option>
+                <option value="1200000">12,00,000</option>
+                <option value="1300000">13,00,000</option>
+                <option value="1400000">14,00,000</option>
+                <option value="1500000">15,00,000</option>
+                <option value="1600000">16,00,000</option>
+                <option value="1700000">17,00,000</option>
+                <option value="1800000">18,00,000</option>
+                <option value="1900000">19,00,000</option>
+                <option value="2000000">20,00,000</option>
+                <option value="2250000">22,50,000</option>
+                <option value="2500000">25,00,000</option>
+                <option value="2750000">27,50,000</option>
+                <option value="3000000">30,00,000</option>
+                <option value="3250000">32,50,000</option>
+                <option value="3500000">35,00,000</option>
+                <option value="3750000">37,50,000</option>
+                <option value="4000000">40,00,000</option>
+                <option value="4500000">45,00,000</option>
+                <option value="5000000">50,00,000</option>
+                <option value="10000000">50,00,000 &amp; above</option>
+              </select>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <div class="col-sm-14 pad-zero">
+              <input type="checkbox" class="demo_box_1" ng-model="sendingData.is_salary_hidden">&nbsp;&nbsp;Please check if salary Needs to be hidden
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Job Location*</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.job_locations" class="input-field" >
               <div class="input-wrapper"></div>
               <div class="message"></div>
             </div>
@@ -206,6 +403,57 @@
         </div>
       </div>
 
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Job Industry*</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.job_industry" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Functional Area*</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.functional_area" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Any Specific Degree</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.desired_candidate_qualifications" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Any Specific College / Institue</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.desired_candidate_institution" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
 
       <div class="form-element clearfix">
         <label for="inputEmail3" class="col-sm-14 pad-zero">Company Name</label>
@@ -254,7 +502,85 @@
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
             <div class="">
-              <textarea type="text" required ng-model="sendingData.company_description" validate-type="name" class="input-field " name="job_description"></textarea>
+              <textarea type="text" required ng-model="sendingData.company_description" validate-type="name" class="input-field " name="company_description"></textarea>
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Coontact Person</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.company_contact_person" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Company Zipcode</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.postcode" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Company City</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.city" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Company State</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.state" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Street Number</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.street_no" class="input-field" >
+              <div class="input-wrapper"></div>
+              <div class="message"></div>
+            </div>
+          </span>
+        </div>
+      </div>
+      
+      <div class="form-element clearfix">
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Street Name</label>
+        <div class="col-sm-9 pad-zero">
+          <span class="form-hold2 clearfix">
+            <div class="validate-line ">
+              <input type="text" ng-model="sendingData.street_name" class="input-field" >
               <div class="input-wrapper"></div>
               <div class="message"></div>
             </div>
@@ -263,11 +589,11 @@
       </div>
 
        <div class="form-element clearfix">
-        <label for="inputEmail3" class="col-sm-14 pad-zero">Job Requirement Details</label>
+        <label for="inputEmail3" class="col-sm-14 pad-zero">Area Details</label>
         <div class="col-sm-9 pad-zero">
           <span class="form-hold2 clearfix">
             <div class="">
-              <textarea type="text" required ng-model="sendingData.job_requirement" validate-type="name" class="input-field " name="job_description"></textarea>
+              <textarea type="text" required ng-model="sendingData.area" validate-type="name" class="input-field " name="area"></textarea>
               <div class="input-wrapper"></div>
               <div class="message"></div>
             </div>
@@ -275,7 +601,7 @@
         </div>
       </div>
     </div>
-    <div class="errormessage" ng-show="isError">{{displayError}}</div>
+    <!-- <div class="errormessage" ng-show="isError">{{displayError}}</div> -->
     <div align="center">
       <button type="submit" class="mc-btn" ng-click="submitSearch()">SUBMIT</button>   
     <div>
@@ -397,19 +723,30 @@ function postJob($scope, $http){
 
 
 var sendingData = {
-  'job_type' : "",
-  'job_industry' : "",
-  'job_description' : "",
-  'job_designation' : "",
-  'min_exp_level' : "",
-  'max_exp_level' : "",
-  'min_salary_range' : "",
-  'max_salary_range' : "",
-  'company_name' : "",
-  'company_logo' : "",
-  'link_to_compnay' : "",
-  'company_description' : "",
-  'job_requirement' : ""
+  'job_designation' : '',
+  'no_of_vacancies' : '',
+  'job_description' : '',
+  'keywords' : '',
+  'min_exp_level' : '',
+  'max_exp_level' : '',
+  'min_salary_range' : '',
+  'max_salary_range' : '',
+  'is_salary_hidden' : 1,
+  'job_locations' : '',
+  'job_industry' : '',
+  'functional_area' : '',
+  'job_type' : '',
+  'desired_candidate_qualifications' : '',
+  'desired_candidate_institution' : '',
+  'company_name' : '',
+  'company_description' : '',
+  'company_logo' : '',
+  'link_to_compnay' : '',
+  'company_contact_person' : '',
+  'postcode' : '',
+  'city' : '',
+  'state' : '',
+  'refresh_schedule' : 0
 };
 //console.log(sendingData);
 $scope.submitSearch = function(){

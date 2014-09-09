@@ -36,7 +36,7 @@ CONSTRAINT users_unique_username_cons UNIQUE (username)
 
 create table if not exists addresses (
   id int(11) not null primary key AUTO_INCREMENT,
-  linkable_uid int(11) not null, 
+  linkable_uid int(11) not null,
   street_no varchar(30) not null,
   street_name varchar(256) not null check (length(street_name) > 0),
   area varchar(256) not null check (length(area) > 0),
@@ -178,22 +178,58 @@ create table if not exists attachments (
 )ENGINE=InnoDB;
 
 
-create table if not exists job_postings (
+-- create table if not exists job_postings (
+--   id int(11) not null primary key AUTO_INCREMENT,
+--   linkable_uid int(11) not null,
+--   job_type varchar(16) not null default 'permanent' check (status in ('permanent', 'contract')),
+--   job_industry varchar(256) not null,
+--   job_description text not null,
+--   job_designation varchar(256) not null,
+--   min_exp_level int(11) not null default 0,
+--   max_exp_level int(11) not null default 0,
+--   min_salary_range varchar(256) not null default 'Best in Industry',
+--   max_salary_range varchar(256),
+--   company_name varchar(256),
+--   company_logo text,
+--   link_to_compnay varchar(256),
+--   company_description text,
+--   job_requirement text not null,
+--   status varchar(16) not null default 'active' check (status in ('active', 'inactive')),
+--   created_at timestamp not null default CURRENT_TIMESTAMP,
+--   updated_at timestamp not null default '0000-00-00 00:00:00',
+--   created_by varchar(128),
+--   updated_by varchar(128),
+--   is_deleted tinyint(1) not null default 0,
+--   FOREIGN KEY(linkable_uid) REFERENCES users(id)
+-- )ENGINE=InnoDB;
+
+
+create table if not exists job_posting_details (
   id int(11) not null primary key AUTO_INCREMENT,
   linkable_uid int(11) not null,
-  job_type varchar(16) not null default 'permanent' check (status in ('permanent', 'contract')),
-  job_industry varchar(256) not null,
+  job_designation varchar(512) not null,
   job_description text not null,
-  job_designation varchar(256) not null,
+  no_of_vacancies int(11) not null,
+  keywords text not null,
   min_exp_level int(11) not null default 0,
   max_exp_level int(11) not null default 0,
   min_salary_range varchar(256) not null default 'Best in Industry',
   max_salary_range varchar(256),
+  is_salary_hidden tinyint(1),
+  job_locations varchar(256) not null,
+  job_industry varchar(256) not null,
+  functional_area varchar(256) not null,
+  job_type varchar(16) not null default 'permanent' check (status in ('permanent', 'contract')),
+  job_time varchar(256) not null default 'fulltime' check (status in ('fulltime', 'parttime')),
+  desired_candidate_qualifications text,
+  desired_candidate_institution text,
   company_name varchar(256),
+  company_description text,
   company_logo text,
   link_to_compnay varchar(256),
-  company_description text,
-  job_requirement text not null,
+  company_contact_person varchar(256),
+  company_address_id int(11),
+  refresh_schedule varchar(256),
   status varchar(16) not null default 'active' check (status in ('active', 'inactive')),
   created_at timestamp not null default CURRENT_TIMESTAMP,
   updated_at timestamp not null default '0000-00-00 00:00:00',
@@ -201,4 +237,35 @@ create table if not exists job_postings (
   updated_by varchar(128),
   is_deleted tinyint(1) not null default 0,
   FOREIGN KEY(linkable_uid) REFERENCES users(id)
+)ENGINE=InnoDB;
+
+create table job_types (
+  id int(11) not null primary key AUTO_INCREMENT,
+  type varchar(512) not null,
+  created_at timestamp not null default CURRENT_TIMESTAMP,
+  updated_at timestamp not null default '0000-00-00 00:00:00',
+  created_by varchar(128),
+  updated_by varchar(128),
+  is_deleted tinyint(1) not null default 0,
+)ENGINE=InnoDB;
+
+
+create table job_functional_area (
+  id int(11) not null primary key AUTO_INCREMENT,
+  type varchar(512) not null,
+  created_at timestamp not null default CURRENT_TIMESTAMP,
+  updated_at timestamp not null default '0000-00-00 00:00:00',
+  created_by varchar(128),
+  updated_by varchar(128),
+  is_deleted tinyint(1) not null default 0,
+)ENGINE=InnoDB;
+
+create table degree_qualifications (
+  id int(11) not null primary key AUTO_INCREMENT,
+  name varchar(512) not null,
+  created_at timestamp not null default CURRENT_TIMESTAMP,
+  updated_at timestamp not null default '0000-00-00 00:00:00',
+  created_by varchar(128),
+  updated_by varchar(128),
+  is_deleted tinyint(1) not null default 0,
 )ENGINE=InnoDB;
