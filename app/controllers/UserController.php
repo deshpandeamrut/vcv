@@ -21,6 +21,8 @@ class UserController extends BaseController {
 
 	public function postRegister(){
 		$input = Input::all();
+		print_r($input);
+		exit();
 		Log::info("postRegister -->value of Params Recvd ".var_export($input,true));
 		$rules = array(
 						'username' => 'Required|unique:users',

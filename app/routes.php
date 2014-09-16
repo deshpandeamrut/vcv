@@ -18,7 +18,7 @@
 
 
 Route::get('/', 'HomeController@showHome');
-Route::post('Register', 'UserController@postRegister');
+Route::post('register', 'UserController@postRegister');
 Route::post('regPersonalDetails', 'UserController@postPersonalDetails');
 Route::post('regJobDetails', 'UserController@postJobSeekerDetails');
 Route::post('extraDetails', 'UserController@postExtraDetails');
