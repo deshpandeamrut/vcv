@@ -19,12 +19,14 @@
 
 Route::get('/', 'HomeController@showHome');
 Route::post('register', 'UserController@postRegister');
+Route::post('login', 'UserController@postLogin');
+
 Route::post('regPersonalDetails', 'UserController@postPersonalDetails');
 Route::post('regJobDetails', 'UserController@postJobSeekerDetails');
 Route::post('extraDetails', 'UserController@postExtraDetails');
 
 Route::get('getUserBasicDetails', 'UserController@getUserBasicDetails');
-Route::post('login', 'UserController@postLogin');
+
 Route::get('dashboardDetails', 'UserController@getDashboardDetails');
 Route::post('getResumses', 'UserController@getResumeDetails');
 Route::get('myAccountDetails', 'UserController@getUserAccountDetailsForId');

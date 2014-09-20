@@ -628,10 +628,10 @@
 		      <div class="modal-body">
 		      	<form name="sign-up-form" ng-controller="SignUpController">
 		      		<label class="label-unbold">
-				        <input type="radio" name="user-type" value="seeker" ng-model="user_type"/>Job Seeker
+				        <input type="radio" name="user-type" value="seeker" ng-model="signUpData.user_type"/>Job Seeker
 				    </label>
 				    <label class="label-unbold">
-				        <input type="radio" name="user-type" value="recruiter" ng-model="user_type"/>Recruiter
+				        <input type="radio" name="user-type" value="recruiter" ng-model="signUpData.user_type"/>Recruiter
 				    </label>
 				    <br/>
 			        <input type="text" placeholder="Username" ng-model="signUpData.username"/><br/>
@@ -657,10 +657,10 @@
 		        <h4 class="modal-title" id="myModalLabel">Sign In</h4>
 		      </div>
 		      <div class="modal-body">
-		        <form name="sign-up-form" ng-controller="SignUpController">
-			        <input type="email" placeholder="Username/E-mail" ng-model="signInData.username"/><br/>
-			        <input type="password" placeholder="Password" ng-model="signInData.login_password"/><br/>
-			        <button class="vcv-button" ng-click="submitSignIn()">LOGIN</button>
+		        <form name="sign-up-form" ng-controller="loginController">
+			        <input type="email" placeholder="Username/E-mail" ng-model="loginData.username"/><br/>
+			        <input type="password" placeholder="Password" ng-model="loginData.password"/><br/>
+			        <button class="vcv-button" ng-click="login()">LOGIN</button>
 		        </form >
 		      </div>
 		      <!-- <div class="modal-footer">
@@ -685,6 +685,7 @@
 		
 		<script type="text/javascript" src="js/ng-route.js"></script>
 		<script type="text/javascript" src="js/ng-controllers/Register.js"></script>
+		<script type="text/javascript" src="js/ng-controllers/login.js"></script>
 		<script type="text/javascript" src="js/ng-services/OnSuccess.js"></script>
 
 

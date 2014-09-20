@@ -21,13 +21,11 @@ class UserController extends BaseController {
 
 	public function postRegister(){
 		$input = Input::all();
-		print_r($input);
-		exit();
 		Log::info("postRegister -->value of Params Recvd ".var_export($input,true));
 		$rules = array(
 						'username' => 'Required|unique:users',
 						'email' => 'Required|unique:users|email',
-						'email_confirmation' => 'Required',
+						'user_type' =>'Required',
 						'password' => 'Required'
 					);
 		$v = Validator::make($input, $rules);
@@ -148,7 +146,7 @@ class UserController extends BaseController {
 		Log::info("value of Params Recvd postLogin ".var_export($input,true));
 		$rules = array(
 						'username' => 'required',
-						'login_password' => 'required',
+						'password' => 'required',
 					  );
 
 		$v = Validator::make($input, $rules);
@@ -157,11 +155,11 @@ class UserController extends BaseController {
 		if($v->passes()){		
 			$login_status = false;
 			try{
-				$credentials = array('email' => $input['username'], 'password' => $input['login_password']);
+				$credentials = array('email' => $input['username'], 'password' => $input['password']);
 				if(Auth::attempt($credentials)){
 					$login_status = true;
 				}else{
-					$credentials = array('username' => $input['username'], 'password' => $input['login_password']);
+					$credentials = array('username' => $input['username'], 'password' => $input['password']);
 					if(Auth::attempt($credentials)){
 						$login_status = true;
 					}

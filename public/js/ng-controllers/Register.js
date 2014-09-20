@@ -1,7 +1,7 @@
 vcvApp.controller('SignUpController', function ($scope, $http, $routeParams) {
 	$scope.signUpData = {
 		"user_type" : "",
-		"user_name" : "",
+		"username" : "",
 		"password"  : "",
 		"email"     : ""
 	};
@@ -15,14 +15,11 @@ vcvApp.controller('SignUpController', function ($scope, $http, $routeParams) {
 		}).success(function(result) {
 			console.log("FFF");
 			// if(result.status_code == 200){
-
+				
 			// }
 			// $scope.datavariable = onAjaxSuccess ;
 
 		});
 	}
-		
-
-	
 
 });
