@@ -4,97 +4,299 @@
 		<title>VCV</title>	
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     	<meta charset="utf-8">
+    	<link type="text/css" src="libraries/jquery.bxslider.css" >
 
 		<link href="libraries/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
 	
 	</head>
-	<body>
-		<div id="overlay"></div>
-		<header class="header" role="banner">
-			<div class="row">
-				<div class="col-md-2">
-					<h2>VCV LOGO</h2>
+	<body class="background-color">
+		<div class="page container">
+			<div id="overlay"></div>
+			<header class="header" role="banner">
+				<div class="row">
+					<div class="col-md-2">
+						<img src="images/vcv-logo2.png">
+					</div>
+					<div class="col-md-6">
+						&nbsp;
+					</div>
+					<div class="col-md-2">
+						<button class="vcv-button btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up">Sign Up</button>
+					</div>
+					<div class="col-md-2">
+						<button class="vcv-button btn btn-primary btn-lg" data-toggle="modal" data-target="#login">Login</button>
+					</div>
 				</div>
-				<div class="col-md-6">
+			</header>
+		
+			<div class="full_outer_container">
+				<div class="content">
+					<div class="row">
+						<input type="search" class="search-bar" placeholder="Search Jobs " />
+					</div>
+					<div class="row">
+						<div class="col-md-5 image-slider">
+							<div class="row">
+								<div class="slider">
+									<div id="carousel-example-generic" class="carousel slide slider-wrap" data-ride="carousel">
+										<!-- Indicators -->
+										<ol class="carousel-indicators">
+											<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+											<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+											<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+										</ol>
+										<!-- Wrapper for slides -->
+										<div class="carousel-inner">
+											<div class="item active">
+												<img src="images/image-slider.png">
+											</div>
+											<div class="item">
+												<img src="images/image-slider.png">
+											</div>
+											<div class="item">
+												<img src="images/image-slider.png">
+											</div>
+										</div>
+
+										<!-- Controls -->
+										<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left"></span>
+										</a>
+										<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="slider-content">
+									AVBN HJK BNM GHJKVB VBNM HJK FGHJ GHJK RFVHNKV AVBN HJK BNM GHJKVB VBNM HJK FGHJ GHJK RFVHNKV VBHJKJHGB HGJKNM GFHUJMNMIKMVBHJKJHGB HGJKNM GFHUJMNMIKM
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							&nbsp;
+						</div>
+						<div class="col-md-5 video-slider">
+							<div class="row">
+								<div class="slider">
+									<div class="bxslider">
+										<!-- <li> -->
+											<iframe src="http://player.vimeo.com/video/17914974" width="100%" height="258" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+										<!-- </li> -->
+										<!-- <li><img src="/images/730_200/houses.jpg" /></li> -->
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="slider-content">
+									VBHJKJHGB HGJKNM GFHUJMNMIKM AVBN HJK BNM GHJKVB VBNM HJK FGHJ GHJK RFVHNKV AVBN HJK BNM GHJKVB VBNM HJK FGHJ GHJK RFVHNKV 
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="recuiter-name">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<!-- <li class="dummy-space"><span></span></li> -->
+							<li class="first active"><a href="#trendingList" role="tab" data-toggle="tab">Trending Job List</a></li>
+							<!-- <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li> -->
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div class="tab-pane active" id="trendingList">
+								<ul>
+									<li class="col-md-2">IT-SOFTWARE</li>
+									<li class="col-md-2">IT-SOFTWARE</li>
+									<li class="col-md-2">IT-SOFTWARE</li>
+									<li class="col-md-2">IT-SOFTWARE</li>
+									<li class="col-md-2">IT-SOFTWARE</li>
+									<li class="col-md-2">IT-SOFTWARE</li>
+									<li class="col-md-2">IT-SOFTWARE</li>
+									<!-- <div class="row">
+										<div class="col-md-2">
+											<li>IT-SOFTWARE</li>
+										</div>
+										<div class="col-md-2">
+											<li>Software Services </li>
+										</div>
+										<div class="col-md-2">
+											<li>IT-Hardware</li>
+										</div>
+										<div class="col-md-2">
+											<li>IT-Hardware</li>
+										</div>
+										<div class="col-md-2">
+											<li>Advertising/PR</li>
+										</div>
+										<div class="col-md-2">
+											<li>Printing/Packaging</li>
+										</div>
+										<div class="col-md-2">
+											<li>CRM/Call Centre</li>
+										</div>
+										<div class="col-md-2">
+											<li>Financial Services</li>
+										</div>
+										<div class="col-md-2">
+											<li>Constrution</li>
+										</div>
+										<div class="col-md-2">
+											<li>Entertainment/Media</li>
+										</div>
+										<div class="col-md-2">
+											<li>Architecture</li>
+										</div>
+										<div class="col-md-2">
+											<li>Consulting Services</li>
+										</div>
+										<div class="col-md-2">
+											<li>IT-SOFTWARE</li>
+										</div>
+										<div class="col-md-2">
+											<li>Software Services </li>
+										</div>
+										<div class="col-md-2">
+											<li>IT-Hardware</li>
+										</div>
+										<div class="col-md-2">
+											<li>IT-Hardware</li>
+										</div>
+										<div class="col-md-2">
+											<li>Advertising/PR</li>
+										</div>
+										<div class="col-md-2">
+											<li>Printing/Packaging</li>
+										</div>
+										<div class="col-md-2">
+											<li>CRM/Call Centre</li>
+										</div>
+										<div class="col-md-2">
+											<li>Financial Services</li>
+										</div>
+										<div class="col-md-2">
+											<li>Constrution</li>
+										</div>
+										<div class="col-md-2">
+											<li>Entertainment/Media</li>
+										</div>
+										<div class="col-md-2">
+											<li>Architecture</li>
+										</div>
+										<div class="col-md-2">
+											<li>Consulting Services</li>
+										</div>
+									</div> -->
+								</ul>
+							</div>
+							<!-- <div class="tab-pane" id="profile">...</div> -->
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<footer class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
 					&nbsp;
 				</div>
-				<div class="col-md-2">
-					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up"><h4>SIGN UP</h4></button>
+				<div class="col-md-4">
+					<div class="row footer-menu-section">
+						<div class="col-md-1">
+							&nbsp;
+						</div>
+						<div class="col-md-10">
+							<div class="row footer-content">
+								<div class="col-md-4">
+									About Us
+								</div>
+								<div class="col-md-4">
+									How It Works
+								</div>
+								<div class="col-md-4">
+									Contact us
+								</div>
+							</div>
+						</div>						
+						<div class="col-md-1">
+							&nbsp;
+						</div>
+					</div>
 				</div>
-				<div class="col-md-2">
-					<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login"><h4>LOGIN</h4></button>
+				<div class="col-md-4 copy-right">
+					<div class="row">
+						<div class="col-md-10 copy-right-text">
+							&#169; 2014 VIDEOCV. ALL RIGHT RESERVED
+						</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+					
 				</div>
 			</div>
-		</header>
-	
-		<div class="full_outer_container">
-			<div class="content">
-				<div>
-					<input type="search" placeholder="Search" />
-				</div>
-			</div>
-		</div><!-- end of full_outer_container -->	
-	<footer class="copyright_holder dashboard_footer">
-		FOOTER IS HERE
-	</footer>
-	<!-- Modal -->
-	<div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
-	      </div>
-	      <div class="modal-body">
-	      	<form name="sign-up-form" ng-controller="SignUpController">
-		        <input type="radio" name="user-type" value="seeker" ng-model="user_type"/>Job Seeker
-		        <input type="radio" name="user-type" value="recruiter" ng-model="user_type"/>Recruiter<br/>
-		        <input type="text" placeholder="Username" ng-model="user_name"/><br/>
-		        <input type="email" placeholder="E-mail" ng-model="email"/><br/>
-		        <input type="password" placeholder="Password" ng-model="password"/><br/>
-		        <input type="password" placeholder="Confirm Password" /><br/>
-		        <button ng-click="signUp()">Submit</button>
-	        </form >
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-	      </div>
-	      <div class="modal-body">
-	        ...
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+		</footer>
+		<!-- Modal -->
+		<div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<form name="sign-up-form" ng-controller="SignUpController">
+			        <input type="radio" name="user-type" value="seeker" ng-model="user_type"/>Job Seeker
+			        <input type="radio" name="user-type" value="recruiter" ng-model="user_type"/>Recruiter<br/>
+			        <input type="text" placeholder="Username" ng-model="user_name"/><br/>
+			        <input type="email" placeholder="E-mail" ng-model="email"/><br/>
+			        <input type="password" placeholder="Password" ng-model="password"/><br/>
+			        <input type="password" placeholder="Confirm Password" /><br/>
+			        <button ng-click="signUp()">Submit</button>
+		        </form >
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
 
 
-	<script type="text/javascript" src="libraries/jquery-1.9.1.js"></script>
-	<script src="libraries/bootstrap/js/bootstrap.min.js"></script>
-	<script src="libraries/bootstrap/js/bootbox.min.js"></script>
+		<script type="text/javascript" src="libraries/jquery-1.9.1.js"></script>
+		<script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+		<script src="libraries/bootstrap/js/bootbox.min.js"></script>
 
-	<script type="text/javascript" src="libraries/jquery.bxslider.js" ></script>
-	<script type="text/javascript" src="libraries/angular.js" ></script>
-	<script type="text/javascript" src="libraries/angular-route.js"></script>
+		<script type="text/javascript" src="libraries/jquery.bxslider.js" ></script>
+		<script type="text/javascript" src="libraries/angular.js" ></script>
+		<script type="text/javascript" src="libraries/angular-route.js"></script>
 
-	<script type="text/javascript" src="js/ng-route.js"></script>
-	<script type="text/javascript" src="js/ng-controllers/Register.js"></script>
-	<script type="text/javascript" src="js/ng-services/OnSuccess.js"></script>
+		<script type="text/javascript" src="js/ng-route.js"></script>
+		<script type="text/javascript" src="js/ng-controllers/Register.js"></script>
+		<script type="text/javascript" src="js/ng-services/OnSuccess.js"></script>
 
 
   </body>
