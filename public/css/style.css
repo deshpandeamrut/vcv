@@ -12,6 +12,27 @@ header {
 	background-repeat: no-repeat;
 	background-position: 0% 100%;
 }
+#sign-up input,
+#login input {
+	width: 270px;
+	height: 40px;
+	margin-bottom: 13px;
+	padding: 0 15px
+}
+#sign-up input[type=radio],
+#login input[type=radio] {
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+}
+.label-unbold {
+	font-weight: normal;
+	font-size: 14px;
+	margin-right: 34px;
+}
+.content {
+	margin-bottom: 60px;
+}
 .search-bar {
 	width: 100%;
 	height: 40px;
@@ -34,6 +55,7 @@ header {
 	background: -o-linear-gradient(#56b9ed, #38a1e6);
 	background: linear-gradient(#56b9ed, #38a1e6);
 	border: none;
+	color: #fff;
 }
 .image-slider .slider .carousel-indicators {
 	bottom: -60px;
@@ -96,6 +118,58 @@ header {
 .recuiter-name .nav-tabs > li > a {
 	margin-right: 0px!important;
 }
+/*.footer {
+	height: 151px;
+	background: -webkit-linear-gradient(left,#7f4131,#ceb286 80%);
+*/}
+
+/*.marquee {
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:60px;
+	border:solid black 1px;
+}*/
+.recruiter-slider-section {
+	margin-bottom: 60px;
+}
+.slider-wrap {
+	background-color: #F2F2F2;
+	padding-top: 7px;
+}
+.recruiter_slide {
+	background-color: #F2F2F2;
+}
+.slide_cont {
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	/*background-color: #f8f0db;*/
+	padding: 5px 0px;
+	width: 100%;
+	box-sizing: border-box;
+	color:#ffffff;
+}
+ul.recruiters {
+	margin:0;
+	padding:0 10px;
+	box-sizing: border-box;
+	height:80px;
+	list-style-type:none;
+}
+ul.recruiters li {
+	float:left;
+	list-style-type:none;
+}
+ul.recruiters li div {
+	margin-left: 30px;
+}
+ul.recruiters li a {
+	color:#ffffff;
+	font-size:13px;
+	margin-right:50px;
+}
+
 footer {
 	height: 97px;
 	background: -webkit-linear-gradient(#2e2e2e, #1c1c1c);
