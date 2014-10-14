@@ -10,7 +10,10 @@ header {
 	background-color: #E5E5E5;
 	background-image: url('../images/reel.png');
 	background-repeat: no-repeat;
-	background-position: 0% 100%;
+	background-position: 0% 105%;
+}
+.no-padding-col {
+	padding: 0;
 }
 #sign-up input,
 #login input {
@@ -203,4 +206,60 @@ footer {
 	margin-top: 44px;
 	font-size: 13px;
 	font-family: century gothic;
+}
+/*--------------SignIn 1---------------------*/
+.step-bar-container {
+	margin-bottom: 10px;
+}
+.step-bar {
+	height: 38px;
+	border: 1px solid #c0c0c0;
+}
+.step-bar .inner-color {
+	background-color: #FFF;
+	display: block;
+	height: 100%;
+	/*border: 2px solid #FFF;*/
+	padding: 8px 20px;
+}
+.step-bar.active {
+	border: 1px solid #3AA2E6;
+}
+.step-bar.active .inner-color {
+	background-color: #3AA2E6;
+	border: 2px solid #FFF;
+}
+.step-details-container {
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 2px solid #3AA2E6;
+	border-radius: 5px;
+	text-align: center;
+	padding: 25px 0;
+}
+.step-details-container table th {
+	padding-left: 30px !important;
+	border-top: none !important;
+}
+.step-details-container table td {
+	padding: 0 !important;
+	border-top: none !important;
+}
+.step-details-container input {
+	width: 300px;
+	padding: 8px 20px;
+}
+.step-details-container.third-step {
+	padding: 25px 60px;
+}
+.step-details-container.third-step input {
+	width: 262px;
+}
+.button-container{
+	text-align: right; 
+	padding-right: 30px;
+	margin-top: 94px;
+}
+.title {
+	text-align: left;
+	border-bottom: 1px solid black;
 }
