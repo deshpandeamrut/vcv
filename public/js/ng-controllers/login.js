@@ -6,17 +6,20 @@ vcvApp.controller('loginController', function ($scope, $http, $routeParams) {
 	$scope.datavariable = {};
 	
 	$scope.login = function () {
-		$http({
-			method : "POST",
-			url    : "login",
-			data   : $scope.loginData
-		}).success(function(result) {
-			// if(result.status_code == 200){
+		console.log("heloo");
+		window.location.href = "signin.html";
+		// $http({
+		// 	method : "POST",
+		// 	url    : "login",
+		// 	data   : $scope.loginData
+		// }).success(function(result) {
+		// 	// if(result.status_code == 200){
 				
-			// }
-			// $scope.datavariable = onAjaxSuccess ;
+		// 	// }
+		// 	// $scope.datavariable = onAjaxSuccess ;
 
-		});
+		// });
+// $location.path("/RegistrationPending");
 	}
 
 });
