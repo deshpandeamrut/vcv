@@ -263,3 +263,33 @@ footer {
 	text-align: left;
 	border-bottom: 1px solid black;
 }
+
+.input-field {
+	font-family: Arial;
+	border-radius: 10px;
+	color: black;
+	position: relative;
+	z-index: 1;
+	outline: none;
+	width: 264px;
+	height: 30px;
+	bottom: 2px;
+	font-size: 14px;
+	left: 5px;
+	box-shadow:none;
+	padding:0
+}
+.input-field:hover, .input-field:active, .input-field:focus {
+	outline: none;
+}
+
+.conact-us-li {
+	font-size: 18px;
+	color: black;
+}
+
+.row-contact-us  p{
+	font-size: 14px;
+	color: black;
+	font-family: 'P22UndergroundPro-Book';
+}
