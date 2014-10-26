@@ -1,0 +1,67 @@
+<html>
+<body>
+<style type="text/css">
+	
+.tabrow {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 24px;
+}
+
+.tabrow li {
+    margin: 0 10px;
+    padding: 0 10px;
+    border: 1px solid #AAA;
+    background: #ECECEC;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    border-radius: 4px 4px 4px 4px;
+    /*border-top-left-radius: 6px;
+    border-top-right-radius: 6px;*/
+}
+
+.tabrow li.selected {
+    background: #FFF;
+    color: #000;
+}
+.tabrow {
+    position: relative;
+}
+.tabrow:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #AAA;
+    z-index: 1;
+}
+
+.tabrow:before {
+	/*border-bottom-right-radius: 6px;*/
+    /*border-width: 0 1px 1px 0;*/
+    z-index: 1;
+}
+
+.tabrow li:after {
+    /*border-bottom-left-radius: 6px;
+    border-width: 0 0 1px 1px;*/
+}
+
+.tabrow li.selected {
+    z-index: 2;
+    border-bottom-color: #FFF;
+}
+</style>
+<ul class="tabrow">
+    <li>Lorem</li>
+    <li>Ipsum</li>
+    <li class="selected">Sit amet</li>
+    <li>Consectetur adipisicing</li>
+</ul>
+
+</body>
+</html>

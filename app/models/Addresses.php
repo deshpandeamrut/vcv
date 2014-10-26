@@ -1,7 +1,6 @@
 <?php
 
 class Addresses extends Eloquent{
-
 	protected $table = 'addresses';
 
 	public function addUpdateAddress($data){

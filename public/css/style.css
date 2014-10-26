@@ -60,6 +60,44 @@ header {
 	border: none;
 	color: #fff;
 }
+
+.reg-vcv-button {
+	margin-top: 200px;
+	width: 120px;
+	height: 35px;
+	padding: 0;
+	font-size: 16px;
+	font-family: Arial;
+	border-radius: 20px;
+	/*background: -webkit-gradient(linear, 20% 50%, 70% 100%, from(#56b9ed), to(#38a1e6));*/
+	background: -webkit-linear-gradient(#56b9ed, #38a1e6);
+	background: -moz-linear-gradient(#56b9ed, #38a1e6);
+	background: -ms-linear-gradient(#56b9ed, #38a1e6);
+	background: -o-linear-gradient(#56b9ed, #38a1e6);
+	background: linear-gradient(#56b9ed, #38a1e6);
+	border: none;
+	color: #fff;
+}
+
+.reg-prev-vcv-button {
+	margin-top: 200px;
+	margin-left: 100px;
+	width: 120px;
+	height: 35px;
+	padding: 0;
+	font-size: 16px;
+	font-family: Arial;
+	border-radius: 20px;
+	/*background: -webkit-gradient(linear, 20% 50%, 70% 100%, from(#56b9ed), to(#38a1e6));*/
+	background: -webkit-linear-gradient(#56b9ed, #38a1e6);
+	background: -moz-linear-gradient(#56b9ed, #38a1e6);
+	background: -ms-linear-gradient(#56b9ed, #38a1e6);
+	background: -o-linear-gradient(#56b9ed, #38a1e6);
+	background: linear-gradient(#56b9ed, #38a1e6);
+	border: none;
+	color: #fff;
+}
+
 .image-slider .slider .carousel-indicators {
 	bottom: -60px;
 }
@@ -292,4 +330,89 @@ footer {
 	font-size: 14px;
 	color: black;
 	font-family: 'P22UndergroundPro-Book';
+}
+
+
+#tabrow {
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 24px;
+}
+
+#tabrow li {
+    margin: 0 10px;
+    padding: 0 10px;
+    border: 1px solid #AAA;
+    background: #ECECEC;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+    border-radius: 4px 4px 4px 4px;
+    /*border-top-left-radius: 6px;
+    border-top-right-radius: 6px;*/
+}
+
+#tabrow li.selected {
+    background: #FFF;
+    color: #000;
+}
+#tabrow {
+    position: relative;
+}
+
+#tabrow:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #AAA;
+    z-index: 1;
+}
+
+#tabrow:before {
+	/*border-bottom-right-radius: 6px;*/
+    /*border-width: 0 1px 1px 0;*/
+    z-index: 1;
+}
+
+#tabrow li:after {
+    /*border-bottom-left-radius: 6px;
+    border-width: 0 0 1px 1px;*/
+}
+
+#tabrow li.selected {
+    z-index: 2;
+    border-bottom-color: #FFF;
+}
+
+.file-upload-wrap {
+	margin:10px 0
+}
+.file-upload-wrap input {
+	height:30px;
+	margin-right:10px;
+    border:none;
+    background-color:#fff;
+    width: 80%;
+}
+
+.file-upload-btn  {
+	background-color: #1C9AD6;
+	border-bottom: 1px solid #238DC0;
+	color: #fff;
+	width: 87px;
+	height: 30px;
+	font-size: 14px;
+	margin: 0 5px 0 0;
+	float:left
+}
+.file-upload-btn:hover, .file-upload-btn:focus {
+	color: #000;
+	color: #fff;
+	border-bottom: 1px solid #1C9AD6;
+	margin: 1px 5px -1px 0;
+	height: 30px;
 }

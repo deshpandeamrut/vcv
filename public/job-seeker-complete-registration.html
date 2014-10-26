@@ -1,45 +1,30 @@
 <!DOCTYPE html>
-<html ng-app="vcv">
+<html ng-app="dash-app">
 	<head>
-		<title>VCV</title>	
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     	<meta charset="utf-8">
     	<link type="text/css" src="libraries/jquery.bxslider.css" >
-
 		<link href="libraries/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
 	
 	</head>
 	<body class="background-color">
-		<div class="page container">
+       <div class="page container" ng-hide="check_verified">
 			<div id="overlay"></div>
-			<header class="header" role="banner">
-				<div class="row">
-					<div class="col-md-2">
-						<img src="images/vcv-logo2.png">
-					</div>
-					<div class="col-md-6">
-						&nbsp;
-					</div>
-					<div class="col-md-2">
-						<!-- <button class="vcv-button btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up">Sign Up</button> -->
-					</div>
-					<div class="col-md-2">
-						<!-- <button class="vcv-button btn btn-primary btn-lg" data-toggle="modal" data-target="#login">Login</button> -->
-					</div>
-				</div>
-			</header>
 			<h3>Help us with your Profession</h3>
             <div>
 			<p>Welcome to VideooCV, you are required to enter your personal details in order in help us verify and rate your profile. VideooCV Has Certificate Where Recruiter are Not allowed to Share/Leak Your Info. If you see a * next to a field, that item is and always will be confidential.</p>
             </div>
-        <form name="oneStepRegistrationForm">
+        <form>
 			<div class="row step-bar-container">
 				<div class="col-md-9">
-					<div class="row">
-						<button class="col-md-4 step-bar no-padding-col " ng-disabled="stepOne"><span class="inner-color"><span class="num-round">1</span> Personal Details</span></button>
-						<button class="col-md-4 step-bar no-padding-col "  ng-disabled="stepTwo"><span class="inner-color"><span class="num-round">2</span> Job Details</span></button>
-						<button class="col-md-4 step-bar no-padding-col " ng-disabled="stepThree"><span class="inner-color"><span class="num-round">3</span> Add More</span></button>
+                	<div class="row">
+                        <ul id="tabrow">
+    						<li ng-disabled="stepOne"><span class="inner-color"><span class="num-round">1</span> Personal Details</span></li>
+    						<li ng-disabled="stepTwo"><span class="inner-color"><span class="num-round">2</span> Job Details</span></li>
+                            <li ng-disabled="stepThree"><span class="inner-color"><span class="num-round">3</span> Video Resume</span></li>
+    						<li ng-disabled="stepFour"><span class="inner-color"><span class="num-round">4</span> Add More</span></li>
+                        </ul>
 					</div>
 				</div>
 				<div class="col-md-3">&nbsp;</div>
@@ -51,7 +36,7 @@
                         <br clear="all">
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Title*" name="title" validate-type="name" ng-model="oneStepRegistration.title"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Title*" name="title" validate-type="name" ng-model="personalDetails.title"  required validate-on-blur>
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -60,7 +45,7 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="First Name*" name="first_name" validate-type="name" ng-model="oneStepRegistration.first_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="First Name*" name="first_name" validate-type="name" ng-model="personalDetails.first_name"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -69,7 +54,7 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Middle Name*" name="middle_name" validate-type="name" ng-model="oneStepRegistration.middle_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Middle Name*" name="middle_name" validate-type="name" ng-model="personalDetails.middle_name"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -78,25 +63,15 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Surname*" name="last_name" validate-type="name" ng-model="oneStepRegistration.last_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Surname*" name="last_name" validate-type="name" ng-model="personalDetails.last_name"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
                         </span> 
                         <br clear="all">
-
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Email*" name="email" validate-type="name" ng-model="oneStepRegistration.email"  required validate-on-blur form-name="oneStepRegistrationForm">
-                                <div class="input-wrapper"></div>
-                                <div class="message"></div>
-                            </div>
-                        </span> 
-                        <br clear="all">
-
-                        <span class="form-hold2 clearfix">
-                            <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Date of birth*" name="dob" validate-type="name" ng-model="oneStepRegistration.dob"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Date of birth*" name="dob" validate-type="name" ng-model="personalDetails.dob"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -109,7 +84,7 @@
                         <label>Residential Address</label>
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="House Number*" name="house_no" validate-type="name" ng-model="oneStepRegistration.house_no"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="House Number*" name="house_no" validate-type="name" ng-model="personalDetails.address.house_no"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -118,7 +93,16 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Street Name*" name="street_name" validate-type="name" ng-model="oneStepRegistration.street_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Street Number*" name="street_no" validate-type="name" ng-model="personalDetails.address.street_no"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span> 
+                        <br clear="all">
+                            
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Street Name*" name="street_name" validate-type="name" ng-model="personalDetails.address.street_name"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -128,7 +112,7 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Suburb*" name="suburb" validate-type="name" ng-model="oneStepRegistration.suburb"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Suburb*" name="suburb" validate-type="name" ng-model="personalDetails.address.suburb"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -137,7 +121,7 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Postcode*" name="postcode" validate-type="name" ng-model="oneStepRegistration.postcode"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Postcode*" name="postcode" validate-type="name" ng-model="personalDetails.address.postcode"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -146,7 +130,7 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="City*" name="city" validate-type="name" ng-model="oneStepRegistration.city"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="City*" name="city" validate-type="name" ng-model="personalDetails.address.city_name"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -155,7 +139,7 @@
 
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="State*" name="state" validate-type="name" ng-model="oneStepRegistration.state"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="State*" name="state" validate-type="name" ng-model="personalDetails.address.state_name"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -165,10 +149,10 @@
 				</div>
 				<div class="col-md-4">
 					<table class="table">
-                    <label>Residential Address</label>
+                    <label>Contact Details</label>
                         <span class="form-hold2 clearfix">
                             <div class="validate-line">
-                                <input type="text"  class="input-field" placeholder="Mobile*" name="mobile" validate-type="name" ng-model="oneStepRegistration.mobile"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <input type="text"  class="input-field" placeholder="Mobile*" name="mobile" validate-type="name" ng-model="personalDetails.mobile"  required validate-on-blur form-name="oneStepRegistrationForm">
                                 <div class="input-wrapper"></div>
                                 <div class="message"></div>
                             </div>
@@ -176,156 +160,322 @@
                         <br clear="all">
                     </table>
                     <div class="button-container">
-                    	<button class="vcv-button" ng-click="stepOneNext()">Next ></button>
+                    	<button class="reg-vcv-button" ng-click="stepOneNext()">Next ></button>
                     </div>
 				</div>
 			</div>
 			<div class="row step-details-container second-step" ng-hide="stepTwo">
-				<div class="col-md-4">
-					<table class="table">
-                        <tr>
-                            <th>Job Details</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Job Category*"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Preferred Job Location*"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Willing To Relocate?*"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Total Experience*"></td>
-                        </tr>
+                <span class="form-hold2 clearfix">
+                    <div class="validate-line">
+                        <input type="text"  class="search-bar" placeholder="Resume Headline*" name="resume_headline" validate-type="name" ng-model="jobDetails.resume_headline"  required validate-on-blur form-name="oneStepRegistrationForm">
+                        <div class="input-wrapper"></div>
+                        <div class="message"></div>
+                    </div>
+                </span> 
+                <br clear="all">
+				    <div class="col-md-4">
+					   <table class="table">
+                        
+                        <label>Job Details</label>
+                         <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Job Category*" name="job_category" validate-type="name" ng-model="jobDetails.job_category"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span> 
+                        <br clear="all">
+                        
+                         <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Skill Sets*" name="skill_sets" validate-type="name" ng-model="jobDetails.skill_sets"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span> 
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Preferred Location*" name="preferred_location" validate-type="name" ng-model="jobDetails.preferred_location"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span> 
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Willing To Re-Locate ?" name="is_relocate" validate-type="name" ng-model="jobDetails.is_relocate"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span> 
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Total Experience*" name="total_experience" validate-type="name" ng-model="jobDetails.total_experience"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span> 
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Any Comments*" name="comments" validate-type="name" ng-model="jobDetails.comments"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span> 
+                        <br clear="all">
+
                     </table>
 				</div>
 				<div class="col-md-4">
 					<table class="table">
-                        <tr>
-                            <th>Add Prior Employements</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Upload Resume"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" placeholder="Upload Video Resume"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Enter Your Resume Head Line Here"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Enter your skill sets"></td>
-                        </tr>
+                    <label>Current Employment Details</label>
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Yearly Salary*" name="yearly_salary" validate-type="name" ng-model="jobDetails.current_emp_details.yearly_salary"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Basis Of Employement Salary*" name="basis_of_employment" validate-type="name" ng-model="jobDetails.current_emp_details.basis_of_employment"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Profession*" name="basis_of_employment" validate-type="name" ng-model="jobDetails.current_emp_details.profession"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Industry*" name="industry" validate-type="name" ng-model="jobDetails.current_emp_details.industry"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Employement Period - Years*" name="employment_period_years" validate-type="name" ng-model="jobDetails.current_emp_details.employment_period_years"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Employement - Months*" name="employment_period_months" validate-type="name" ng-model="jobDetails.current_emp_details.employment_period_months"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Functional Area*" name="functional_area" validate-type="name" ng-model="jobDetails.current_emp_details.functional_area"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <input type="text"  class="input-field" placeholder="Employement Role*" name="employment_role" validate-type="name" ng-model="jobDetails.current_emp_details.employment_role"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
+
+                        
+
                     </table>
-				</div>
-				<div class="col-md-4">
-					<table class="table">
-                        <tr>
-                            <th>Current Employement</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Salary*"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Basis of employment*"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Profession*"></td>
-                        </tr>
-                        	<td><input type="text" class="input-field" placeholder="Industry*"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Functional Area*"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Employment Role*"></td>
-                        </tr>
-                        	<td><input type="text" class="input-field" placeholder="Employment Period*"></td>
-                        </tr>
-                        </tr>
-                        	<td><input type="text" class="input-field" placeholder="Any Comments You Want To Add"></td>
-                        </tr>
+                </div>
+                <div class="col-md-4">
+                    <table class="table">
+                        <label>Upload Resume</label>
+                        <span class="form-hold2 clearfix">
+                            <div class="validate-line">
+                                <div>
+                                    <input type="file" class ="vcv-button" name="resume_text">
+                                </div>
+                                <div class="input-wrapper"></div>
+                                <div class="message"></div>
+                            </div>
+                        </span>
+                        <br clear="all">
                     </table>
+                </div>
                     <div class="button-container">
-                    	<button class="vcv-button" ng-click="stepTwoPrevious()">< Previous</button>
-                    	<button class="vcv-button" ng-click="stepTwoNext()">Next > </button>
+                    	<button class="reg-prev-vcv-button" ng-click="stepTwoPrevious()">< Previous</button>
+                    	<button class="reg-vcv-button" ng-click="stepTwoNext()">Next > </button>
                     </div>
 				</div>
 			</div>
-			<div class="row step-details-container third-step" ng-hide="stepThree">
-				<div class="row title">
-					<h4>EDUCATION DETAILS</h4>
-				</div>
+            
+            <div class="row step-details-container third-step" ng-hide="stepThree">
+                    <div class="button-container">
+                        <form method = "POST" action = 'upload-video'>
+                                <input type="file" class ="vcv-button" name="resume_text">
+                                <button class="reg-prev-vcv-button" ng-click="stepTwoPrevious()">< Previous</button>
+                                <button class="reg-vcv-button" ng-click="stepThreeNext()">Next ></button>
+                        </form>
+                    </div>
+            </div>
+			<div class="row step-details-container fourth-step" ng-hide="stepFour">
 				<div class="row">
 				<div class="col-md-3 no-padding-col">
 					<table class="table">
-                        <tr>
-                            <th>Class 10th Details</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Year of Passing"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Name of School"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Passing Percentage/Cgpa"></td>
-                        </tr>
+                        <label>Class 10th Details</label>
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Year of Passing*" name="year_of_passing" validate-type="name" ng-model="extraDetails.class_10_details.year_of_passing"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Institute Name*" name="school_name" validate-type="name" ng-model="extraDetails.class_10_details.school_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Passing %*" name="passing_percentage" validate-type="name" ng-model="extraDetails.class_10_details.passing_percentage"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
                     </table>
 				</div>
 				<div class="col-md-3 no-padding-col">
 					<table class="table">
-                        <tr>
-                            <th>Class 12th Details</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Year of Passing"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Name of School/College"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Passing Percentage/Cgpa"></td>
-                        </tr>
+
+                        <label>Class 12th Details</label>
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Year of Passing*" name="year_of_passing" validate-type="name" ng-model="extraDetails.class_12_details.year_of_passing"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Institute Name*" name="school_name" validate-type="name" ng-model="extraDetails.class_12_details.school_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Passing %*" name="passing_percentage" validate-type="name" ng-model="extraDetails.class_12_details.passing_percentage"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
                     </table>
 				</div>
 				<div class="col-md-3 no-padding-col">
 					<table class="table">
-                        <tr>
-                            <th>Bachelor's Degree Details</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Year of Passing"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Name of College"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Passing Percentage/Cgpa"></td>
-                        </tr>
+
+                        <label>Bachelor's Degree Details</label>
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Year of Passing*" name="year_of_passing" validate-type="name" ng-model="extraDetails.b_degree_details.year_of_passing"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Institute Name*" name="school_name" validate-type="name" ng-model="extraDetails.b_degree_details.school_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Passing %*" name="passing_percentage" validate-type="name" ng-model="extraDetails.b_degree_details.passing_percentage"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
                     </table>
 				</div>
 				<div class="col-md-3 no-padding-col">
 					<table class="table">
-                        <tr>
-                            <th>Project Details</th>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Name of the Project"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Project Details"></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" class="input-field" placeholder="Link to Project"></td>
-                        </tr>
+
+                        <label>Project Details</label>
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Project Name*" name="project_name" validate-type="name" ng-model="extraDetails.project_details.project_name"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Project Details*" name="project_details" validate-type="name" ng-model="extraDetails.project_details.project_details"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
+
+                        <span class="form-hold2 clearfix">
+                                <div class="validate-line">
+                                    <input type="text"  class="input-field" placeholder="Project Link*" name="project_link" validate-type="name" ng-model="extraDetails.project_details.project_link"  required validate-on-blur form-name="oneStepRegistrationForm">
+                                    <div class="input-wrapper"></div>
+                                    <div class="message"></div>
+                                </div>
+                        </span>
+                        <br clear="all">
                     </table>
                     
 				</div>
 				<div class="button-container">
-	            	<button class="vcv-button" ng-click="stepThreePrevious()">Previous</button>
-                	<button class="vcv-button" ng-click="stepThreeSubmit()">Submit </button>
+	            	<button class="reg-prev-vcv-button" ng-click="stepfourPrevious()">Previous</button>
+                	<button class="reg-vcv-button" ng-click="stepFourSubmit()">Submit </button>
 	            </div>
 			</div>
 	        </div>
@@ -343,8 +493,9 @@
 
 		<script src="js/marquee.js" type="text/javascript"></script>
 		
-		<script type="text/javascript" src="js/ng-route.js"></script>
-		<script type="text/javascript" src="js/ng-controllers/complete_registration.js"></script>
+		<!-- // <script type="text/javascript" src="js/ng-route.js"></script> -->
+        <script type="text/javascript" src="js/dashboard-app.js"></script>
+		 <script type="text/javascript" src="js/ng-controllers/complete_registration.js"></script>
 		
   </body>
 

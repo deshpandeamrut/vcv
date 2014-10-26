@@ -208,34 +208,26 @@ class UserController extends BaseController {
 			return $responseJson;
   		}
   		$input = Input::all();
-  		$fileReferences = array();
-		Log::info("postPersonalDetails --> value of Params Recvd postPersonalDetails ".var_export($input,true));
-		if(array_key_exists('files_reference', $input)){
-			$fileReferences = $input['files_reference'];	
-			$fileReferences = json_decode($fileReferences,true);
-		}
-		Log::info("postPersonalDetails --> value of Params Recvd Decoded fileReferences ".var_export($fileReferences,true));
-		$countOfFilesUploaded = count($fileReferences);
-		Log::info("postPersonalDetails --> Count of no of files Uploaded fileReferences ".var_export($countOfFilesUploaded,true));
-		$rules_personal = array(
+  		$rules_personal = array(
+  							'title' => 'required',
 							'first_name' => 'Required',
 							'dob' => 'required'
 						  );
 		$rules_address = array(
 							'street_no' => 'required',
-							'street_name' => 'required',
-							'postcode' => 'required',
+							'house_no' => 'required',
+							'street_name'  => 'required',
+							'suburb' => 'required',
+							'postcode'  => 'required',
 							'city_name' => 'required',
 							'state_name' => 'required'
 						 );
+
 		$rules_phone = array(
-						'phone_city_code' => 'required',
-						'phone_number' => 'required'
+						'mobile' => 'required'
 						);
-		$userAddress = json_decode($input['address'],true);
+		$userAddress = $input['address'];
 		Log::info("postPersonalDetails --> User Address Details ".var_export($userAddress,true));
-		$userPhone = json_decode($input['phone'],true);
-		Log::info("postPersonalDetails --> User Phone Details ".var_export($userPhone,true));
 		$v1_personal = Validator::make($input, $rules_personal);
 		$v1_address = Validator::make($userAddress, $rules_address);
 		if($v1_personal->fails() || $v1_address->fails() ){
@@ -261,29 +253,23 @@ class UserController extends BaseController {
 			$userAddress['address_type'] = 'user';
 			$result = $addressObj->addUpdateAddress($userAddress);
 			Log::info("postPersonalDetails --> Successfully Stored Address Details");
-			$PhoneKeys = array_keys($userPhone);
-			$counter = 0;
-			foreach($userPhone as $row){
-				$insertdata = array(
+			$phoneData = array(
 					'user_id' => $input['user_id'],
 					'email_id' => $input['email_id'],
-					'phone_type' => $PhoneKeys[$counter],
-					'phone_city_code' => $row['phone_city_code'],
-					'phone_number' => $row['phone_number']
+					'phone_type' => 'mobile',
+					'phone_city_code' => '91',
+					'phone_number' => $input['mobile']
 				);
-				$result = $phoneObj->addPhone($insertdata);
-				Log::info("postPersonalDetails --> Successfully Phone Details");
-				$counter = $counter + 1;
-			}
+			$result = $phoneObj->addPhone($phoneData);
+			Log::info("postPersonalDetails --> Successfully Phone Details");
 			Log::info("postPersonalDetails --> Succesfully Saved PersonalDetails");
-			//Auth::user()->profile_status
 			$responseJson = json_encode(array("status_code" => 200,"status_message"=>"Succesfull","data"=>array("profile_status"=>'job',"is_profile_complete"=>Auth::user()->is_profile_complete)));
-			Log::info("Sending of Response Params postLoanDetails ".$responseJson);
+			Log::info("Sending of Response Params postPersonalDetails ".$responseJson);
 			return $responseJson;
 		}catch(Exception $e){
 			Log::error("postPersonalDetails --> There was some Error".$e->getMessage());
 			$responseJson = json_encode(array("status_code" => 500,"status_message"=>"Internal Server Error","data"=>array("Reason"=>"Internal Server Error")));
-			Log::info("Sending of Response Params postLoanDetails ".$responseJson);
+			Log::info("Sending of Response Params postPersonalDetails ".$responseJson);
 			return $responseJson;
 		}
 	} // end of function postPersonalDetails 
@@ -291,29 +277,27 @@ class UserController extends BaseController {
 /* postPersonalDetails Function Ends Here */
 
 
-/* postLoanDetails Function Starts Here */
+/* postJobSeekerDetails Function Starts Here */
 	
 	public function postJobSeekerDetails(){
 		if(empty(Auth::user()->id)){
    			Log::info("User Not Logged In.. Please Check");
    			$repsonseArray = array("Reason"=>"User Not Logged in");
    			$responseJson = json_encode(array("status_code" => 401,"status_message"=>"Unauthorized","data"=> $repsonseArray));
-   			Log::info("postJobSeekerDetails -->Sending of Response Params postLoanDetails ".$responseJson);
+   			Log::info("postJobSeekerDetails -->Sending of Response Params postJobSeekerDetails ".$responseJson);
 			return $responseJson;
   		}
   		$input = Input::all();
-  		Log::info("postJobSeekerDetails -->value of Params Recvd postJobSeekerDetails ".var_export($input,true));
-  		$fileReferences = '';
-  		if(array_key_exists('files_reference', $input)){
-			$fileReferences = json_decode($input['files_reference'],true);
-		}
-		Log::info("postJobSeekerDetails --> value of Params Recvd Decoded fileReferences ".var_export($fileReferences,true));
+  		$fileReferences = Input::file('resume_text');
+  		Log::info("postJobSeekerDetails -->value of Params Recvd postJobSeekerDetails ".var_export($input,true));	
+  		Log::info("postJobSeekerDetails --> value of Params Recvd Decoded fileReferences ".var_export($fileReferences,true));
 		$countOfFilesUploaded = count($fileReferences);
 		$rules = array(
 						'resume_headline' => 'Required',
 						'job_category' => 'Required',
 						'skill_sets' => 'Required',
 						'preferred_location' => 'Required',
+						'is_relocate' => 'Required',
 						'total_experience' => 'Required'
 					);
 		$rules_employment = array(
@@ -339,7 +323,7 @@ class UserController extends BaseController {
 			Log::info("postJobSeekerDetails -->Sending of Response Params postJobSeekerDetails ".$responseJson);
 			return $responseJson;
 		}
-		$currentEmp = json_decode($input['current_employment'],true);
+		$currentEmp = $input['current_emp_details'];
 		$v_current_emp = Validator::make($currentEmp, $rules_employment);
 		if($v_current_emp->fails()){
 			$failureData = $v_current_emp->messages();
@@ -359,7 +343,8 @@ class UserController extends BaseController {
 			$currentEmp['email_id'] = Auth::user()->email;
 			$currentEmp['employment_type'] = 'current';
 			$objJobSeekerEmploymentDetails->addemployementDetails($currentEmp);
-			$priorEmp = json_decode($input['previous_employments'],true);
+			//$priorEmp = json_decode($input['previous_employments'],true);
+			$priorEmp = array();
 			if(!empty($priorEmp)){
 				foreach($priorEmp as $row){
 					if(!empty($row)){
@@ -373,6 +358,7 @@ class UserController extends BaseController {
 			}
 			Log::info("postJobSeekerDetails--> Now going to Upload Files");
 			$fileCounter = 0;
+			$fileReferences = '';
 			if(!empty($fileReferences)){
 				$fileReferencesKeys = array_keys($fileReferences);
 				if($countOfFilesUploaded > 0){
@@ -433,7 +419,8 @@ class UserController extends BaseController {
 		$classTwelveDetails = $input['class_12_details'];
 		$bDegreeDetails = $input['b_degree_details'];
 		$projectDetails = $input['project_details'];
-		$addProjectDetails = $input['more_projects'];
+		//$addProjectDetails = $input['more_projects'];
+		$addProjectDetails = array();
 
 		try{
 			$userId= Auth::user()->id;
@@ -442,10 +429,13 @@ class UserController extends BaseController {
 			$objJobSeekerProjectDetails = new JobSeekerProjectDetails();
 			$classTenDetails['user_id'] = $userId;
 			$classTenDetails['email_id'] = $emailId;
+			$classTenDetails['basis_of_education'] = 'class_10';
 			$classTwelveDetails['user_id'] = $userId;
 			$classTwelveDetails['email_id'] = $emailId;
+			$classTwelveDetails['basis_of_education'] = 'class_12';
 			$bDegreeDetails['user_id'] = $userId;
 			$bDegreeDetails['email_id'] = $emailId;
+			$bDegreeDetails['basis_of_education'] = 'b_degree';
 			$projectDetails['user_id'] = $userId;
 			$projectDetails['email_id'] = $emailId;
 
@@ -757,22 +747,10 @@ class UserController extends BaseController {
 			$repsonseArray = array(	
 								"id"=>Auth::user()->id,
 								"email"=>Auth::user()->email,
-								"username"=>Auth::user()->username,								
-								"first_name"=>Auth::user()->first_name,
-								"country_code"=>Auth::user()->country_code,
 								"status"=>Auth::user()->status,//'unverified'
 								"user_type"=>Auth::user()->user_type,
-								"memebership_type"=>Auth::user()->memebership_type,
-								"credit_rating"=>Auth::user()->credit_rating,
-								"is_activated"=>Auth::user()->is_activated,
-								"profile_status"=>'job',
 								"is_profile_complete"=>Auth::user()->is_profile_complete
 							   );
-			if(Auth::user()->user_type == 'employee'){
-				$repsonseArray['is_employee'] = 1;
-			}else{
-					$repsonseArray['is_employee'] = 0;
-			}
 		    return $repsonseArray;		
 		} // end of else
 		
@@ -1753,6 +1731,12 @@ class UserController extends BaseController {
 			return $responseJson;
 		}
 
+	}
+
+	public function postVideoDetails(){
+		Log::info('postVideoDetails -->coming inside');
+		$fileDetails = Input::file('resume_text');
+		Log::info('getPostedJobs -->Params recvd for '.var_export($fileDetails,true));
 	}
 
 

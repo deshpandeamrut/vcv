@@ -9,7 +9,7 @@ class JobSeekerProjectDetails extends Eloquent{
 		$id = DB::table('job_seeker_project_details')->insertGetId(array(
 							'linkable_uid' => $data['user_id'],
 							'project_name' => $data['project_name'],
-							'project_details' => $data['project_description'],
+							'project_details' => $data['project_details'],
 							'project_link' => $data['project_link'],
 							'updated_at'=>date('Y-m-d H:i:s'),
 							'created_by'=>$data['email_id'],

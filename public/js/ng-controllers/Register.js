@@ -14,7 +14,7 @@ vcvApp.controller('SignUpController', function ($scope, $http, $routeParams) {
 			data   : $scope.signUpData
 		}).success(function(result) {
 			if(result.status_code == 200){
-				window.location.href = "job-seeker-complete-registration.html";
+				window.location.href = "dashboard.html";
 			}else{
 				alert('Oops Something went wrong..Please try once again');
 			}

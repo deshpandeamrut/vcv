@@ -12,7 +12,7 @@ vcvApp.controller('loginController', function ($scope, $http, $routeParams) {
 			data   : $scope.loginData
 		}).success(function(result) {
 			if(result.status_code == 200){
-				window.location.href = "job-seeker-complete-registration.html";
+				window.location.href = "dashboard.html";
 			}
 		});
 	}

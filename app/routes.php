@@ -24,6 +24,7 @@ Route::post('login', 'UserController@postLogin');
 Route::post('regPersonalDetails', 'UserController@postPersonalDetails');
 Route::post('regJobDetails', 'UserController@postJobSeekerDetails');
 Route::post('extraDetails', 'UserController@postExtraDetails');
+Route::post('upload-video', 'UserController@postVideoDetails');
 
 Route::get('getUserBasicDetails', 'UserController@getUserBasicDetails');
 
