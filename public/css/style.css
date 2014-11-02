@@ -327,9 +327,8 @@ footer {
 }
 
 .row-contact-us  p{
-	font-size: 14px;
-	color: black;
-	font-family: 'P22UndergroundPro-Book';
+	font-size: 21px !important;
+	color: black !important;;
 }
 
 
@@ -415,4 +414,13 @@ footer {
 	border-bottom: 1px solid #1C9AD6;
 	margin: 1px 5px -1px 0;
 	height: 30px;
+}
+
+.social-img {
+	vertical-align: middle;
+	height: 40px;
+	width: 45px;
+	border: 1px solid #AAA;
+	display: inline-block;
+	position: relative;
 }
